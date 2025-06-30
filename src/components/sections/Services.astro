@@ -4,6 +4,7 @@ import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
 import { services } from "../../utils/data.ts";
+import GradiantText from "../shared/GradiantText.astro";
 
 type ServicesProps = {
   title: string;
@@ -45,7 +46,7 @@ const { className } = Astro.props;
   ></span>
   <Container className="space-y-10 md:sapce-y-12">
     <div class="text-center max-w-3xl mx-auto space-y-4">
-      <Title className="">Why Choose [Your Agency Name]?</Title>
+      <Title className="">Simak <GradiantText>Testimoni</GradiantText> Klien Kami</Title>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
       {
