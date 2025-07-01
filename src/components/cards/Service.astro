@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import Paragraph from "../shared/Paragraph.astro";
+import google from "../../assets/images/google.png";
 
 export interface Props {
   title: string;
@@ -32,7 +33,15 @@ const { title, star, features, icon } = Astro.props;
     <h2 class="text-lg md:text-xl font-semibold text-heading-2">
       {title}
     </h2>
-    <div>
+    <div class="flex gap-4 flex-row items-center">
+      <Image
+        src={google}
+        alt="Berkah Jasa on Google Reviews"
+        class="my-class"
+        width="48"
+        height="48"
+        class="rounded-3xl object-cover lg:max-h-none max-h-96"
+      />
       {star}
     </div>
     <Paragraph>
