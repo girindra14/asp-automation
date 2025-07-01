@@ -88,7 +88,7 @@ const priorities = [
       "Proses Cek Nama CV",
       "Akte Notaris",
       "SK Kementerian Hukum & HAM",
-      "File Pendaftaran NPWP Perusahaan",
+      "Pendaftaran NPWP Perusahaan",
       "Sertifikat Standar (KBLI risiko menengah rendah / menengah tinggi)",
       "NIB (Nomor Induk Berusaha)",
       "Akun OSS"
@@ -109,7 +109,7 @@ const priorities = [
       "Proses Cek Nama PT",
       "Akte Notaris",
       "SK Kementerian Hukum & HAM",
-      "File Pendaftaran NPWP Perusahaan",
+      "Pendaftaran NPWP Perusahaan",
       "Sertifikat Standar (KBLI risiko menengah rendah / menengah tinggi)",
       "NIB (Nomor Induk Berusaha)",
       "Akun OSS"
