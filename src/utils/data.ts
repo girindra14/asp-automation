@@ -28,7 +28,7 @@ const testimonies = [
       "Berkah Selalu",
       "Alhamdulillah Lancar",
       "Proses Cepat",
-      "Biarkan bintang yg jd saksi🥰"
+      "Biarkan Bintang Yang Jadi Saksi🥰"
     ],
     icon: testimoni2,
   },
