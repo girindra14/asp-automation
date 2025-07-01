@@ -1,16 +1,95 @@
 ---
-import Service from "../cards/Service.astro";
 import Container from "../shared/Container.astro";
-import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
-import { services } from "../../utils/data.ts";
+
 import GradiantText from "../shared/GradiantText.astro";
 
-type ServicesProps = {
+type ServiceProps = {
   title: string;
-  features: string[];
-  icon: string;
 };
+const services = [
+  {
+    title: "NIB PERORANGAN (seluruh Indonesia)",
+  },
+  {
+    title: "CV (seluruh Indonesia)",
+  },
+  {
+    title: "PT UMUM / PT PERORANGAN (seluruh Indonesia)",
+  },
+  {
+    title: "UPDATE NIB (OSS RBA) (seluruh Indonesia)",
+  },
+  {
+    title: "SIUJPT rekomendasi DISHUB dan verifikasi sertifikat standar (wilayah Jawa Timur)",
+  },
+  {
+    title: "SIPA izin angkutan truck untuk verifikasi sertifikat standar (wilayah Surabaya dan Sidoarjo)",
+  },
+  {
+    title: "PIRT (khusus wilayah Surabaya, Sidoarjo, dan Gresik)",
+  },
+  {
+    title: "MEREK (seluruh Indonesia)",
+  },
+  {
+    title: "IMB/PBG (wilayah Surabaya dan Sidoarjo)",
+  },
+  {
+    title: "Izin LIMBAH (wilayah Surabaya dan Sidoarjo)",
+  },
+  {
+    title: "ISO (seluruh Indonesia)",
+  },
+  {
+    title: "SMK3 (seluruh Indonesia)",
+  },
+  {
+    title: "SNI (seluruh Indonesia)",
+  },
+  {
+    title: "Izin PT PMA",
+  },
+  {
+    title: "Izin BPOM (wilayah Jawa Timur)",
+  },
+  {
+    title: "Izin IPAK",
+  },
+  {
+    title: "Izin Konstruksi Pembuatan Tenaga Ahli SKK + Dokumen SBU (wilayah Jawa Timur)",
+  },
+  {
+    title: "Izin PKKPR (seluruh Indonesia)",
+  },
+  {
+    title: "Pembuatan Website Perusahaan",
+  },
+  {
+    title: "Izin Pengeboran Air Sumur (wilayah Jawa Timur)",
+  },
+  {
+    title: "Verifikasi Sertifikat Standar untuk Risiko Menengah Tinggi dan Tinggi",
+  },
+  {
+    title: "Izin TKDN",
+  },
+  {
+    title: "Izin PKRT",
+  },
+  {
+    title: "Instalasi dan Izin IPAL",
+  },
+  {
+    title: "Izin SPIONAM KBLI Angkutan Risiko Tinggi 49432",
+  },
+  {
+    title: "Izin HALAL",
+  },
+  {
+    title: "Izin Lainnya",
+  },
+];
 
 export interface Props {
   className?: string;
@@ -19,47 +98,29 @@ export interface Props {
 const { className } = Astro.props;
 ---
 
-<!-- <section
-  id="services"
-  class=`relative bg-gradient-to-br from-blue-100 to-sky-200 dark:from-indigo-800 dark:to-green-950  ${className}`
-> -->
-<section
-  id="services"
-  class=`relative  dark:bg-gradient-to-br dark:from-indigo-800 dark:to-green-950  ${className}`
->
-  <span
-    class="w-40 h-40 rounded-full bg-gradient-to-br from-sky-200 dark:from-sky-500 from-0% via-primary dark:via-primary via-80% to-green-400 dark:to-green-600 to-110%
-    absolute left-1/3 bottom-1/3"
-  ></span>
-  <span
-    class="w-40 h-40 rounded-full bg-gradient-to-br from-yellow-200 dark:from-yellow-400 from-0% via-sky-500 dark:via-sky-700 via-85% to-primary dark:to-primary to-100%
-    absolute right-1/4 bottom-0"
-  ></span>
-  <span
-    class="w-40 h-40 rounded-full bg-gradient-to-br from-green-300 dark:from-green-500 from-0% via-primary dark:via-primary via-80% to-sky-400 dark:to-sky-600 to-110%
-    absolute right-1/3 top-1/3"
-  ></span>
-
-  <span
-    class="w-40 h-40 rounded-full bg-gradient-to-br from-green-300 dark:from-green-500 from-0% via-primary dark:via-primary via-80% to-sky-400 dark:to-sky-600 to-110%
-    absolute right-3/4 top-1/3"
-  ></span>
-  <Container className="space-y-10 md:sapce-y-12">
-    <div class="text-center max-w-3xl mx-auto space-y-4">
-      <Title className="">Simak <GradiantText>Testimoni</GradiantText> Klien Kami</Title>
+<section id="layanan" class=`${className}`>
+  <Container className="">
+    <div class="text-center max-w-3xl mx-auto">
+      <Title>
+        Kami menyediakan <GradiantText>Banyak Pilihan Jasa </br> Izin Usaha</GradiantText> untuk Anda
+      </Title>
     </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+    <div class="flex flex-row flex-wrap mt-8">
+      <!-- <div class="flex flex-col lg:gap-10 lg:gap-12 midmd:flex-row mt-8"> -->
+      <!-- <div class="flex  lg:w-1/2 flex-row"> -->
       {
-        services.map((service: ServicesProps) => {
+        services.map((service: ServiceProps) => {
           return (
-            <Service
-              title={service.title}
-              features={service.features}
-              icon={service.icon}
-            />
+            <div class="flex items-center text-heading-3 font-medium basis-full md:basis-1/2 lg:basis-1/3">
+              <span class="font-bold rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">
+                &checkmark;
+              </span>
+              {service.title}
+            </div>
           );
         })
       }
+      <!-- </div> -->
     </div>
   </Container>
 </section>

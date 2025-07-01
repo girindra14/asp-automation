@@ -1,0 +1,55 @@
+---
+import Container from "../shared/Container.astro";
+import Title from "../shared/Title.astro";
+import GradiantText from "../shared/GradiantText.astro";
+import { priorities } from "../../utils/data.ts";
+import Priority from "../cards/Priority.astro";
+import Price from "../cards/Price.astro";
+
+type PrioritiesProps = {
+  title: string;
+  price: string;
+  features: string[];
+  img: ImageMetadata;
+  pricelist: string[];
+};
+
+export interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props;
+---
+
+<section id="prioritas" class=`${className}`>
+    <Container className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      {
+        priorities.map((solution: PrioritiesProps, index: number) => {
+          const flexRow = "midmd:flex-row";
+          return (
+            <div class={`w-100 py-10 md:py-16`}>
+              <div
+                class={`flex flex-col gap-10 lg:gap-12 ${flexRow} mx-auto max-w-7xl w-full`}
+              >
+                <div class="max-w-full mx-auto w-11/12 flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col">
+                  <div class="text-center">
+                    <Title>
+                      {solution.title}
+                    </Title>
+                    <Title>
+                      <GradiantText>{solution.price}</GradiantText>
+                    </Title>
+                  </div>
+                  <div class="mt-8 flex gap-8 flex-row">
+                    <Priority
+                      features={solution.features}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })
+      }
+    </Container>
+</section>
