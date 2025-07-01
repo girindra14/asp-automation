@@ -25,7 +25,9 @@ const { features } = Astro.props;
                 <span class="font-bold rounded-full w-8 h-8 mr-3 inline-flex justify-center items-center text-primary dark:text-white">
                   &checkmark;
                 </span>
-                {feature}
+                <span class="flex-1">
+                  {feature}
+                </span>
               </div>
             );
           })

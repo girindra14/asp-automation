@@ -10,6 +10,7 @@ type TestimoniesProps = {
   star: string;
   features: string[];
   icon: ImageMetadata;
+  link: string;
 };
 
 export interface Props {
@@ -56,6 +57,7 @@ const { className } = Astro.props;
               star={service.star}
               features={service.features}
               icon={service.icon}
+              link={service.link}
             />
           );
         })

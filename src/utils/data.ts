@@ -20,6 +20,7 @@ const testimonies = [
       "Anti Ribet, Tau Beres"
     ],
     icon: testimoni1,
+    link: "https://www.google.com/maps/contrib/115817238128517098713/reviews?hl=en-GB"
   },
   {
     title: "Sayuti",
@@ -31,6 +32,7 @@ const testimonies = [
       "Biarkan Bintang Yang Jadi Saksi🥰"
     ],
     icon: testimoni2,
+    link: "https://www.google.com/maps/contrib/106242027134866729198/reviews?hl=en-GB"
   },
   {
     title: "Dini Puspita Sari",
@@ -41,6 +43,7 @@ const testimonies = [
       "Terima Kasih, Lancar Selalu🥰"
     ],
     icon: testimoni3,
+    link: "https://www.google.com/maps/contrib/118315404532748638068/reviews?hl=en-GB"
   },
   {
     title: "Nalita Alvis",
@@ -51,6 +54,7 @@ const testimonies = [
       "Biarkan Bintangku Jadi Saksi"
     ],
     icon: testimoni4,
+    link: "https://www.google.com/maps/contrib/111184786605743360372/reviews?hl=en-GB"
   },
   {
     title: "Dwi Asmanto",
@@ -61,6 +65,7 @@ const testimonies = [
       "Lancar Terus Usahanya"
     ],
     icon: testimoni5,
+    link: "https://www.google.com/maps/contrib/103939054530389189894/reviews?hl=en-GB"
   },
   {
     title: "Safari Umrah & Haji Travel",
@@ -70,7 +75,8 @@ const testimonies = [
       "Proses Cepat",
       "Sukses Selalu Berkah Jasa",
     ],
-    icon: testimoni6
+    icon: testimoni6,
+    link: "https://www.google.com/maps/contrib/112674763053972811979/reviews?hl=en-GB"
   },
 ];
 
@@ -84,7 +90,7 @@ const priorities = [
       "SK Kementerian Hukum & HAM",
       "File Pendaftaran NPWP Perusahaan",
       "Sertifikat Standar (KBLI risiko menengah rendah / menengah tinggi)",
-      "NIB",
+      "NIB (Nomor Induk Berusaha)",
       "Akun OSS"
     ],
     img: visibilityDilemma,
@@ -105,7 +111,7 @@ const priorities = [
       "SK Kementerian Hukum & HAM",
       "File Pendaftaran NPWP Perusahaan",
       "Sertifikat Standar (KBLI risiko menengah rendah / menengah tinggi)",
-      "NIB",
+      "NIB (Nomor Induk Berusaha)",
       "Akun OSS"
     ],
     img: engagementGap,
@@ -118,11 +124,11 @@ const priorities = [
     ],
   },
   {
-    title: "Pendirian NIB",
+    title: "Pembuatan NIB",
     price: "Mulai dari Rp1.000.000",
     features: [
       "Sertifikat Standar (KBLI risiko menengah rendah / menengah tinggi)",
-      "NIB"
+      "NIB (Nomor Induk Berusaha)"
     ],
     img: resultsInHibernation,
     pricelist: [

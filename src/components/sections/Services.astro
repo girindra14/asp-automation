@@ -115,7 +115,9 @@ const { className } = Astro.props;
               <span class="font-bold rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">
                 &checkmark;
               </span>
-              {service.title}
+              <span class="flex-1">
+                {service.title}
+              </span>
             </div>
           );
         })
