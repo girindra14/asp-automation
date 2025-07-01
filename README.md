@@ -1,4 +1,4 @@
-# Astro - Template - Social Media Marketing Agency
+# Astro - Template - Berkah Jasa
 
 ### 🚀 Check Out the Live Site
 
