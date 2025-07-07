@@ -60,7 +60,7 @@ const testimonies = [
     title: "Dwi Asmanto",
     star: "⭐⭐⭐⭐⭐",
     features: [
-      "proses cepat",
+      "Proses Cepat",
       "Gak Pakai Ribet",
       "Lancar Terus Usahanya"
     ],
@@ -85,6 +85,7 @@ const priorities = [
     title: "Pendirian CV",
     price: "Mulai dari Rp2.200.000",
     features: [
+      "Selesai Dalam 2 Minggu (Setelah Dokumen Persyaratan Benar dan Lengkap)",
       "Proses Cek Nama CV",
       "Akte Notaris",
       "SK Kementerian Hukum & HAM",
@@ -106,6 +107,7 @@ const priorities = [
     title: "Pendirian PT",
     price: "Mulai dari Rp7.500.000",
     features: [
+      "Selesai Dalam 2 Minggu (Setelah Dokumen Persyaratan Benar dan Lengkap)",
       "Proses Cek Nama PT",
       "Akte Notaris",
       "SK Kementerian Hukum & HAM",
@@ -127,6 +129,7 @@ const priorities = [
     title: "Pembuatan NIB",
     price: "Mulai dari Rp1.000.000",
     features: [
+      "Selesai Dalam 2 Hari (Setelah Dokumen Persyaratan Benar dan Lengkap)",
       "Sertifikat Standar (KBLI risiko menengah rendah / menengah tinggi)",
       "NIB (Nomor Induk Berusaha)"
     ],
