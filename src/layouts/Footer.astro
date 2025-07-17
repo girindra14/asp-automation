@@ -101,105 +101,130 @@ const footerLegal = [
     class="relative bg-gradient-to-tr from-slate-100/85 to-zinc-200/85 dark:from-slate-800/85 dark:to-zinc-800/85 pt-28 rounded-t-3xl backdrop-blur-md"
   >
     <Container className="pb-8 relative overflow-auto ">
-      <div
-        class="grid grid-cols-2 lg:grid-cols-3 lg:items-stretch gap-8 relative"
-      >
-        <div class="col-span-2 lg:col-span-1 h-auto flex flex-col">
-          <div class="h-full">
-            <a href="/" class="relative flex items-center gap-3">
-              <div class="inline-flex text-lg font-semibold text-heading-1">
-                CV Berkah Jasa
-              </div>
-            </a>
-            <Paragraph className={"mt-8"}>
-              Office 1:
-              </br>
-              <strong>Revio Space Jln. Kaliwaron Nomor 58 Lantai 3 RT 1 RW 2 Kelurahan Mojo Kecamatan Gubeng, Surabaya, Jawa Timur 60285 – Indonesia</strong>
-              </br></br>
-              Office 2:
-              </br>
-              <strong>Kavling Kalanganyar blok E 16 Desa Kalanganyar Kecamatan Sedati Kabupaten Sidoarjo, Jawa Timur 61253 – Indonesia</strong>
-            </Paragraph>
-          </div>
-
-          <!-- social links -->
-          <div class="min-h-max flex items-center gap-4 text-heading-3 mt-8">
-            <a href="/" class="transition hover:text-heading-1 hover:scale-105">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="w-5 h-5"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
-                ></path>
-              </svg>
-              <span class="sr-only">social link</span>
-            </a>
-
-            <a href="/" class="transition hover:text-heading-1 hover:scale-105">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="w-5 h-5"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
-                ></path>
-              </svg>
-              <span class="sr-only">social link</span>
-            </a>
-
-            <a href="/" class="transition hover:text-heading-1 hover:scale-105">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="w-5 h-5"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
-                ></path>
-              </svg>
-              <span class="sr-only">social link</span>
-            </a>
-
-            <a href="/" class="transition hover:text-heading-1 hover:scale-105">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="w-5 h-5"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-                ></path>
-              </svg>
-              <span class="sr-only">social link</span>
-            </a>
-          </div>
+      <div class="col-span-2 lg:col-span-1 h-auto flex flex-col">
+        <div class="grid grid-cols-2 gap-4">
+            <div>
+              <Paragraph>
+                <h2 class="capitalze font-semibold text-heading-1 text-xl">
+                  Office 1
+                </h2>
+                </br>
+                <div class="font-medium md:text-lg text-heading-3">
+                  Revio Space Jln. Kaliwaron Nomor 58 Lantai 3 RT 1 RW 2 Kelurahan Mojo Kecamatan Gubeng, Surabaya, Jawa Timur 60285 – Indonesia
+                </div>
+                </br></br>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.800869469462!2d112.7674074!3d-7.2634893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb1cdbe3f315%3A0x66f504741696f365!2sCV.%20BERKAH%20JASA!5e0!3m2!1sen!2sid!4v1752742025975!5m2!1sen!2sid"
+                  width="600"
+                  height="450"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Revio Space Jln. Kaliwaron Nomor 58 Lantai 3 RT 1 RW 2 Kelurahan Mojo Kecamatan Gubeng, Surabaya, Jawa Timur 60285 – Indonesia"
+                  aria-label="Revio Space Jln. Kaliwaron Nomor 58 Lantai 3 RT 1 RW 2 Kelurahan Mojo Kecamatan Gubeng, Surabaya, Jawa Timur 60285 – Indonesia"
+                ></iframe>
+              </Paragraph>
+            </div>
+            <div>
+              <Paragraph>
+                <h2 class="capitalze font-semibold text-heading-1 text-xl">
+                  Office 2
+                </h2>
+                </br>
+                <div class="font-medium md:text-lg text-heading-3">
+                  Kavling Kalanganyar blok E 16 Desa Kalanganyar Kecamatan Sedati Kabupaten Sidoarjo, Jawa Timur 61253 – Indonesia
+                </div>
+                </br></br>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3956.599061291813!2d112.78944407500104!3d-7.398741092611212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMjMnNTUuNSJTIDExMsKwNDcnMzEuMyJF!5e0!3m2!1sen!2sid!4v1752741919911!5m2!1sen!2sid"
+                  width="600"
+                  height="450"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Kavling Kalanganyar blok E 16 Desa Kalanganyar Kecamatan Sedati Kabupaten Sidoarjo, Jawa Timur 61253 – Indonesia"
+                  aria-label="Kavling Kalanganyar blok E 16 Desa Kalanganyar Kecamatan Sedati Kabupaten Sidoarjo, Jawa Timur 61253 – Indonesia"
+                ></iframe>
+              </Paragraph>
+            </div>
         </div>
 
-        <GroupFooterNav>
-          <FooterNav title={"Company"} navItems={footerCompany} />
-          <FooterNav title={"Solutions"} navItems={footerNav1} />
-        </GroupFooterNav>
+        <!-- social links -->
+        <div class="min-h-max flex items-center gap-4 text-heading-3 mt-8">
+          <a href="/" class="transition hover:text-heading-1 hover:scale-105">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="w-5 h-5"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+              ></path>
+            </svg>
+            <span class="sr-only">social link</span>
+          </a>
 
-        <GroupFooterNav>
-          <FooterNav title={"Support"} navItems={footerSupport} />
-          <FooterNav title={"Ressources"} navItems={footerLegal} />
-        </GroupFooterNav>
+          <a href="/" class="transition hover:text-heading-1 hover:scale-105">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="w-5 h-5"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+              ></path>
+            </svg>
+            <span class="sr-only">social link</span>
+          </a>
+
+          <a href="/" class="transition hover:text-heading-1 hover:scale-105">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="w-5 h-5"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+              ></path>
+            </svg>
+            <span class="sr-only">social link</span>
+          </a>
+
+          <a href="/" class="transition hover:text-heading-1 hover:scale-105">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="w-5 h-5"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+              ></path>
+            </svg>
+            <span class="sr-only">social link</span>
+          </a>
+        </div>
       </div>
+
+      <GroupFooterNav>
+        <FooterNav title={"Company"} navItems={footerCompany} />
+        <FooterNav title={"Solutions"} navItems={footerNav1} />
+        <FooterNav title={"Support"} navItems={footerSupport} />
+        <FooterNav title={"Ressources"} navItems={footerLegal} />
+      </GroupFooterNav>
     </Container>
     <div class="py-2 relative">
       <Container>
