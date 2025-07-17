@@ -7,9 +7,8 @@ const url = useApi ? `https://api.whatsapp.com/send?phone=${mobile}&text=${encod
 
 <!-- BEGIN WHATSAPP BUTTON -->
 <div id="astro-whatsapp" class="astro-whatsapp hidden">
-  <div id="wa-tooltip" class="p-2 lg:p-4 absolute left-[-200px] lg:left-[-220px] top-1/2 -translate-y-1/2 rounded-xl shadow-md shadow-slate-700 dark:shadow-slate-900
-  bg-gradient-to-tr from-slate-100/70 to-zinc-200/60 dark:from-slate-800/10 dark:to-zinc-800/10 backdrop-blur-md hover:bg-black/10 hover:dark:bg-slate-700/10 text-heading-3 font-medium">
-    Konsultasi dengan kami
+  <div id="wa-tooltip" class="p-2 lg:p-4 absolute left-[-175px] lg:left-[-190px] top-1/2 -translate-y-1/2 rounded-xl shadow-md bg-white text-heading-3 font-medium">
+    Konsultasi sekarang
   </div>
   <a href={url} target="_blank">
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -53,8 +52,8 @@ const url = useApi ? `https://api.whatsapp.com/send?phone=${mobile}&text=${encod
     .astro-whatsapp {
         position: fixed;
         width: 4rem;
-        bottom: 1rem;
-        right: 1rem;
+        bottom: 2rem;
+        right: 2rem;
         border-radius: 100%;
         z-index: 999;
 
