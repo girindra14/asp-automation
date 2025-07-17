@@ -4,7 +4,9 @@ import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import ByNumber from "./ByNumber.astro";
 
-import myHeroImage3 from "../../assets/images/hero3.jpg";
+import porto1 from "../../assets/images/porto1.webp";
+import porto2 from "../../assets/images/porto2.webp";
+import porto3 from "../../assets/images/porto3.webp";
 import CtaButton from "../shared/CtaButton.astro";
 import ByResult from "./ByResult.astro";
 import GradiantText from "../shared/GradiantText.astro";
@@ -37,7 +39,7 @@ const { className } = Astro.props;
       </Paragraph>
 
       <div class="mt-8 w-full flex flex-col">
-        <div class="mx-auto md:gap-8 gap-4 flex flex-col md:flex-row">
+        <div class="md:gap-8 gap-4 flex flex-col md:flex-row">
           <div class="lg:mx-auto mb-8">
             <Portofolio />
           </div>
@@ -54,20 +56,45 @@ const { className } = Astro.props;
       </div>
     </div>
 
-    <div
-      class="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl"
-    >
-      <Image
-        src={myHeroImage3}
-        alt="CV Berkah Jasa"
-        class="my-class"
-        width="2350"
-        height="2359"
-        class="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96"
-      />
+    <div class="relative flex-1 lg:w-1/2 lg:h-auto lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
+      <div class="relative w-full h-96 sm:h-full lg:aspect-square aspect-[3/4] overflow-hidden rounded-3xl">
+        <Image
+          src={porto1}
+          alt="Portofolio CV Berkah Jasa"
+          width="2350"
+          height="2359"
+          class="carousel-img absolute inset-0 w-full h-full object-cover opacity-100 z-20 transition-opacity duration-1000"
+        />
+        <Image
+          src={porto2}
+          alt="Portofolio CV Berkah Jasa"
+          width="2350"
+          height="2359"
+          class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 z-10 transition-opacity duration-1000"
+        />
+        <Image
+          src={porto3}
+          alt="Portofolio CV Berkah Jasa"
+          width="2350"
+          height="2359"
+          class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 z-10 transition-opacity duration-1000"
+        />
+      </div>
     </div>
   </Container>
 
   <ByNumber />
-  <!-- <ByResult /> -->
+  <script type="module">
+    const images = document.querySelectorAll('.carousel-img');
+    let current = 0;
+
+    setInterval(() => {
+      images.forEach((img, i) => {
+        img.style.opacity = i === current ? '1' : '0';
+        img.style.zIndex = i === current ? '20' : '10';
+      });
+
+      current = (current + 1) % images.length;
+    }, 4000); // Change image every 4 seconds
+  </script>
 </section>

@@ -1,12 +1,9 @@
-import visibilityDilemma from "../assets/images/visibility-dilemma.jpg";
-import engagementGap from "../assets/images/engagement-gap.jpg";
-import resultsInHibernation from "../assets/images/results-in-hibernation.jpg";
-import testimoni1 from "../assets/images/testimoni1.png";
-import testimoni2 from "../assets/images/testimoni2.png";
-import testimoni3 from "../assets/images/testimoni3.png";
-import testimoni4 from "../assets/images/testimoni4.png";
-import testimoni5 from "../assets/images/testimoni5.png";
-import testimoni6 from "../assets/images/testimoni6.png";
+import testimoni1 from "../assets/images/testimoni1.webp";
+import testimoni2 from "../assets/images/testimoni2.webp";
+import testimoni3 from "../assets/images/testimoni3.webp";
+import testimoni4 from "../assets/images/testimoni4.webp";
+import testimoni5 from "../assets/images/testimoni5.webp";
+import testimoni6 from "../assets/images/testimoni6.webp";
 
 const testimonies = [
   {
@@ -94,7 +91,6 @@ const priorities = [
       "NIB (Nomor Induk Berusaha)",
       "Akun OSS"
     ],
-    img: visibilityDilemma,
     pricelist: [
       "CV wilayah Surabaya Rp2.200.000",
       "CV wilayah Sidoarjo Rp2.400.000",
@@ -116,7 +112,6 @@ const priorities = [
       "NIB (Nomor Induk Berusaha)",
       "Akun OSS"
     ],
-    img: engagementGap,
     pricelist: [
       "PT wilayah Surabaya Rp7.500.000",
       "PT wilayah Sidoarjo Rp7.500.000",
@@ -133,7 +128,6 @@ const priorities = [
       "Sertifikat Standar (KBLI risiko menengah rendah / menengah tinggi)",
       "NIB (Nomor Induk Berusaha)"
     ],
-    img: resultsInHibernation,
     pricelist: [
       "NIB seluruh Indonesia Rp1.000.000",
     ],

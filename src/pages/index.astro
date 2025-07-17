@@ -5,10 +5,12 @@ import Testimonies from "../components/sections/Testimonies.astro";
 import Services from "../components/sections/Services.astro";
 import CTA from "../components/sections/CTA.astro";
 import Priorities from "../components/sections/Priorities.astro";
+import Whatsapp from "../components/shared/Whatsapp.astro";
 ---
 
 <Layout title="Welcome to the Agency template">
   <main class="flex flex-col overflow-hidden">
+    <Whatsapp useApi="true" mobile="6281249863105" message="Hai Kak, Saya berminat untuk mengurus izin usaha CV di Jawa Timur" />
     <Hero className="py-10 md:py-16" />
     <Priorities className="pt-10 md:pt-16" />
     <Services className="py-10 md:py-16" />

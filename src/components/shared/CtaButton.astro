@@ -3,7 +3,7 @@ import Button from "./Button.astro";
 ---
 
 <a
-  href="https://wa.me/6281249863105?text=Hai%20Kak,%20Saya%20berminat%20untuk%20mengurus%20izin%20usaha%20CV%20di%20Jawa%20Timur"
+  href=`https://api.whatsapp.com/send?phone=6281249863105&text=${encodeURIComponent("Hai Kak, Saya berminat untuk mengurus izin usaha CV di Jawa Timur")}`
   target="_blank"
   rel="noopener noreferrer"
 >
