@@ -1,9 +1,15 @@
 ---
-import Button from "./Button.astro";
+import Button from './Button.astro';
+
+export interface Props {
+  location: string;
+}
+
+const { location } = Astro.props;
 ---
 
 <a
-  href=`https://api.whatsapp.com/send?phone=6281249863105&text=${encodeURIComponent("Hai Kak, Saya ingin tahu lebih lanjut mengenai jasa pengurusan izin usaha di Berkah Jasa")}`
+  href={`https://api.whatsapp.com/send?phone=6281249863105&text=${encodeURIComponent(`Hai Kak, Saya ingin tahu lebih lanjut mengenai jasa pengurusan izin usaha di Berkah Jasa di ${location}`)}`}
   target="_blank"
   rel="noopener noreferrer"
 >

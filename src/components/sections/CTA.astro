@@ -6,9 +6,10 @@ import Paragraph from "../shared/Paragraph.astro";
 
 export interface Props {
   className?: string;
+  location: string;
 }
 
-const { className } = Astro.props;
+const { className, location } = Astro.props;
 ---
 
 <section id="cta" class=`pb-20 ${className}`>
@@ -29,7 +30,7 @@ const { className } = Astro.props;
           Segera Konsultasi Izin Usaha Bersama Kami!
         </Paragraph>
         <div class="mx-auto max-w-md sm:max-w-xl pt-10">
-          <CtaButton />
+          <CtaButton location={location} />
         </div>
       </div>
     </div>

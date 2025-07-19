@@ -5,6 +5,12 @@ import CtaButton from "../components/shared/CtaButton.astro";
 import Image from "astro/components/Image.astro";
 import myLogo from "../assets/images/berkah_jasa_logo.webp";
 
+export interface Props {
+  location: string;
+}
+
+const { location } = Astro.props;
+
 const navItems = [
   {
     href: "/",
@@ -69,7 +75,7 @@ const navItems = [
         <div
           class="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-bg lg:border-0 px-6 lg:px-0"
         >
-          <CtaButton />
+          <CtaButton location={location} />
         </div>
       </div>
 

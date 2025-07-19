@@ -12,13 +12,13 @@ import ByResult from "./ByResult.astro";
 import GradiantText from "../shared/GradiantText.astro";
 import Portofolio from "../shared/Portofolio.astro";
 import PSE from "../shared/PSE.astro";
-import { lazy } from "astro/zod";
 
 export interface Props {
   className?: string;
+  location: string;
 }
 
-const { className } = Astro.props;
+const { className, location } = Astro.props;
 ---
 
 <section class=`relative pt-32 lg:pt-36 ${className}`>
@@ -36,16 +36,16 @@ const { className } = Astro.props;
         Anda Dengan Berkah Jasa
       </h1>
       <Paragraph className="mt-8 ">
-        Mulai izin pendirian <GradiantText><strong>CV, PT, berbagai izin usaha lainnya</strong></GradiantText>, dari wilayah <GradiantText><strong>Provinsi Jawa Timur</strong></GradiantText> hingga <GradiantText><strong>seluruh Indonesia</strong></GradiantText>.
+        Mulai izin pendirian <GradiantText><strong>CV, PT, berbagai izin usaha lainnya</strong></GradiantText>, untuk wilayah <GradiantText><strong>{location}</strong></GradiantText> hingga <GradiantText><strong>seluruh Indonesia</strong></GradiantText>.
       </Paragraph>
 
       <div class="mt-8 w-full flex flex-col">
-        <div class="md:gap-8 gap-4 flex flex-col md:flex-row">
+        <div class="md:gap-8 gap-4 flex flex-col md:flex-row justify-center">
           <div class="lg:mx-auto mb-8">
             <Portofolio />
           </div>
           <div class="lg:mx-auto mb-8">
-            <CtaButton />
+            <CtaButton location={location} />
           </div>
           <div class="lg:mx-auto mb-8">
             <PSE />

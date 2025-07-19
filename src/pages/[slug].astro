@@ -7,9 +7,30 @@ import CTA from "../components/sections/CTA.astro";
 import Priorities from "../components/sections/Priorities.astro";
 import Whatsapp from "../components/shared/Whatsapp.astro";
 
-const location = "Provinsi Jawa Timur";
-const pathname = Astro.url.pathname;
-const canonicalUrl = `https://gunturajip.github.io${pathname}`;
+export async function getStaticPaths() {
+  return [
+    {
+      params: {
+        slug: "surabaya"
+      }
+    },
+    {
+      params: {
+        slug: "malang"
+      }
+    },
+  ];
+}
+
+const slug = Astro.params.slug;
+const canonicalUrl = `https://gunturajip.github.io/jasaberkah/${slug}`;
+
+const locationMap = {
+  "surabaya": "Kota Surabaya",
+  "malang": "Kota Malang"
+}
+
+const location = locationMap[slug];
 ---
 
 <Layout location={location} canonicalUrl={canonicalUrl}>
