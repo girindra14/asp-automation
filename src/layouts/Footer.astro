@@ -4,78 +4,63 @@ import Container from "../components/shared/Container.astro";
 import FooterNav from "../components/shared/FooterNav.astro";
 import Paragraph from "../components/shared/Paragraph.astro";
 
-const footerNav1 = [
+const kotaSurabaya = [
   {
-    itemText: "Marketing",
-    itemLink: "/",
+    itemText: "Kota Surabaya",
+    itemLink: "/jasaberkah/surabaya",
   },
   {
-    itemText: "Analylitics",
-    itemLink: "/",
+    itemText: "Kecamatan Wonocolo",
+    itemLink: "/jasaberkah/wonocolo",
   },
   {
-    itemText: "Commerce",
-    itemLink: "/",
-  },
-  {
-    itemText: "Insights",
-    itemLink: "/",
+    itemText: "Kecamatan Wonokromo",
+    itemLink: "/jasaberkah/wonokromo",
   },
 ];
 
-const footerSupport = [
+const kabupatenGresik = [
   {
-    itemText: "Pricing",
-    itemLink: "/",
+    itemText: "Kabupaten Gresik",
+    itemLink: "/jasaberkah/gresik",
   },
   {
-    itemText: "Guides",
-    itemLink: "/",
+    itemText: "Kecamatan Balongpanggang",
+    itemLink: "/jasaberkah/balongpanggang",
   },
   {
-    itemText: "FAQ",
-    itemLink: "/",
-  },
-  {
-    itemText: "Contact",
-    itemLink: "/",
+    itemText: "Kecamatan Benjeng",
+    itemLink: "/jasaberkah/benjeng",
   },
 ];
 
-const footerCompany = [
+const kabupatenSidoarjo = [
   {
-    itemText: "About",
-    itemLink: "/",
+    itemText: "Kabupaten Sidoarjo",
+    itemLink: "/jasaberkah/sidoarjo",
   },
   {
-    itemText: "Blog",
-    itemLink: "/",
+    itemText: "Kecamatan Buduran",
+    itemLink: "/jasaberkah/buduran",
   },
   {
-    itemText: "Jobs",
-    itemLink: "/",
-  },
-  {
-    itemText: "Partners",
-    itemLink: "/",
-  },
-  {
-    itemText: "Jobs",
-    itemLink: "/",
+    itemText: "Kecamatan candi",
+    itemLink: "/jasaberkah/candi",
   },
 ];
-const footerLegal = [
+
+const kotaMalang = [
   {
-    itemText: "Claim",
-    itemLink: "/",
+    itemText: "Kota Malang",
+    itemLink: "/jasaberkah/malang",
   },
   {
-    itemText: "Privacy",
-    itemLink: "/",
+    itemText: "Kecamatan Klojen",
+    itemLink: "/jasaberkah/klojen",
   },
   {
-    itemText: "Terms",
-    itemLink: "/",
+    itemText: "Kecamatan Lowokwaru",
+    itemLink: "/jasaberkah/lowokwaru",
   },
 ];
 ---
@@ -216,10 +201,10 @@ const footerLegal = [
       </div>
 
       <GroupFooterNav>
-        <FooterNav title={"Company"} navItems={footerCompany} />
-        <FooterNav title={"Solutions"} navItems={footerNav1} />
-        <FooterNav title={"Support"} navItems={footerSupport} />
-        <FooterNav title={"Ressources"} navItems={footerLegal} />
+        <FooterNav title={"Kota Surabaya"} navItems={kotaSurabaya} />
+        <FooterNav title={"Kabupaten Gresik"} navItems={kabupatenGresik} />
+        <FooterNav title={"Kabupaten Sidoarjo"} navItems={kabupatenSidoarjo} />
+        <FooterNav title={"Kota Malang"} navItems={kotaMalang} />
       </GroupFooterNav>
     </Container>
     <div class="py-2 relative">

@@ -16,7 +16,57 @@ export async function getStaticPaths() {
     },
     {
       params: {
+        slug: "wonocolo"
+      }
+    },
+    {
+      params: {
+        slug: "wonokromo"
+      }
+    },
+    {
+      params: {
+        slug: "gresik"
+      }
+    },
+    {
+      params: {
+        slug: "balongpanggang"
+      }
+    },
+    {
+      params: {
+        slug: "benjeng"
+      }
+    },
+    {
+      params: {
+        slug: "sidoarjo"
+      }
+    },
+    {
+      params: {
+        slug: "buduran"
+      }
+    },
+    {
+      params: {
+        slug: "candi"
+      }
+    },
+    {
+      params: {
         slug: "malang"
+      }
+    },
+    {
+      params: {
+        slug: "klojen"
+      }
+    },
+    {
+      params: {
+        slug: "lowokwaru"
       }
     },
   ];
@@ -27,7 +77,17 @@ const canonicalUrl = `https://gunturajip.github.io/jasaberkah/${slug}`;
 
 const locationMap: Record<string, string> = {
   "surabaya": "Kota Surabaya",
-  "malang": "Kota Malang"
+  "wonocolo": "Kecamatan Wonocolo, Kota Surabaya",
+  "wonokromo": "Kecamatan Wonokromo, Kota Surabaya",
+  "gresik": "Kabupaten Gresik",
+  "balongpanggang": "Kecamatan Balongpanggang, Kabupaten Gresik",
+  "benjeng": "Kecamatan Benjeng, Kabupaten Gresik",
+  "sidoarjo": "Kabupaten Sidoarjo",
+  "buduran": "Kecamatan Buduran, Kabupaten Sidoarjo",
+  "candi": "Kecamatan Candi, Kabupaten Sidoarjo",
+  "malang": "Kota Malang",
+  "klojen": "Kecamatan Klojen, Kota Malang",
+  "lowokwaru": "Kecamatan Lowokwaru, Kota Malang"
 }
 
 const location = locationMap[slug];
