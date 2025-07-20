@@ -8,17 +8,18 @@ import Priorities from "../components/sections/Priorities.astro";
 import Whatsapp from "../components/shared/Whatsapp.astro";
 
 const location = "Provinsi Jawa Timur";
+const purpose = "Izin Pembuatan CV, PT, NIB";
 const pathname = Astro.url.pathname;
 const canonicalUrl = `https://gunturajip.github.io${pathname}`;
 ---
 
-<Layout location={location} canonicalUrl={canonicalUrl}>
+<Layout location={location} purpose={purpose} canonicalUrl={canonicalUrl}>
   <main class="flex flex-col overflow-hidden">
-    <Whatsapp useApi="true" mobile="6281249863105" message=`Hai Kak, Saya ingin tahu lebih lanjut mengenai jasa pengurusan izin usaha di Berkah Jasa di ${location}` />
-    <Hero className="py-10 md:py-16" location={location} />
+    <Whatsapp useApi="true" mobile="6281249863105" message=`Hai Kak, Saya ingin tahu lebih lanjut mengenai jasa pengurusan ${purpose} di Berkah Jasa untuk wilayah ${location}` />
+    <Hero className="py-10 md:py-16" location={location} purpose={purpose} />
     <Priorities className="pt-10 md:pt-16" />
     <Services className="py-10 md:py-16" />
     <Testimonies className="py-10 md:py-16" />
-    <CTA className="py-10 md:py-16" location={location} />
+    <CTA className="py-10 md:py-16" location={location} purpose={purpose} />
   </main>
 </Layout>

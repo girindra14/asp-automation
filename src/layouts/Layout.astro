@@ -4,10 +4,11 @@ import Footer from "./Footer.astro";
 
 export interface Props {
   location: string;
+  purpose: string;
   canonicalUrl: string;
 }
 
-const { location, canonicalUrl } = Astro.props;
+const { location, purpose, canonicalUrl } = Astro.props;
 ---
 
 <html lang="id">
@@ -17,14 +18,14 @@ const { location, canonicalUrl } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta
       name="title"
-      content=`Berkah Jasa - Jasa Urus Izin Usaha di ${location}`
+      content=`Berkah Jasa - Jasa Urus ${purpose} di ${location}`
     />
     <meta
       name="description"
-      content=`Berkah Jasa mempermudah pengurusan izin usaha Anda, mulai izin pendirian CV, PT, dan berbagai izin usaha lainnya untuk wilayah ${location} hingga seluruh Indonesia.`
+      content=`Berkah Jasa mempermudah pengurusan izin usaha Anda, mulai ${purpose}, dan berbagai izin usaha lainnya untuk wilayah ${location} hingga seluruh Indonesia.`
     />
     <link rel="canonical" href={canonicalUrl} />
-    <title>Berkah Jasa - Jasa Urus Izin Usaha di ${location}</title>
+    <title>Berkah Jasa - Jasa Urus {purpose} di {location}</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -32,7 +33,7 @@ const { location, canonicalUrl } = Astro.props;
     <link rel="stylesheet" href="/jasaberkah/style/custom.css" />
   </head>
   <body class="overflow-hidden overflow-y-auto bg-body">
-    <Navbar location={location} />
+    <Navbar location={location} purpose={purpose} />
     <slot />
     <Footer />
   </body>

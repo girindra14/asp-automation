@@ -16,9 +16,10 @@ import PSE from "../shared/PSE.astro";
 export interface Props {
   className?: string;
   location: string;
+  purpose: string;
 }
 
-const { className, location } = Astro.props;
+const { className, location, purpose } = Astro.props;
 ---
 
 <section class=`relative pt-32 lg:pt-36 ${className}`>
@@ -36,7 +37,7 @@ const { className, location } = Astro.props;
         Anda Dengan Berkah Jasa
       </h1>
       <Paragraph className="mt-8 ">
-        Mulai izin pendirian <GradiantText><strong>CV, PT, berbagai izin usaha lainnya</strong></GradiantText>, untuk wilayah <GradiantText><strong>{location}</strong></GradiantText> hingga <GradiantText><strong>seluruh Indonesia</strong></GradiantText>.
+        Mulai izin pembuatan <GradiantText><strong>CV, PT, NIB, hingga berbagai izin usaha lainnya</strong></GradiantText>, untuk wilayah <GradiantText><strong>{location}</strong></GradiantText> hingga <GradiantText><strong>seluruh Indonesia</strong></GradiantText>.
       </Paragraph>
 
       <div class="mt-8 w-full flex flex-col">
@@ -45,7 +46,7 @@ const { className, location } = Astro.props;
             <Portofolio />
           </div>
           <div class="lg:mx-auto mb-8">
-            <CtaButton location={location} />
+            <CtaButton location={location} purpose={purpose} />
           </div>
           <div class="lg:mx-auto mb-8">
             <PSE />
