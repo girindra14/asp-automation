@@ -33,6 +33,14 @@ const { location, purpose, canonicalUrl } = Astro.props;
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/style/custom.css" />
+    <!-- Data Layer for GTM (Google Tag Manager) -->
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+    </script>
+    <!-- End Data Layer for GTM (Google Tag Manager) -->
     <!-- GTM (Google Tag Manager) -->
     <script is:inline>
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
