@@ -4,7 +4,14 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), sitemap()],
+  integrations: [
+    tailwind(),
+    sitemap({
+      changefreq: "daily",
+      priority: 1,
+      lastmod: new Date(),
+    }),
+  ],
   site: "https://jasaberkah.id",
   base: "",
 });
