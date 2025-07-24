@@ -30,6 +30,8 @@ const { location, purpose, canonicalUrl } = Astro.props;
     />
     <link rel="canonical" href={canonicalUrl} />
     <title>Berkah Jasa - Jasa Urus {purpose} di {location}</title>
+    <link rel="dns-prefetch" href={canonicalUrl}>
+    <link rel="preconnect" href={canonicalUrl} crossorigin>
     <Fragment set:html={`<style>${customCSS}</style>`} />
     <!-- GSC -->
     <meta name="google-site-verification" content="iNcx25s2rV9q_29woQd_HQwGSUN2xibBBB-Kpw52HFg" />
