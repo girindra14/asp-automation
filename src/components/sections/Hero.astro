@@ -64,24 +64,30 @@ const { className, location, purpose } = Astro.props;
           loading="lazy"
           src={hero1}
           alt="Berkah Jasa Surabaya"
-          width="2350"
-          height="2359"
+          width={921}
+          height={614}
+          sizes="(min-width: 1024px) 921px, 576px"
+          format="webp"
           class="carousel-img absolute inset-0 w-full h-full object-cover opacity-100 z-20 transition-opacity duration-1000"
         />
         <Image
           loading="lazy"
           src={hero2}
           alt="Berkah Jasa Sidoarjo"
-          width="2350"
-          height="2359"
+          width={921}
+          height={614}
+          sizes="(min-width: 1024px) 921px, 576px"
+          format="webp"
           class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 z-10 transition-opacity duration-1000"
         />
         <Image
           loading="lazy"
           src={hero3}
           alt="Berkah Jasa Gresik"
-          width="2350"
-          height="2359"
+          width={921}
+          height={614}
+          sizes="(min-width: 1024px) 921px, 576px"
+          format="webp"
           class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 z-10 transition-opacity duration-1000"
         />
       </div>
