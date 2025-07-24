@@ -1,6 +1,7 @@
 ---
 import Navbar from "./Navbar.astro";
 import Footer from "./Footer.astro";
+import customCSS from "../assets/style/custom.css?inline";
 
 export interface Props {
   location: string;
@@ -29,11 +30,7 @@ const { location, purpose, canonicalUrl } = Astro.props;
     />
     <link rel="canonical" href={canonicalUrl} />
     <title>Berkah Jasa - Jasa Urus {purpose} di {location}</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/style/custom.css" />
+    <Fragment set:html={`<style>${customCSS}</style>`} />
     <!-- GSC -->
     <meta name="google-site-verification" content="iNcx25s2rV9q_29woQd_HQwGSUN2xibBBB-Kpw52HFg" />
     <!-- End GSC -->

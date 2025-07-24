@@ -1,5 +1,5 @@
 ---
-import Service from "../cards/Service.astro";
+import Testimony from "../cards/Testimony.astro";
 import Container from "../shared/Container.astro";
 import Title from "../shared/Title.astro";
 import { testimonies } from "../../utils/data.ts";
@@ -7,7 +7,7 @@ import GradiantText from "../shared/GradiantText.astro";
 
 type TestimoniesProps = {
   title: string;
-  star: string;
+  star: number;
   features: string[];
   icon: ImageMetadata;
   link: string;
@@ -46,14 +46,14 @@ const { className } = Astro.props;
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
       {
-        testimonies.map((service: TestimoniesProps) => {
+        testimonies.map((testimony: TestimoniesProps) => {
           return (
-            <Service
-              title={service.title}
-              star={service.star}
-              features={service.features}
-              icon={service.icon}
-              link={service.link}
+            <Testimony
+              title={testimony.title}
+              star={testimony.star}
+              features={testimony.features}
+              icon={testimony.icon}
+              link={testimony.link}
             />
           );
         })
