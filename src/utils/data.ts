@@ -5,6 +5,144 @@ import testimoni4 from "../assets/images/testimoni4.webp";
 import testimoni5 from "../assets/images/testimoni5.webp";
 import testimoni6 from "../assets/images/testimoni6.webp";
 
+export const cities = [
+  {
+    slug: "bangkalan",
+    name: "Kabupaten Bangkalan"
+  },
+  {
+    slug: "banyuwangi",
+    name: "Kabupaten Banyuwangi"
+  },
+    {
+    slug: "blitar",
+    name: "Kota/Kabupaten Blitar"
+  },
+  {
+    slug: "bojonegoro",
+    name: "Kabupaten Bojonegoro"
+  },
+  {
+    slug: "bondowoso",
+    name: "Kabupaten Bondowoso"
+  },
+  {
+    slug: "gresik",
+    name: "Kabupaten Gresik"
+  },
+  {
+    slug: "jember",
+    name: "Kabupaten Jember"
+  },
+  {
+    slug: "jombang",
+    name: "Kabupaten Jombang"
+  },
+  {
+    slug: "kediri",
+    name: "Kota/Kabupaten Kediri"
+  },
+  {
+    slug: "lamongan",
+    name: "Kabupaten Lamongan"
+  },
+  {
+    slug: "lumajang",
+    name: "Kabupaten Lumajang"
+  },
+  {
+    slug: "madiun",
+    name: "Kota/Kabupaten Madiun"
+  },
+  {
+    slug: "magetan",
+    name: "Kabupaten Magetan"
+  },
+  {
+    slug: "malang",
+    name: "Kota/Kabupaten Malang"
+  },
+  {
+    slug: "mojokerto",
+    name: "Kota/Kabupaten Mojokerto"
+  },
+  {
+    slug: "nganjuk",
+    name: "Kabupaten Nganjuk"
+  },
+  {
+    slug: "pacitan",
+    name: "Kabupaten Pacitan"
+  },
+  {
+    slug: "pamekasan",
+    name: "Kabupaten Pamekasan"
+  },
+  {
+    slug: "pasuruan",
+    name: "Kota/Kabupaten Pasuruan"
+  },
+  {
+    slug: "ponorogo",
+    name: "Kabupaten Ponorogo"
+  },
+  {
+    slug: "probolinggo",
+    name: "Kota/Kabupaten Probolinggo"
+  },
+  {
+    slug: "sampang",
+    name: "Kabupaten Sampang"
+  },
+  {
+    slug: "sidoarjo",
+    name: "Kabupaten Sidoarjo"
+  },
+  {
+    slug: "situbondo",
+    name: "Kabupaten Situbondo"
+  },
+  {
+    slug: "sumenep",
+    name: "Kabupaten Sumenep"
+  },
+  {
+    slug: "trenggalek",
+    name: "Kabupaten Trenggalek"
+  },
+  {
+    slug: "tuban",
+    name: "Kabupaten Tuban"
+  },
+  {
+    slug: "tulungagung",
+    name: "Kabupaten Tulungagung"
+  },
+  {
+    slug: "batu",
+    name: "Kota Batu"
+  },
+  {
+    slug: "surabaya",
+    name: "Kota surabaya"
+  },
+]
+
+export const purposes = [
+  {
+    slug: "nib",
+    name: "Izin Pembuatan NIB"
+  },
+  {
+    slug: "cv",
+    name: "Izin Pembuatan CV"
+  },
+  {
+    slug: "pt",
+    name: "Izin Pembuatan PT"
+  },
+]
+
 const testimonies = [
   {
     title: "Adit Firmansyah",
