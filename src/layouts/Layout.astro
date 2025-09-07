@@ -2,7 +2,7 @@
 import Navbar from "./Navbar.astro";
 import Footer from "./Footer.astro";
 import customCSS from "../assets/style/custom.css?inline";
-
+import { getSchema } from "../utils/schema.ts";
 export interface Props {
   location: string;
   purpose: string;
@@ -10,6 +10,7 @@ export interface Props {
 }
 
 const { location, purpose, canonicalUrl } = Astro.props;
+const schema = getSchema();
 ---
 
 <html lang="id">
@@ -53,6 +54,9 @@ const { location, purpose, canonicalUrl } = Astro.props;
       })(window,document,'script','dataLayer','GTM-5M2JWJXN');
     </script>
     <!-- End GTM (Google Tag Manager) -->
+    <!-- Rich Snippet Review JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(schema)}></script>
+    <!-- End Rich Snippet Review JSON-LD -->
   </head>
   <body class="overflow-hidden overflow-y-auto bg-body">
     <!-- GTM (Google Tag Manager) (noscript) -->

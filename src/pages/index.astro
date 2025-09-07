@@ -6,6 +6,7 @@ import Services from "../components/sections/Services.astro";
 import CTA from "../components/sections/CTA.astro";
 import Priorities from "../components/sections/Priorities.astro";
 import Whatsapp from "../components/shared/Whatsapp.astro";
+import FAQ from "../components/sections/FAQ.astro";
 
 const location = "Provinsi Jawa Timur";
 const purpose = "Izin Pembuatan CV, PT, NIB";
@@ -20,6 +21,7 @@ const canonicalUrl = `https://jasaberkah.id${pathname}`;
     <Priorities className="pt-10 md:pt-16" />
     <Services className="py-10 md:py-16" />
     <Testimonies className="py-10 md:py-16" />
+    <FAQ className="py-10 md:py-16" />
     <CTA className="py-10 md:py-16" location={location} purpose={purpose} />
   </main>
 </Layout>
