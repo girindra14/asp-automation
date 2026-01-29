@@ -1,9 +1,19 @@
+import problem1 from "../../assets/images/problems/problem1.svg";
+import problem2 from "../../assets/images/problems/problem2.svg";
+import problem3 from "../../assets/images/problems/problem3.svg";
+import problem4 from "../../assets/images/problems/problem4.svg";
+import problem5 from "../../assets/images/problems/problem5.svg";
+import problem6 from "../../assets/images/problems/problem6.svg";
+import problem7 from "../../assets/images/problems/problem7.svg";
+import problem8 from "../../assets/images/problems/problem7.svg";
+import problem9 from "../../assets/images/problems/problem7.svg";
+import problem1_3 from "../../assets/images/problems/problem1_3.webp";
+import problem4_6 from "../../assets/images/problems/problem4_6.webp";
+import problem7_9 from "../../assets/images/problems/problem7_9.webp";
+
 import { useEffect } from "react";
 
-export default function Problems({
-    paintpoint_headline,
-    paint_points
-}) {
+export default function Problems({ paintpoint_headline }) {
     useEffect(() => {
         const applyStylesToStrongChildren = () => {
             const elements = document.querySelectorAll('.paintpoint-headline strong');
@@ -14,6 +24,62 @@ export default function Problems({
         };
         applyStylesToStrongChildren();
     });
+    const paint_points = [
+        {
+            name: "For manufacturing processes and operations",
+            image: problem1_3,
+            paint_point_items: [
+                {
+                    image: problem1,
+                    explanation: "Australia's older welders find it hard to transfer skills to younger staff"
+                },
+                {
+                    image: problem2,
+                    explanation: "Labor shortages delay production schedules"
+                },
+                {
+                    image: problem3,
+                    explanation: "Inconsistent quality and high defect rate"
+                }
+            ]
+        },
+        {
+            name: "For introduction of automatic machines",
+            image: problem4_6,
+            paint_point_items: [
+                {
+                    image: problem4,
+                    explanation: "Current machine jig replacement is too costly to afford"
+                },
+                {
+                    image: problem5,
+                    explanation: "In Australia, existing automatic machines fail to reach the target production volume"
+                },
+                {
+                    image: problem6,
+                    explanation: "Hard to locate an automatic machine that fits both technical and budget constraints"
+                }
+            ]
+        },
+        {
+            name: "For outsourcing",
+            image: problem7_9,
+            paint_point_items: [
+                {
+                    image: problem7,
+                    explanation: "Outsourcing processes result in higher costs, which are not economical for customers"
+                },
+                {
+                    image: problem8,
+                    explanation: "Outsourced welding tasks face high defect rates, showing the need to install advanced machines"
+                },
+                {
+                    image: problem9,
+                    explanation: "Insufficient welders affecting in-house production quality"
+                }
+            ]
+        }
+    ];
     return (
         <section
             id="problems"

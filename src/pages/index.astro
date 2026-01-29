@@ -17,29 +17,88 @@ import Map from "../components/sections/Map";
 
 <Layout>
     <Navbar />
-    <Hero />
-    <Application />
-    <div className="relative">
-        <CTA message={1} />
-        <div className="bg-clip-1 bg-jmso-dark-blue-alt w-full absolute h-full -bottom-px"></div>
+    <Hero
+        hero_headline={"Delivering Australia Welding Machines with Superior Japanese Qualities"}
+        hero_sub_headline={"With 30+ years of expertise, our Japanese experts designed tailored welding machines for all industrial and material needs"}
+        hero_headline_data={"Lower defect rates optimally"}
+        hero_quote={"We provide on-site training, no welding staff required."}
+    />
+    <Application
+        feature_headline={"Application"}
+        feature_description={"Providing extensive welding services, we cover semiconductor equipment parts, ultra-high vacuum components, pressure-resistant parts, thermocouple sheaths, and various needs."}
+        feature_industry_headline={"Navigating Australia's Industry Challenges with Welding Machine"}
+        feature_industry_description={
+        `Australia, known for its vast resources and remote regions, is heavily reliant on sectors like mining and construction. However, labor shortages and the logistical challenges of working in harsh, isolated environments have intensified the need for more efficient solutions. Rising infrastructure demands require advanced technologies to bridge the gap in manpower and ensure quality and durability across long-term projects.
+         Automatic welding machines are essential in addressing these challenges, offering precision and durability that manual labor often falls short of in remote or high-stakes conditions. By automating welding processes, industries can overcome labor shortages and enhance productivity, ensuring projects remain on schedule while maintaining high standards of safety and quality.`
+        }
+    />
+    <div class="relative">
+        <CTA
+            feature_quote={"JMSO provides customized solutions designed to solve unique welding challenges in Australia."}
+            machine_quote={""}
+            case_study_quote={""}
+            message={1}
+        />
+        <div class="bg-clip-1 bg-jmso-dark-blue-alt w-full absolute h-full -bottom-px"></div>
     </div>
-    <Problems />
-    <Chart />
-    <Approach />
-    <div className="relative">
-        <CTA message={2} />
-        <div className="bg-clip-2 bg-jmso-light-blue w-full absolute h-full -top-px"></div>
+    <Problems
+        paintpoint_headline={"Do you encounter any of these issues?"}
+    />
+    <Chart
+        service_headline={"Discover JMSO's premier automation solutions, developed by welders with 30+ years of experience"}
+        service_description={"Our comprehensive services are designed to elevate your business, featuring business optimization consulting, automatic machine development and delivery, and training on new equipment."}
+        service_explanation={"Understanding the overall picture of your company’s issues and processes, our skilled welder technicians create automatic welding machines in Japan. We offer thorough support and technical training, enabling even inexperienced staff to use the machinery effectively."}
+    />
+    <Approach
+        approach_headline_1={"1. Business optimization consulting"}
+        approach_headline_1_explanation_1={"We are committed to understanding your company's issues and concerns fully."}
+        approach_headline_1_explanation_2={"Expert welders review your process and identify critical problem areas."}
+        approach_headline_1_explanation_3={"VA/VE proposals: We formulate proposals to optimize drawings, welding shapes, and machining designs, enhancing work efficiency. We also offer automation solutions."}
+        approach_headline_1_footnote={"＊VA: Value Analysis, VE: Value Engineering"}
+        approach_headline_2={"2. Development and delivery of automatic machines"}
+        approach_headline_2_explanation_1={"Designed and developed by our welders, our comprehensive automatic machines meet your company's requirements, including mass production targets, materials, machining geometry, welding geometry, and other specifications."}
+        approach_headline_2_explanation_2={"These JMSO-designed machines, made in Japan, aim to cut initial and maintenance costs while minimizing breakdowns."}
+        approach_headline_2_explanation_3={"We conduct test mass production to ensure the machine aligns with your production requirements."}
+        approach_headline_2_footnote={""}
+        approach_headline_3={"3. On-the-job training for new machines as well as maintenance support"}
+        approach_headline_3_explanation_1={"Advanced technical training ensures high-quality results are consistently produced."}
+        approach_headline_3_explanation_2={"We offer full guarantees and after-sales service."}
+        approach_headline_3_footnote={""}
+        approach_quote={"Considering automation? We are available to address your needs, whether they are cost or process related. We make samples and test mass manufacturing before launching your product, so you can be certain in its effectiveness."}
+    />
+    <div class="relative">
+        <CTA
+            feature_quote={""}
+            machine_quote={"JMSO offers growth-oriented solutions in Singapore through japanese welding machines."}
+            case_study_quote={""}
+            message={2}
+        />
+        <div class="bg-clip-2 bg-jmso-light-blue w-full absolute h-full -top-px"></div>
     </div>
     <CaseStudy />
-    <div className="relative">
-        <CTA message={3} />
-        <div className="bg-clip-3 bg-gradient-to-r from-jmso-dark-blue to-[#0050A8] w-full absolute h-full -bottom-px"></div>
+    <div class="relative">
+        <CTA
+            feature_quote={""}
+            machine_quote={""}
+            case_study_quote={"JMSO leverages Japanese welding machines for your company-specific solutions."}
+            message={3}
+        />
+        <div class="bg-clip-3 bg-gradient-to-r from-jmso-dark-blue to-[#0050A8] w-full absolute h-full -bottom-px"></div>
     </div>
-    <div className="relative bg-gradient-to-tr from-jmso-dark-blue from-50% to-[#0050A8] pt-8 md:pt-12 lg:pt-20">
-        <div className="bg-clip-4 bg-jmso-dark-blue w-full absolute h-8 md:h-12 lg:h-20 bottom-px translate-y-full"></div>
+    <div class="relative bg-gradient-to-tr from-jmso-dark-blue from-50% to-[#0050A8] pt-8 md:pt-12 lg:pt-20">
+        <div class="bg-clip-4 bg-jmso-dark-blue w-full absolute h-8 md:h-12 lg:h-20 bottom-px translate-y-full"></div>
     </div>
     <SupportSteps />
     <FAQ />
-    <About />
-    <Contact />
+    <About
+        is_country_lp={true}
+        about_us_quote={"Australia’s manufacturing industry is being transformed by JMSO’s technological innovations. We offer a broad range of services, including proposals, development projects, design improvements, training, and consulting in production technology."}
+    />
+    <Contact
+        contact_form_one_liner={"Feel free to reach out to our Australia representative with any concerns about the welding process, issues you are currently facing, or automation queries."}
+        lp_type={""}
+        lp_name={""}
+        baseUrl={""}
+        slug={""}
+    />
 </Layout>

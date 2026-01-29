@@ -1,8 +1,42 @@
+import case1 from "../../assets/images/case_studies/case1.webp";
+import case2 from "../../assets/images/case_studies/case2.webp";
+import case3 from "../../assets/images/case_studies/case3.webp";
+
 import React from "react";
 
-export default function CaseStudy({
-  case_studies
-}) {
+export default function CaseStudy() {
+  const case_studies = [
+      {
+        name: "Improvement of TIG welding work",
+        image: case1,
+        type: "for industrial machinery",
+        country: "Japan",
+        company_size: "US$10.2 million in annual sales",
+        issue_request: "Employees tasked with welding for mass production and single items face challenges as aging has diminished the capabilities of veteran welders. The company has been searching for new welders, but experienced candidates are hard to find. Even those available lack the required skills. As a result, projects assigned to other welders have not maintained the same volume and sales, impacting the company's productivity and revenue.",
+        solution: "The automatic welding machine has eliminated the need to hire new welders, cutting recruitment expenses. The company's profit margin has improved since even employees with no welding experience can use the machine effectively.",
+        product_cost: "US$34,000"
+      },
+      {
+        name: "Improvement of TIG welding work",
+        image: case2,
+        type: "semiconductor industry",
+        country: "Vietnam",
+        company_size: "US$340 million in annual sales",
+        issue_request: "Mass-produced products had a 10% defect rate due to manual welding. While repairs were possible, corrections with machine tools and re-welding made the process inefficient.",
+        solution: "By adopting an automatic welding machine, the defect rate for mass-produced items decreased from 10% to 2%. The reduction in required correction work led to a significant boost in work efficiency.",
+        product_cost: "US$68,000"
+      },
+      {
+        name: "Improvement of Laser welding work",
+        image: case3,
+        type: "for microminiature parts related to fishing tackle",
+        country: "Philippines",
+        company_size: "US$68 million in annual sales",
+        issue_request: "While their existing machine applied the method to set up 30 pieces side by side on the welding table and weld 30 pieces in a row, JMSO's automatic welding machine can weld one piece per about one second while rotating the machine, produce 40 pieces per 1 minute. The repetition of this process has increased production to 13,000 pieces per day.",
+        solution: "Utilizing a specialized automatic welding machine priced at US $204,000, the company initially produced 2,000 microminiature fishing parts per day. However, the Covid-19 period saw a dramatic increase in fishing customers, leading to a significant surge in demand. Consequently, the company had to ramp up production to over 10,000 pieces daily to fulfill orders.",
+        product_cost: "US$23,800"
+      }
+  ];
   return (
     <section id="case-study" className="relative py-8 md:py-12 lg:py-20">
       <div className="container">

@@ -1,16 +1,23 @@
-import bg from "../../../assets/images/application-bg.png";
-import automotive from "../../../assets/images/industries/automotive.png";
-import biotech from "../../../assets/images/industries/biotech.png";
-import lcd from "../../../assets/images/industries/lcd.png";
-import medical from "../../../assets/images/industries/medical.png";
-import rocket from "../../../assets/images/industries/rocket.png";
-import semiconductor from "../../../assets/images/industries/semiconductor.png";
-import automotiveMobile from "../../../assets/images/industries/automotive-mobile.png";
-import biotechMobile from "../../../assets/images/industries/biotech-mobile.png";
-import lcdMobile from "../../../assets/images/industries/lcd-mobile.png";
-import medicalMobile from "../../../assets/images/industries/medical-mobile.png";
-import rocketMobile from "../../../assets/images/industries/rocket-mobile.png";
-import semiconductorMobile from "../../../assets/images/industries/semiconductor-mobile.png";
+import bg from "../../assets/images/application-bg.png";
+import automotive from "../../assets/images/industries/automotive.png";
+import biotech from "../../assets/images/industries/biotech.png";
+import lcd from "../../assets/images/industries/lcd.png";
+import medical from "../../assets/images/industries/medical.png";
+import rocket from "../../assets/images/industries/rocket.png";
+import semiconductor from "../../assets/images/industries/semiconductor.png";
+import automotiveMobile from "../../assets/images/industries/automotive-mobile.png";
+import biotechMobile from "../../assets/images/industries/biotech-mobile.png";
+import lcdMobile from "../../assets/images/industries/lcd-mobile.png";
+import medicalMobile from "../../assets/images/industries/medical-mobile.png";
+import rocketMobile from "../../assets/images/industries/rocket-mobile.png";
+import semiconductorMobile from "../../assets/images/industries/semiconductor-mobile.png";
+import tig1 from "../../assets/images/welding_types/tig1.webp";
+import tig1 from "../../assets/images/welding_types/tig2.webp";
+import tig2 from "../../assets/images/welding_types/tig3.webp";
+import tig3 from "../../assets/images/welding_types/mig1.webp";
+import mig1 from "../../assets/images/welding_types/mig2.webp";
+import stick1 from "../../assets/images/welding_types/stick1.webp";
+import stick2 from "../../assets/images/welding_types/stick2.webp";
 
 import { useEffect } from "react";
 import {
@@ -22,8 +29,6 @@ import {
 export default function Application({
     feature_headline,
     feature_description,
-    welding_types,
-    materials,
     feature_industry_headline,
     feature_industry_description
 }) {
@@ -47,6 +52,30 @@ export default function Application({
         };
         applyStylesToStrongChildren();
     });
+    const welding_types = [
+        {
+            name: "TIG Welding",
+            images: [tig1, tig2, tig3]
+        },
+        {
+            name: "MIG Welding",
+            images: [mig1, mig2]
+        },
+        {
+            name: "Stick Welding",
+            images: [stick1, stick2]
+        }
+    ];
+
+    const materials = [
+        { name: "Aluminium" },
+        { name: "Hastelloy" },
+        { name: "Inconel" },
+        { name: "Iron" },
+        { name: "Stainless Steel" },
+        { name: "Stellite" },
+        { name: "Titanium" }
+    ];
     const industries = [
         {
             title: "Semiconductor manufacturing equipment parts",
