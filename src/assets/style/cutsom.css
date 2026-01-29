@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-heading font-bold tracking-tighter;
+    }
+    h1 strong,
+    h2 strong,
+    h3 strong,
+    h4 strong,
+    h5 strong,
+    h6 strong {
+        font-weight: inherit;
+    }
+    section {
+        @apply scroll-mt-[calc(65px+2remå)] lg:scroll-mt-[calc(73px+2rem)];
+    }
+    a {
+        @apply ease-in-out duration-200;
+    }
+    input,
+    select,
+    textarea,
+    button {
+        @apply focus-visible:ring-1 ring-offset-0 focus:ring-jmso-light-blue focus-visible:ring-offset-0 focus-visible:ring-jmso-light-blue !important;
+    }
+}
+
+@layer components {
+    .jmso-heading {
+        @apply text-4xl lg:text-5xl underline underline-offset-[6px] lg:underline-offset-[20px] decoration-jmso-tosca leading-none;
+    }
+    .jmso-subheading {
+        @apply text-3xl lg:text-[40px] leading-none;
+    }
+}
+@layer utilities {
+    .underline-heading {
+        border-image: linear-gradient(#f6b73c, #4d9f0c) 30;
+        border-width: 4px;
+        border-style: solid;
+        border-radius: 32px;
+    }
+    .curved-underline {
+        position: relative;
+    }
+    .curved-underline:after {
+        content: "";
+        position: absolute;
+        bottom: -12px;
+        left: 0;
+        height: 10px;
+        width: 100%;
+        border: solid 4px #ff0000;
+        border-color: #ff0000 transparent transparent transparent;
+        border-radius: 50%;
+    }
+    .bg-clip-1 {
+        clip-path: polygon(0 0, 100% 75%, 100% 100%, 0% 100%);
+    }
+    .bg-clip-2 {
+        clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    }
+    .bg-clip-3 {
+        clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+    }
+    .bg-clip-4 {
+        clip-path: polygon(0 0, 0% 100%, 100% 0);
+    }
+}

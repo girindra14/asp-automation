@@ -1,27 +1,45 @@
 ---
+import Application from "../components/sections/Application.astro";
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/sections/Hero.astro";
-import Testimonies from "../components/sections/Testimonies.astro";
-import Services from "../components/sections/Services.astro";
-import CTA from "../components/sections/CTA.astro";
-import Priorities from "../components/sections/Priorities.astro";
-import Whatsapp from "../components/shared/Whatsapp.astro";
-import FAQ from "../components/sections/FAQ.astro";
-
-const location = "Provinsi Jawa Timur";
-const purpose = "Izin Pembuatan CV, PT, NIB";
-const pathname = Astro.url.pathname;
-const canonicalUrl = `https://jasaberkah.id${pathname}`;
+import Navbar from "../components/ui/Navbar.astro";
+import Hero from "../components/sections/Hero";
+import CTA from "../components/sections/CTA";
+import Problems from "../components/sections/Problems";
+import Chart from "../components/sections/Chart";
+import Approach from "../components/sections/Approach";
+import CaseStudy from "../components/sections/CaseStudy";
+import SupportSteps from "../components/sections/SupportSteps";
+import FAQ from "../components/sections/FAQ";
+import About from "../components/sections/About";
+import Contact from "../components/sections/Contact";
+import Map from "../components/sections/Map";
 ---
 
-<Layout location={location} purpose={purpose} canonicalUrl={canonicalUrl}>
-  <main class="flex flex-col overflow-hidden">
-    <Whatsapp useApi="true" mobile="6281249863105" message=`Hai Kak, Saya ingin tahu lebih lanjut mengenai jasa pengurusan ${purpose} di Berkah Jasa untuk wilayah ${location}` />
-    <Hero className="py-10 md:py-16" location={location} purpose={purpose} />
-    <Priorities className="pt-10 md:pt-16" />
-    <Services className="py-10 md:py-16" />
-    <Testimonies className="py-10 md:py-16" />
-    <FAQ className="py-10 md:py-16" />
-    <CTA className="py-10 md:py-16" location={location} purpose={purpose} />
-  </main>
-</Layout>
+<Layout>
+    <Navbar />
+    <Hero />
+    <Application />
+    <div className="relative">
+        <CTA message={1} />
+        <div className="bg-clip-1 bg-jmso-dark-blue-alt w-full absolute h-full -bottom-px"></div>
+    </div>
+    <Problems />
+    <Chart />
+    <Approach />
+    <div className="relative">
+        <CTA message={2} />
+        <div className="bg-clip-2 bg-jmso-light-blue w-full absolute h-full -top-px"></div>
+    </div>
+    <CaseStudy />
+    <div className="relative">
+        <CTA message={3} />
+        <div className="bg-clip-3 bg-gradient-to-r from-jmso-dark-blue to-[#0050A8] w-full absolute h-full -bottom-px"></div>
+    </div>
+    <div className="relative bg-gradient-to-tr from-jmso-dark-blue from-50% to-[#0050A8] pt-8 md:pt-12 lg:pt-20">
+        <div className="bg-clip-4 bg-jmso-dark-blue w-full absolute h-8 md:h-12 lg:h-20 bottom-px translate-y-full"></div>
+    </div>
+    <SupportSteps />
+    <FAQ />
+    <About />
+    <Contact />
+  </Layout>
