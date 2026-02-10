@@ -2,7 +2,7 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 import { Check, X, CaretDown } from "@phosphor-icons/react/dist/ssr";
-import { Button } from "@/Components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -14,7 +14,7 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/Components/ui/popover";
+} from "@/components/ui/popover";
 import { Badge } from "@/components/ui/badge";
 
 export type OptionType = {

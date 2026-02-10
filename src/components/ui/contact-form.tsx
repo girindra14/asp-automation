@@ -11,7 +11,7 @@ import {
     FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/Components/ui/button";
+import { Button } from "@/components/ui/button";
 // import {
 //   Select,
 //   SelectContent,
@@ -30,7 +30,7 @@ import {
     Popover,
     PopoverContent,
     PopoverTrigger,
-} from "@/Components/ui/popover";
+} from "@/components/ui/popover";
 import {
     Command,
     CommandEmpty,

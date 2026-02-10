@@ -12,10 +12,10 @@ import medicalMobile from "../../assets/images/industries/medical-mobile.png";
 import rocketMobile from "../../assets/images/industries/rocket-mobile.png";
 import semiconductorMobile from "../../assets/images/industries/semiconductor-mobile.png";
 import tig1 from "../../assets/images/welding_types/tig1.webp";
-import tig1 from "../../assets/images/welding_types/tig2.webp";
-import tig2 from "../../assets/images/welding_types/tig3.webp";
-import tig3 from "../../assets/images/welding_types/mig1.webp";
-import mig1 from "../../assets/images/welding_types/mig2.webp";
+import tig2 from "../../assets/images/welding_types/tig2.webp";
+import tig3 from "../../assets/images/welding_types/tig3.webp";
+import mig1 from "../../assets/images/welding_types/mig1.webp";
+import mig2 from "../../assets/images/welding_types/mig2.webp";
 import stick1 from "../../assets/images/welding_types/stick1.webp";
 import stick2 from "../../assets/images/welding_types/stick2.webp";
 

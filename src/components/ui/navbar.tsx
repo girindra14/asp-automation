@@ -1,6 +1,6 @@
 import logo from "../../../assets/images/jmso-logo.png";
 import logoShort from "../../../assets/images/favicon.png";
-import { Button } from "@/Components/ui/button";
+import { Button } from "@/components/ui/button";
 import MobileNav from "@/components/ui/mobile-nav";
 
 import React from "react";

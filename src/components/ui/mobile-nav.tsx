@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/sheet";
 import { List, X } from "@phosphor-icons/react/dist/ssr";
 import { useEffect, useState } from "react";
-import { Button } from "@/Components/ui/button";
+import { Button } from "@/components/ui/button";
 import React from "react";
 
 export default function MobileNav({

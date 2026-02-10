@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ChartSlider } from "@/Components/ui/swiper";
+import { ChartSlider } from "@/components/ui/swiper";
 import chart from "../../../assets/images/jmso-chart-en.png";
 import chart_mobile from "../../../assets/images/jmso-chart-mobile-en.png";
 export default function Chart({
