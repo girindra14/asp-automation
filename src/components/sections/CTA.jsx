@@ -1,5 +1,5 @@
 import { Button } from "../ui/button";
-import ctaBg from "../../../assets/images/cta-bg.png";
+import ctaBg from "../../assets/images/cta-bg.png";
 import React from "react";
 
 export default function CTA({
@@ -14,7 +14,7 @@ export default function CTA({
                 <div className="shadow-md">
                     <div className="rounded-xl relative overflow-hidden">
                         <img
-                            src={ctaBg}
+                            src={ctaBg.src}
                             alt="Contact Us"
                             className="absolute w-full h-full inset-0 select-none pointer-events-none object-cover"
                         />

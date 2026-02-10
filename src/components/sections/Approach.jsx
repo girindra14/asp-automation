@@ -1,8 +1,8 @@
 import Machine from "../ui/machine-slider";
-import approach_corner from "../../../assets/images/tosca-corner-blur.svg";
-import approach_1 from "../../../assets/images/approach/approach-1.png";
-import approach_2 from "../../../assets/images/approach/approach-2.png";
-import approach_3 from "../../../assets/images/approach/approach-3.png";
+import approach_corner from "../../assets/images/tosca-corner-blur.svg";
+import approach_1 from "../../assets/images/approach/approach-1.png";
+import approach_2 from "../../assets/images/approach/approach-2.png";
+import approach_3 from "../../assets/images/approach/approach-3.png";
 import React from "react";
 
 export default function Approach({
@@ -78,12 +78,12 @@ export default function Approach({
                                 </h3>
                                 <div className="flex flex-col md:flex-row items-center gap-0 lg:gap-8 bg-jmso-dark-blue relative rounded-xl overflow-hidden">
                                     <img
-                                        src={approach_corner}
+                                        src={approach_corner.src}
                                         alt={"Corner"}
                                         className="w-full h-auto absolute top-0 -translate-y-1/2 right-0 translate-x-1/2"
                                     />
                                     <img
-                                        src={c.image}
+                                        src={c.image.src}
                                         alt={c.title}
                                         className="w-full md:w-[50%] lg:w-[30rem] h-full object-cover"
                                     />

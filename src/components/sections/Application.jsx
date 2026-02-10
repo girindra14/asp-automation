@@ -14,10 +14,10 @@ import semiconductorMobile from "../../assets/images/industries/semiconductor-mo
 import tig1 from "../../assets/images/welding_types/tig1.webp";
 import tig2 from "../../assets/images/welding_types/tig2.webp";
 import tig3 from "../../assets/images/welding_types/tig3.webp";
-import mig1 from "../../assets/images/welding_types/mig1.webp";
-import mig2 from "../../assets/images/welding_types/mig2.webp";
-import stick1 from "../../assets/images/welding_types/stick1.webp";
-import stick2 from "../../assets/images/welding_types/stick2.webp";
+import mig1 from "../../assets/images/welding_types/mig1.jpg";
+import mig2 from "../../assets/images/welding_types/mig2.jpg";
+import stick1 from "../../assets/images/welding_types/stick1.jpg";
+import stick2 from "../../assets/images/welding_types/stick2.jpg";
 
 import { useEffect } from "react";
 import {
@@ -111,7 +111,7 @@ export default function Application({
     return (
         <section id="application" className="relative py-8 md:py-12 lg:py-20">
             <img
-                src={bg}
+                src={bg.src}
                 alt="Application"
                 className="absolute top-0 left-1/2 -translate-x-1/2 w-full select-none pointer-events-none"
             />
@@ -129,25 +129,23 @@ export default function Application({
                     </h3>
                     <div className="flex flex-wrap gap-4 lg:gap-8 justify-center w-full">
                         {welding_types.map((item, index) => (
-                            <div className="rounded-md bg-white border border-gray-200 p-4 w-full md:w-max">
+                            <div key={item.name} className="rounded-md bg-white border border-gray-200 p-4 w-full md:w-max">
                                 <h4 className="text-2xl font-sans text-jmso-dark-blue font-semibold text-center mb-4">
                                     {item.name}
                                 </h4>
                                 <div className="flex items-center justify-center md:justify-between gap-4 flex-wrap w-full">
-                                    {item.images.map((image) => (
-                                        <Popover key={item}>
+                                    {item.images.map((image, imgIndex) => (
+                                        <Popover key={`${item.name}-${imgIndex}`}>
                                             <PopoverTrigger className="overflow-hidden rounded-md">
                                                 <img
-                                                    slot="thumbnail"
-                                                    src={image}
+                                                    src={image.src}
                                                     alt={item.name}
                                                     className="w-20 xl:w-[109px] aspect-[1/1] rounded-md object-cover hover:scale-110 duration-300 ease-out"
                                                 />
                                             </PopoverTrigger>
                                             <PopoverContent className="w-full max-w-screen-sm">
                                                 <img
-                                                    slot="photo"
-                                                    src={image}
+                                                    src={image.src}
                                                     alt={item.name}
                                                     className="w-full h-auto object-cover"
                                                 />
@@ -190,16 +188,16 @@ export default function Application({
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                         {industries.map((industry, index) => (
                             <div
-                                key={index}
+                                key={industry.title}
                                 className="relative overflow-hidden rounded-md group"
                             >
                                 <img
-                                    src={industry.img}
+                                    src={industry.img.src}
                                     alt={industry.title}
                                     className="hidden md:block w-auto h-full object-cover duration-200 ease-out"
                                 />
                                 <img
-                                    src={industry.imgMobile}
+                                    src={industry.imgMobile.src}
                                     alt={industry.title}
                                     className="block md:hidden w-auto h-full object-cover duration-200 ease-out"
                                 />

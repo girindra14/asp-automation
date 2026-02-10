@@ -62,7 +62,7 @@ export default function CaseStudy() {
                   </div>
                   <div className="pr-4 md:pr-0 lg:pr-0 pl-4 md:pl-0 lg:pl-8 py-4 md:py-6 lg:py-8">
                     <img
-                      src={item.image}
+                      src={item.image.src}
                       alt={item.name}
                       className="w-max rounded-xl h-full object-cover "
                     />

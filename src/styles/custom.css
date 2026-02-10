@@ -23,7 +23,7 @@
         font-weight: inherit;
     }
     section {
-        @apply scroll-mt-[calc(65px+2remå)] lg:scroll-mt-[calc(73px+2rem)];
+        @apply scroll-mt-[calc(65px+2rem)] lg:scroll-mt-[calc(73px+2rem)];
     }
     a {
         @apply ease-in-out duration-200;

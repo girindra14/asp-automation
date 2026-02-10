@@ -1,4 +1,4 @@
-import map from "../../../assets/images/map.svg";
+import map from "../../assets/images/map.svg";
 
 export default function Map({
     country_coverage_headline,

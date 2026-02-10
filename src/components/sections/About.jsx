@@ -7,17 +7,17 @@ import {
     UsersThree,
 } from "@phosphor-icons/react/dist/ssr";
 
-import jmsoLogo from "../../../assets/images/jmso-logo-en.png";
-import company_1 from "../../../assets/images/companies/company-1-matsumura.jpeg";
-import company_1_logo from "../../../assets/images/companies/company-logo-matsumura.png";
-import company_2 from "../../../assets/images/companies/company-2-kyokuto.png";
-import company_2_logo from "../../../assets/images/companies/company-logo-kyokuto.png";
-import company_3 from "../../../assets/images/companies/company-3-yuko.png";
-import company_3_logo from "../../../assets/images/companies/company-logo-yuko.png";
-import company_4 from "../../../assets/images/companies/company-4-nagai.png";
-import company_4_logo from "../../../assets/images/companies/company-logo-nagai.png";
-import company_5 from "../../../assets/images/companies/company-5-kke.png";
-import company_5_logo from "../../../assets/images/companies/company-logo-kke.png";
+import jmsoLogo from "../../assets/images/jmso-logo-en.png";
+import company_1 from "../../assets/images/companies/company-1-matsumura.jpeg";
+import company_1_logo from "../../assets/images/companies/company-logo-matsumura.png";
+import company_2 from "../../assets/images/companies/company-2-kyokuto.png";
+import company_2_logo from "../../assets/images/companies/company-logo-kyokuto.png";
+import company_3 from "../../assets/images/companies/company-3-yuko.png";
+import company_3_logo from "../../assets/images/companies/company-logo-yuko.png";
+import company_4 from "../../assets/images/companies/company-4-nagai.png";
+import company_4_logo from "../../assets/images/companies/company-logo-nagai.png";
+import company_5 from "../../assets/images/companies/company-5-kke.png";
+import company_5_logo from "../../assets/images/companies/company-logo-kke.png";
 
 import React from "react";
 
@@ -109,7 +109,7 @@ Field of application : ultra-precision valve equipment /
                                     Organization Name
                                 </span>
                                 <img
-                                    src={jmsoLogo}
+                                    src={jmsoLogo.src}
                                     alt="JMSO (Japan manufacturing Support Organization)"
                                     className="w-full h-auto max-w-40 mt-2"
                                 />
@@ -160,7 +160,7 @@ Field of application : ultra-precision valve equipment /
                     matsumura=
                     {
                         <img
-                            src={company_1}
+                            src={company_1.src}
                             alt="matsumura"
                             className="w-full h-auto aspect-[1/1] object-cover rounded-md mb-4"
                         />
@@ -168,7 +168,7 @@ Field of application : ultra-precision valve equipment /
                     matsumura_logo=
                     {
                         <img
-                            src={company_1_logo}
+                            src={company_1_logo.src}
                             alt="matsumura"
                             className="w-8 h-8"
                         />
@@ -176,43 +176,43 @@ Field of application : ultra-precision valve equipment /
                     kyokuto=
                     {
                         <img
-                            src={company_2}
+                            src={company_2.src}
                             alt="kyokuto"
                             className="w-full h-auto aspect-[1/1] object-cover rounded-md mb-4"
                         />
                     }
                     kyokuto_logo=
-                    {<img src={company_2_logo} alt="kyokuto" className="w-8 h-8" />}
+                    {<img src={company_2_logo.src} alt="kyokuto" className="w-8 h-8" />}
                     yuko=
                     {
                         <img
-                            src={company_3}
+                            src={company_3.src}
                             alt="yuko"
                             className="w-full h-auto aspect-[1/1] object-cover rounded-md mb-4"
                         />
                     }
                     yuko_logo=
-                    {<img src={company_3_logo} alt="yuko" className="w-8 h-8" />}
+                    {<img src={company_3_logo.src} alt="yuko" className="w-8 h-8" />}
                     nagai=
                     {
                         <img
-                            src={company_4}
+                            src={company_4.src}
                             alt="nagai"
                             className="w-full h-auto aspect-[1/1] object-cover rounded-md mb-4"
                         />
                     }
                     nagai_logo=
-                    {<img src={company_4_logo} alt="nagai" className="w-8 h-8" />}
+                    {<img src={company_4_logo.src} alt="nagai" className="w-8 h-8" />}
                     kke=
                     {
                         <img
-                            src={company_5}
+                            src={company_5.src}
                             alt="kke"
                             className="w-full h-auto aspect-[1/1] object-cover rounded-md mb-4"
                         />
                     }
                     kke_logo=
-                    {<img src={company_5_logo} alt="kke" className="w-8 h-8" />}>
+                    {<img src={company_5_logo.src} alt="kke" className="w-8 h-8" />}>
                 </BoardMobile>
             </div>
             <div className="hidden md:block">
@@ -221,7 +221,7 @@ Field of application : ultra-precision valve equipment /
                         matsumura=
                         {
                             <img
-                                src={company_1}
+                                src={company_1.src}
                                 alt="matsumura"
                                 className="w-full h-auto aspect-[1/1] object-cover rounded-md mb-4"
                             />
@@ -229,7 +229,7 @@ Field of application : ultra-precision valve equipment /
                         matsumura_logo=
                         {
                             <img
-                                src={company_1_logo}
+                                src={company_1_logo.src}
                                 alt="matsumura"
                                 className="w-10 h-10"
                             />
@@ -237,7 +237,7 @@ Field of application : ultra-precision valve equipment /
                         kyokuto=
                         {
                             <img
-                                src={company_2}
+                                src={company_2.src}
                                 alt="kyokuto"
                                 className="w-full h-auto aspect-[1/1] object-cover rounded-md mb-4"
                             />
@@ -245,7 +245,7 @@ Field of application : ultra-precision valve equipment /
                         kyokuto_logo=
                         {
                             <img
-                                src={company_2_logo}
+                                src={company_2_logo.src}
                                 alt="kyokuto"
                                 className="w-10 h-10"
                             />
@@ -253,7 +253,7 @@ Field of application : ultra-precision valve equipment /
                         yuko=
                         {
                             <img
-                                src={company_3}
+                                src={company_3.src}
                                 alt="yuko"
                                 className="w-full h-auto aspect-[1/1] object-cover rounded-md mb-4"
                             />
@@ -261,7 +261,7 @@ Field of application : ultra-precision valve equipment /
                         yuko_logo=
                         {
                             <img
-                                src={company_3_logo}
+                                src={company_3_logo.src}
                                 alt="yuko"
                                 className="w-10 h-10"
                             />
@@ -269,7 +269,7 @@ Field of application : ultra-precision valve equipment /
                         nagai=
                         {
                             <img
-                                src={company_4}
+                                src={company_4.src}
                                 alt="nagai"
                                 className="w-full h-auto aspect-[1/1] object-cover rounded-md mb-4"
                             />
@@ -277,7 +277,7 @@ Field of application : ultra-precision valve equipment /
                         nagai_logo=
                         {
                             <img
-                                src={company_4_logo}
+                                src={company_4_logo.src}
                                 alt="nagai"
                                 className="w-10 h-10"
                             />
@@ -285,7 +285,7 @@ Field of application : ultra-precision valve equipment /
                         kke=
                         {
                             <img
-                                src={company_5}
+                                src={company_5.src}
                                 alt="kke"
                                 className="w-full h-auto aspect-[1/1] object-cover rounded-md mb-4"
                             />
@@ -293,7 +293,7 @@ Field of application : ultra-precision valve equipment /
                         kke_logo=
                         {
                             <img
-                                src={company_5_logo}
+                                src={company_5_logo.src}
                                 alt="kke"
                                 className="w-10 h-10"
                             />
@@ -308,7 +308,7 @@ Field of application : ultra-precision valve equipment /
                         <div className="grid grid-cols-1 lg:grid-cols-6 gap-4 lg:gap-8">
                             <div className="p-4 lg:p-4 flex flex-col gap-4 border rounded-md !h-auto bg-white lg:col-span-2">
                                 <img
-                                    src={company_1}
+                                    src={company_1.src}
                                     alt="matsumura"
                                     className="w-full h-auto aspect-[1/1] lg:aspect-[5/4] object-cover rounded-md mb-4"
                                 />
@@ -317,7 +317,7 @@ Field of application : ultra-precision valve equipment /
                                 </p>
                                 <h5 className="font-semibold text-lg text-jmso-dark-blue mb-2 inline-flex gap-1 items-center">
                                     <img
-                                        src={company_1_logo}
+                                        src={company_1_logo.src}
                                         alt="matsumura"
                                         className="w-10 h-10"
                                     />
@@ -331,7 +331,7 @@ Field of application : ultra-precision valve equipment /
                             </div>
                             <div className="p-4 lg:p-4 flex flex-col gap-4 border rounded-md !h-auto bg-white lg:col-span-2">
                                 <img
-                                    src={company_2}
+                                    src={company_2.src}
                                     alt="kyokuto"
                                     className="w-full h-auto aspect-[1/1] lg:aspect-[5/4] object-cover rounded-md mb-4"
                                 />
@@ -340,7 +340,7 @@ Field of application : ultra-precision valve equipment /
                                 </p>
                                 <h5 className="font-semibold text-lg text-jmso-dark-blue mb-2 inline-flex gap-1 items-center">
                                     <img
-                                        src={company_2_logo}
+                                        src={company_2_logo.src}
                                         alt="kyokuto"
                                         className="w-10 h-10"
                                     />{" "}
@@ -354,7 +354,7 @@ Field of application : ultra-precision valve equipment /
                             </div>
                             <div className="p-4 lg:p-4 flex flex-col gap-4 border rounded-md !h-auto bg-white lg:col-span-2">
                                 <img
-                                    src={company_3}
+                                    src={company_3.src}
                                     alt="yuko"
                                     className="w-full h-auto aspect-[1/1] lg:aspect-[5/4] object-cover rounded-md mb-4"
                                 />
@@ -363,7 +363,7 @@ Field of application : ultra-precision valve equipment /
                                 </p>
                                 <h5 className="font-semibold text-lg text-jmso-dark-blue mb-2 inline-flex gap-1 items-center">
                                     <img
-                                        src={company_3_logo}
+                                        src={company_3_logo.src}
                                         alt="yuko"
                                         className="w-10 h-10"
                                     />
@@ -377,7 +377,7 @@ Field of application : ultra-precision valve equipment /
                             </div>
                             <div className="p-4 lg:p-4 flex flex-col gap-4 border rounded-md !h-auto bg-white lg:col-span-2 lg:col-start-2">
                                 <img
-                                    src={company_4}
+                                    src={company_4.src}
                                     alt="nagai"
                                     className="w-full h-auto aspect-[1/1] lg:aspect-[5/4] object-cover rounded-md mb-4"
                                 />
@@ -386,7 +386,7 @@ Field of application : ultra-precision valve equipment /
                                 </p>
                                 <h5 className="font-semibold text-lg text-jmso-dark-blue mb-2 inline-flex gap-1 items-center">
                                     <img
-                                        src={company_4_logo}
+                                        src={company_4_logo.src}
                                         alt="nagai"
                                         className="w-10 h-10"
                                     />
@@ -400,7 +400,7 @@ Field of application : ultra-precision valve equipment /
                             </div>
                             <div className="p-4 lg:p-4 flex flex-col gap-4 border rounded-md !h-auto bg-white lg:col-span-2">
                                 <img
-                                    src={company_5}
+                                    src={company_5.src}
                                     alt="kke"
                                     className="w-full h-auto aspect-[1/1] lg:aspect-[5/4] object-cover rounded-md mb-4"
                                 />
@@ -409,7 +409,7 @@ Field of application : ultra-precision valve equipment /
                                 </p>
                                 <h5 className="font-semibold text-lg text-jmso-dark-blue mb-2 inline-flex gap-1 items-center">
                                     <img
-                                        src={company_5_logo}
+                                        src={company_5_logo.src}
                                         alt="kke"
                                         className="w-10 h-10"
                                     />

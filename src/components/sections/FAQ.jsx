@@ -1,4 +1,4 @@
-import bg_faq from "../../../assets/images/faq-bg.png";
+import bg_faq from "../../assets/images/faq-bg.png";
 import FAQAccordion from "../ui/faq-accordion";
 import React from "react";
 
@@ -31,7 +31,7 @@ export default function FAQ() {
             className="relative pt-8 md:pt-12 lg:pt-20 bg-jmso-light-blue"
         >
             <img
-                src={bg_faq}
+                src={bg_faq.src}
                 alt="FAQ"
                 className="absolute top-0 inset-x-0 select-none pointer-events-none"
             />

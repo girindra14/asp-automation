@@ -98,7 +98,7 @@ export default function Problems({ paintpoint_headline }) {
                                 {item.paint_point_items.map((item, index) => (
                                     <li className="inline-flex items-center gap-4 lg:gap-8">
                                         <img
-                                            src={item.image}
+                                            src={item.image.src}
                                             alt={`Solution ${index + 1}`}
                                             className="w-8 h-8 lg:w-12 lg:h-12"
                                         />
@@ -109,7 +109,7 @@ export default function Problems({ paintpoint_headline }) {
                         </div>
                         <div className="order-first w-full h-full lg:order-last lg:w-1/2">
                             <img
-                                src={item.image}
+                                src={item.image.src}
                                 alt={`Problem ${index + 1}`}
                                 className="lg:rounded-l-xl w-full h-full object-cover"
                             />
@@ -119,7 +119,7 @@ export default function Problems({ paintpoint_headline }) {
                     <div className="flex flex-wrap items-center gap-8 pt-8 lg:pt-16">
                         <div className="w-full h-full lg:w-1/2">
                             <img
-                                src={item.image}
+                                src={item.image.src}
                                 alt={`Problem ${index + 1}`}
                                 className="lg:rounded-r-xl w-full h-full object-cover"
                             />
@@ -130,7 +130,7 @@ export default function Problems({ paintpoint_headline }) {
                                 {item.paint_point_items.map((item, index) => (
                                     <li className="inline-flex items-center gap-4 lg:gap-8">
                                         <img
-                                            src={item.image}
+                                            src={item.image.src}
                                             alt={`Solution ${index + 1}`}
                                             className="w-8 h-8 lg:w-12 lg:h-12"
                                         />

@@ -1,11 +1,11 @@
 // ---
 // import { Image } from "astro:assets";
 
-import heroBg from "../../../assets/images/hero-bg-untouched.png";
-import heroBgMobile from "../../../assets/images/hero-bg-mobile.png";
-import heroBgTablet from "../../../assets/images/hero-bg-tablet.png";
-import arcTosca from "../../../assets/images/arc-underline-tosca.svg";
-import heroChart from "../../../assets/images/hero-chart-en.svg";
+import heroBg from "../../assets/images/hero-bg-untouched.png";
+import heroBgMobile from "../../assets/images/hero-bg-mobile.png";
+import heroBgTablet from "../../assets/images/hero-bg-tablet.png";
+import arcTosca from "../../assets/images/arc-underline-tosca.svg";
+import heroChart from "../../assets/images/hero-chart-en.svg";
 // import { getLangFromUrl, useTranslations } from "@/lib/utils";
 
 // const lang = getLangFromUrl(Astro.url);
@@ -42,19 +42,19 @@ export default function Hero({
         <section id="hero" className="relative overflow-hidden">
             <div className="absolute top-1/2 -translate-y-1/2 inset-x-0 h-full w-full">
                 <img
-                    src={heroBg}
+                    src={heroBg.src}
                     alt="Welding"
                     loading="eager"
                     className="hidden lg:block w-full h-full object-cover select-none pointer-events-none lg:h-screen"
                 />
                 <img
-                    src={heroBgTablet}
+                    src={heroBgTablet.src}
                     alt="Welding"
                     loading="eager"
                     className="hidden md:block lg:hidden w-full h-full object-cover select-none pointer-events-none lg:h-screen"
                 />
                 <img
-                    src={heroBgMobile}
+                    src={heroBgMobile.src}
                     alt="Welding"
                     loading="eager"
                     className="block md:hidden w-full h-full object-cover select-none pointer-events-none lg:h-screen"
@@ -71,7 +71,7 @@ export default function Hero({
                                 <h2 className="font-semibold text-lg md:text-2xl text-jmso-light-blue" dangerouslySetInnerHTML={{ __html: hero_headline_data }} />
                             </div>
                             <img
-                                src={heroChart}
+                                src={heroChart.src}
                                 alt="Chart"
                                 className="w-full"
                             />
@@ -86,12 +86,12 @@ export default function Hero({
                                     Single-function
                                 </h2>
                                 <img
-                                    src={arcTosca}
+                                    src={arcTosca.src}
                                     alt="Single-function"
                                     className="mb-2"
                                 />
                                 <p className="text-white text-3xl md:text-4xl font-semibold text-center mb-2">
-                                    US＄10,000-
+                                    US $ 10,000-
                                 </p>
                             </div>
                         </div>
@@ -101,12 +101,12 @@ export default function Hero({
                                     Multifunctional
                                 </h2>
                                 <img
-                                    src={arcTosca}
+                                    src={arcTosca.src}
                                     alt="Multifunctional"
                                     className="mb-2"
                                 />
                                 <p className="text-white text-3xl md:text-4xl font-semibold text-center mb-2">
-                                    US＄50,000-
+                                    US $ 50,000-
                                 </p>
                             </div>
                         </div>

@@ -1,6 +1,6 @@
 import ContactForm from "@/components/ui/contact-form";
 
-import bg_faq from "../../../assets/images/faq-bg.png";
+import bg_faq from "../../assets/images/faq-bg.png";
 import React from "react";
 
 export default function Contact({
@@ -455,7 +455,7 @@ export default function Contact({
       className="bg-gradient-to-b from-white via-white to-jmso-light-blue/50 relative pb-8 md:pb-12 lg:pb-20"
     >
       <img
-        src={bg_faq}
+        src={bg_faq.src}
         alt="FAQ"
         className="absolute bottom-0 inset-x-0 rotate-180 select-none pointer-events-none"
       />

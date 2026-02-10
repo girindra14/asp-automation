@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { ChartSlider } from "@/components/ui/swiper";
-import chart from "../../../assets/images/jmso-chart-en.png";
-import chart_mobile from "../../../assets/images/jmso-chart-mobile-en.png";
+import chart from "../../assets/images/jmso-chart-en.png";
+import chart_mobile from "../../assets/images/jmso-chart-mobile-en.png";
 export default function Chart({
     service_headline,
     service_description,
@@ -33,12 +33,12 @@ export default function Chart({
                 <div className="py-8 relative w-full">
                     <div className="flex items-center justify-center relative z-20 container overflow-x-clip lg:overflow-visible">
                         <img
-                            src={chart}
+                            src={chart.src}
                             alt="Chart"
                             className="w-full hidden md:block relative z-10"
                         />
                         <img
-                            src={chart_mobile}
+                            src={chart_mobile.src}
                             alt="Chart"
                             className="w-full md:hidden relative z-10"
                         />

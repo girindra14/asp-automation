@@ -3,14 +3,14 @@ import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css/effect-fade";
 import "swiper/css";
 import { useRef, useState } from "react";
-import slide_1 from "../../../assets/images/sliders/weld_1.webp";
-// import slide_2 from "../../../assets/images/sliders/weld_2.webp";
-import slide_3 from "../../../assets/images/sliders/weld_3.webp";
-import slide_4 from "../../../assets/images/sliders/weld_4.webp";
-import slide_5 from "../../../assets/images/sliders/weld_5.webp";
-import slide_6 from "../../../assets/images/sliders/weld_6.webp";
-import slide_7 from "../../../assets/images/sliders/weld_7.webp";
-import slide_8 from "../../../assets/images/sliders/weld_8.webp";
+import slide_1 from "../../assets/images/sliders/weld_1.webp";
+import slide_2 from "../../assets/images/sliders/weld_2.webp";
+import slide_3 from "../../assets/images/sliders/weld_3.webp";
+import slide_4 from "../../assets/images/sliders/weld_4.webp";
+import slide_5 from "../../assets/images/sliders/weld_5.webp";
+import slide_6 from "../../assets/images/sliders/weld_6.webp";
+import slide_7 from "../../assets/images/sliders/weld_7.webp";
+import slide_8 from "../../assets/images/sliders/weld_8.webp";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import React from "react";
 
@@ -67,15 +67,15 @@ export const ChartSlider = () => {
             className="w-full max-w-xs md:max-w-sm lg:max-w-md pointer-events-none select-none aspect-1 rounded-md"
           />
         </SwiperSlide>
-        {/* <SwiperSlide>
+        <SwiperSlide>
           <img
-            src={slide_2}
+            src={slide_2.src}
             alt="Slide"
             width={480}
             height={480}
             className="w-full max-w-xs md:max-w-sm lg:max-w-md pointer-events-none select-none aspect-1 rounded-md"
           />
-        </SwiperSlide> */}
+        </SwiperSlide>
         <SwiperSlide>
           <img
             src={slide_3.src}
@@ -209,7 +209,7 @@ export const BoardSlider = (props: any) => {
               {t.matsumura.category}
             </p>
             <h5 className="font-semibold text-lg text-jmso-dark-blue mb-2 inline-flex gap-1 items-center">
-              {props.matsumura_logo}
+              {props.matsumura_logo.src}
               {t.matsumura.title}
             </h5>
             <div className="space-y-2">
@@ -225,7 +225,7 @@ export const BoardSlider = (props: any) => {
               {t.kyokuto.category}
             </p>
             <h5 className="font-semibold text-lg text-jmso-dark-blue mb-2 inline-flex gap-1 items-center">
-              {props.kyokuto_logo}
+              {props.kyokuto_logo.src}
               {t.kyokuto.title}
             </h5>
             <div className="space-y-2">
@@ -241,7 +241,7 @@ export const BoardSlider = (props: any) => {
               {t.yuko.category}
             </p>
             <h5 className="font-semibold text-lg text-jmso-dark-blue mb-2 inline-flex gap-1 items-center">
-              {props.yuko_logo}
+              {props.yuko_logo.src}
               {t.yuko.title}
             </h5>
             <div className="space-y-2">
@@ -257,7 +257,7 @@ export const BoardSlider = (props: any) => {
               {t.nagai.category}
             </p>
             <h5 className="font-semibold text-lg text-jmso-dark-blue mb-2 inline-flex gap-1 items-center">
-              {props.nagai_logo}
+              {props.nagai_logo.src}
               {t.nagai.title}
             </h5>
             <div className="space-y-2">
@@ -273,7 +273,7 @@ export const BoardSlider = (props: any) => {
               {t.kke.category}
             </p>
             <h5 className="font-semibold text-lg text-jmso-dark-blue mb-2 inline-flex gap-1 items-center">
-              {props.kke_logo}
+              {props.kke_logo.src}
               {t.kke.title}
             </h5>
             <div className="space-y-2">
