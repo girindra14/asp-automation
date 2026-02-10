@@ -5,7 +5,7 @@ import {
     SheetHeader,
     SheetTitle,
     SheetTrigger,
-} from "@/Components/ui/sheet";
+} from "@/components/ui/sheet";
 import { List, X } from "@phosphor-icons/react/dist/ssr";
 import { useEffect, useState } from "react";
 import { Button } from "@/Components/ui/button";

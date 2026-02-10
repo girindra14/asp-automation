@@ -7,7 +7,16 @@ import {
 import type { Key } from "react";
 import React from "react";
 
-export default function FAQAccordion({ faqs }) {
+interface FAQ {
+  q: string;
+  a: string;
+}
+
+interface FAQAccordionProps {
+  faqs: FAQ[];
+}
+
+export default function FAQAccordion({ faqs }: FAQAccordionProps) {
   return (
     <Accordion
       type="single"

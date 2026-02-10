@@ -1,4 +1,4 @@
-import ContactForm from "@/Components/ui/contact-form";
+import ContactForm from "@/components/ui/contact-form";
 
 import bg_faq from "../../../assets/images/faq-bg.png";
 import React from "react";

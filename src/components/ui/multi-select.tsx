@@ -9,13 +9,13 @@ import {
   CommandGroup,
   CommandInput,
   CommandItem,
-} from "@/Components/ui/command";
+} from "@/components/ui/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/Components/ui/popover";
-import { Badge } from "@/Components/ui/badge";
+import { Badge } from "@/components/ui/badge";
 
 export type OptionType = {
   label: string;

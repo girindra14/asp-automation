@@ -1,5 +1,5 @@
-import { BoardSlider } from "@/Components/ui/swiper";
-import BoardMobile from "@/Components/ui/board-mobile";
+import { BoardSlider } from "@/components/ui/swiper";
+import BoardMobile from "@/components/ui/board-mobile";
 import {
     Buildings,
     MapPin,

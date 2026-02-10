@@ -1,7 +1,7 @@
 import logo from "../../../assets/images/jmso-logo.png";
 import logoShort from "../../../assets/images/favicon.png";
 import { Button } from "@/Components/ui/button";
-import MobileNav from "@/Components/ui/mobile-nav";
+import MobileNav from "@/components/ui/mobile-nav";
 
 import React from "react";
 
@@ -22,7 +22,7 @@ export default function Navbar() {
             <div className="container lg:flex justify-between items-center gap-4 hidden">
                 <a href={`#`} aria-label="JMSO">
                     <img
-                        src={logo}
+                        src={logo.src}
                         alt="JMSO"
                         loading="eager"
                         className="h-8 w-auto"
@@ -61,7 +61,7 @@ export default function Navbar() {
                         titleImg={
                             <a slot="titleImg" href="#" aria-label="JMSO">
                                 <img
-                                    src={logo}
+                                    src={logo.src}
                                     alt="JMSO"
                                     loading="eager"
                                     className="h-8 w-auto"
@@ -70,14 +70,14 @@ export default function Navbar() {
                         }
                     ></MobileNav>
                     <img
-                        src={logo}
+                        src={logo.src}
                         alt="JMSO"
                         height={32}
                         loading="eager"
                         className="hidden md:block lg:hidden"
                     />
                     <img
-                        src={logoShort}
+                        src={logoShort.src}
                         alt="JMSO"
                         loading="eager"
                         className="block md:hidden h-8 w-auto"

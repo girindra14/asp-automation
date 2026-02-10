@@ -60,7 +60,7 @@ export const ChartSlider = () => {
       >
         <SwiperSlide>
           <img
-            src={slide_1}
+            src={slide_1.src}
             alt="Slide"
             width={480}
             height={480}
@@ -78,7 +78,7 @@ export const ChartSlider = () => {
         </SwiperSlide> */}
         <SwiperSlide>
           <img
-            src={slide_3}
+            src={slide_3.src}
             alt="Slide"
             width={480}
             height={480}
@@ -87,7 +87,7 @@ export const ChartSlider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src={slide_4}
+            src={slide_4.src}
             alt="Slide"
             width={480}
             height={480}
@@ -96,7 +96,7 @@ export const ChartSlider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src={slide_5}
+            src={slide_5.src}
             alt="Slide"
             width={480}
             height={480}
@@ -105,7 +105,7 @@ export const ChartSlider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src={slide_6}
+            src={slide_6.src}
             alt="Slide"
             width={480}
             height={480}
@@ -114,7 +114,7 @@ export const ChartSlider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src={slide_7}
+            src={slide_7.src}
             alt="Slide"
             width={480}
             height={480}
@@ -123,7 +123,7 @@ export const ChartSlider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src={slide_8}
+            src={slide_8.src}
             alt="Slide"
             width={480}
             height={480}

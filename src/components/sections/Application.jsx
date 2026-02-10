@@ -24,7 +24,7 @@ import {
     Popover,
     PopoverContent,
     PopoverTrigger,
-} from "@/Components/ui/popover";
+} from "@/components/ui/popover";
 
 export default function Application({
     feature_headline,

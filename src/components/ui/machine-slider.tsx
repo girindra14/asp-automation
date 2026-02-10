@@ -4,8 +4,8 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/Components/ui/carousel";
-import { type CarouselApi } from "@/Components/ui/carousel";
+} from "@/components/ui/carousel";
+import { type CarouselApi } from "@/components/ui/carousel";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react/dist/ssr";
 
 // import prod_1 from "../../../assets/images/sliders/machine_product_1.webp";
@@ -88,7 +88,7 @@ export default function MachineSlider() {
             >
               <img
                 loading="lazy"
-                src={i}
+                src={i.src}
                 alt={`Product ${index}`}
                 width={440}
                 height={440}

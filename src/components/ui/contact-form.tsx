@@ -9,8 +9,8 @@ import {
     FormItem,
     FormLabel,
     FormMessage,
-} from "@/Components/ui/form";
-import { Input } from "@/Components/ui/input";
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 import { Button } from "@/Components/ui/button";
 // import {
 //   Select,
@@ -19,13 +19,13 @@ import { Button } from "@/Components/ui/button";
 //   SelectTrigger,
 //   SelectValue,
 // } from "@/Components/ui/select";
-import { Textarea } from "@/Components/ui/textarea";
-import { Checkbox } from "@/Components/ui/checkbox";
-import { MultiSelect } from "@/Components/ui/multi-select";
+import { Textarea } from "@/components/ui/text-area";
+import { Checkbox } from "@/components/ui/checkbox";
+import { MultiSelect } from "@/components/ui/multi-select";
 // import("@/Components/ui/multi-select");
 
 import countryJSON from "country-json/src/country-by-name.json";
-import { ScrollArea } from "@/Components/ui/scroll-area";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import {
     Popover,
     PopoverContent,
@@ -37,7 +37,7 @@ import {
     CommandGroup,
     CommandInput,
     CommandItem,
-} from "@/Components/ui/command";
+} from "@/components/ui/command";
 // import { BASE_URL, cn } from "@/lib/utils";
 import { cn } from "@/lib/utils";
 import { CaretDown, Check, CircleNotch } from "@phosphor-icons/react/dist/ssr";
@@ -45,7 +45,14 @@ import React from "react";
 import { CommandList } from "cmdk";
 // import { defaultLang } from "@/lib/i18n";
 
-export default function FormContact({ baseUrl, slug, fields, lang = "en" }) {
+interface FormContactProps {
+  baseUrl: string;
+  slug: string;
+  fields: any; // atau define structure yang lebih spesifik
+  lang?: string;
+}
+
+export default function FormContact({ baseUrl, slug, fields, lang = "en" }: FormContactProps) {
     const BASE_URL = baseUrl;
     const defaultLang = "en";
     const source = `${baseUrl}/lp/${slug}`;
@@ -101,33 +108,33 @@ export default function FormContact({ baseUrl, slug, fields, lang = "en" }) {
         // Create a new FormData object
         const formData = new FormData();
         for (const key in data) {
+            const typedKey = key as keyof typeof data;
+            const value = data[typedKey];
+            
             // Check if the value is an array (for request field)
-            if (Array.isArray(data[key])) {
-                data[key].forEach((value: string | Blob, index: any) => {
-                    if (value === undefined || value === null || value === "") {
+            if (Array.isArray(value)) {
+                value.forEach((item: string | Blob, index: number) => {
+                    if (item === undefined || item === null || item === "") {
                         if (key === "spam_detector") {
                             formData.append(key, "");
                         } else {
                             formData.append(`${key}[${index}]`, "-");
                         }
                     } else {
-                        formData.append(`${key}[${index}]`, value);
+                        formData.append(`${key}[${index}]`, item);
                     }
                 });
             } else {
-                // formData.append(key, data[key]);
-                if (
-                    data[key] === undefined ||
-                    data[key] === null ||
-                    data[key] === ""
-                ) {
+                // Convert value to string
+                if (value === undefined || value === null || value === "") {
                     if (key === "spam_detector") {
                         formData.append(key, "");
                     } else {
                         formData.append(key, "-");
                     }
                 } else {
-                    formData.append(key, data[key]);
+                    // Convert boolean and other types to string
+                    formData.append(key, String(value));
                 }
             }
         }
@@ -137,34 +144,34 @@ export default function FormContact({ baseUrl, slug, fields, lang = "en" }) {
         // }
         // setIsLoading(false);
         try {
-        } catch (error) {
-            setIsSent(false);
-            setIsError(true);
-            console.error(error.message);
-        }
-        try {
-            // await submitToCrm(formData);
-            await fetch(`${BASE_URL}/lp/inquiry`, {
+            // Get CSRF token with null check
+            const csrfToken = document
+                .querySelector('meta[name="csrf-token"]')
+                ?.getAttribute("content") || "";
+
+            const res = await fetch(`${BASE_URL}/lp/inquiry`, {
                 method: "POST",
                 body: formData,
                 headers: {
-                    "X-CSRF-TOKEN": document
-                        .querySelector('meta[name="csrf-token"]')
-                        .getAttribute("content"),
+                    "X-CSRF-TOKEN": csrfToken,
                 },
-            }).then((res) => {
-                if (res.ok) {
-                    setIsLoading(false);
-                    setIsSent(true);
-                    window.location.href = `${BASE_URL}/lp/thank-you`;
-                } else {
-                    throw new Error("error");
-                }
             });
+
+            if (res.ok) {
+                setIsLoading(false);
+                setIsSent(true);
+                window.location.href = `${BASE_URL}/lp/thank-you`;
+            } else {
+                throw new Error("Failed to submit form");
+            }
         } catch (error) {
             setIsSent(false);
             setIsError(true);
-            console.error(error.message);
+            if (error instanceof Error) {
+                console.error(error.message);
+            } else {
+                console.error("An unknown error occurred");
+            }
         }
     }
 

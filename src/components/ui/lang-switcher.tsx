@@ -1,14 +1,17 @@
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/Components/ui/dropdown-menu";
-import { languages } from "@/lib/i18n";
+import React from "react";
+import { DropdownMenu } from "../ui/dropdown-menu";
+import { DropdownMenuContent } from "../ui/dropdown-menu";
+import { DropdownMenuItem } from "../ui/dropdown-menu";
+import { DropdownMenuTrigger } from "../ui/dropdown-menu";
+import { languages, type Language } from "@/lib/i18n";
 import { BASE_URL } from "@/lib/utils";
 import { CaretDown } from "@phosphor-icons/react/dist/ssr";
 
-export default function LangSwitcher({ currentLang }) {
+interface LangSwitcherProps {
+  currentLang: Language;
+}
+
+export default function LangSwitcher({ currentLang }: LangSwitcherProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="text-sm flex gap-2 items-center">
