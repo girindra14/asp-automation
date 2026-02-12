@@ -26,7 +26,7 @@ export default function Problems({ paintpoint_headline }) {
     });
     const paint_points = [
         {
-            name: "For manufacturing processes and operations",
+            name: "Experienced Automation Engineers",
             image: problem1_3,
             paint_point_items: [
                 {
@@ -44,7 +44,7 @@ export default function Problems({ paintpoint_headline }) {
             ]
         },
         {
-            name: "For introduction of automatic machines",
+            name: "Proven Industrial Projects",
             image: problem4_6,
             paint_point_items: [
                 {
@@ -62,8 +62,26 @@ export default function Problems({ paintpoint_headline }) {
             ]
         },
         {
-            name: "For outsourcing",
+            name: "Reliable After-Sales Support",
             image: problem7_9,
+            paint_point_items: [
+                {
+                    image: problem7,
+                    explanation: "Outsourcing processes result in higher costs, which are not economical for customers"
+                },
+                {
+                    image: problem8,
+                    explanation: "Outsourced welding tasks face high defect rates, showing the need to install advanced machines"
+                },
+                {
+                    image: problem9,
+                    explanation: "Insufficient welders affecting in-house production quality"
+                }
+            ]
+        },
+        {
+            name: "Trusted Technology Partners",
+            image: problem1_3,
             paint_point_items: [
                 {
                     image: problem7,

@@ -1,4 +1,5 @@
 import bg from "../../assets/images/application-bg.png";
+import bgFlipped from "../../assets/images/application-bg-flipped.png";
 import automotive from "../../assets/images/industries/automotive.png";
 import biotech from "../../assets/images/industries/biotech.png";
 import lcd from "../../assets/images/industries/lcd.png";
@@ -25,6 +26,7 @@ import {
     PopoverContent,
     PopoverTrigger,
 } from "@/components/ui/popover";
+import { ChartSlider } from "@/components/ui/swiper";
 
 export default function Application({
     feature_headline,
@@ -78,35 +80,35 @@ export default function Application({
     ];
     const industries = [
         {
-            title: "Semiconductor manufacturing equipment parts",
+            title: "Industrial Control Systems",
             img: semiconductor,
             imgMobile: semiconductorMobile,
         },
         {
-            title: "Rocket and space development",
+            title: "Electrical & Control Panels",
             img: rocket,
             imgMobile: rocketMobile,
         },
         {
-            title: "Biotechnology and tanks",
+            title: "Instrumentation & Field Devices",
             img: biotech,
             imgMobile: biotechMobile,
         },
         {
-            title: "LCD equipment",
+            title: "Network & Industrial Communication",
             img: lcd,
             imgMobile: lcdMobile,
         },
-        {
-            title: "Medical components",
-            img: medical,
-            imgMobile: medicalMobile,
-        },
-        {
-            title: "Automotive parts",
-            img: automotive,
-            imgMobile: automotiveMobile,
-        },
+        // {
+        //     title: "Medical components",
+        //     img: medical,
+        //     imgMobile: medicalMobile,
+        // },
+        // {
+        //     title: "Automotive parts",
+        //     img: automotive,
+        //     imgMobile: automotiveMobile,
+        // },
     ];
     return (
         <section id="application" className="relative py-8 md:py-12 lg:py-20">
@@ -123,86 +125,35 @@ export default function Application({
                     className="feature-description text-center text-gray-600 text-lg lg:text-2xl leading-tight max-w-[1080px]"
                     dangerouslySetInnerHTML={{ __html: feature_description }}
                 />
-                <div className="mt-12 lg:mt-16">
-                    <h3 className="jmso-subheading text-jmso-blue mb-4 lg:mb-8 text-center">
-                        Welding Type
-                    </h3>
-                    <div className="flex flex-wrap gap-4 lg:gap-8 justify-center w-full">
-                        {welding_types.map((item, index) => (
-                            <div key={item.name} className="rounded-md bg-white border border-gray-200 p-4 w-full md:w-max">
-                                <h4 className="text-2xl font-sans text-jmso-dark-blue font-semibold text-center mb-4">
-                                    {item.name}
-                                </h4>
-                                <div className="flex items-center justify-center md:justify-between gap-4 flex-wrap w-full">
-                                    {item.images.map((image, imgIndex) => (
-                                        <Popover key={`${item.name}-${imgIndex}`}>
-                                            <PopoverTrigger className="overflow-hidden rounded-md">
-                                                <img
-                                                    src={image.src}
-                                                    alt={item.name}
-                                                    className="w-20 xl:w-[109px] aspect-[1/1] rounded-md object-cover hover:scale-110 duration-300 ease-out"
-                                                />
-                                            </PopoverTrigger>
-                                            <PopoverContent className="w-full max-w-screen-sm">
-                                                <img
-                                                    src={image.src}
-                                                    alt={item.name}
-                                                    className="w-full h-auto object-cover"
-                                                />
-                                            </PopoverContent>
-                                        </Popover>
-                                    ))}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                <p className="text-jmso-dark-blue-alt font-medium text-center text-base md:text-lg my-4">
-                    Brazing and more...
-                </p>
+                <div className="my-4"></div>
+            </div>
+            <ChartSlider client:load />
+            <div className="mt-12"></div>
+            <div className="relative container flex flex-col items-center z-10">
                 <div className="h-px border border-gray-200 w-full"></div>
-                <div className="mt-4 md:mt-12 w-full">
-                    <h3 className="jmso-subheading text-jmso-blue mb-4 lg:mb-8 text-center">
-                        Materials
-                    </h3>
-                    <div className="rounded-md bg-white grid grid-cols-2 lg:flex w-full lg:flex-wrap lg:justify-center gap-4 lg:gap-x-8 lg:gap-y-4">
-                        {materials.map((item) => (
-                            <div
-                                key={item.name}
-                                className="flex px-2 py-2 md:px-8 md:py-6 lg:px-12 lg:py-5 bg-jmso-light-blue text-base md:text-xl lg:text-2xl font-semibold font-heading text-jmso-dark-blue w-full md:w-auto lg:min-w-[270px] items-center justify-center"
-                            >
-                                {item.name}
-                            </div>
-                        ))}
-                    </div>
-                    <p className="text-jmso-dark-blue-alt font-medium text-center text-base md:text-lg my-4">
-                        and more...
-                    </p>
-                </div>
-                <div className="h-px border border-gray-200 mt-4 lg:mt-0 w-full"></div>
-                <div className="mt-12 lg:mt-16">
-                    <h3 className="jmso-subheading text-jmso-blue mb-4 lg:mb-8 text-center">
+                <div className="mt-12 lg:mt-16 w-full">
+                    <h2 className="jmso-heading text-jmso-dark-blue text-center mb-8 lg:mb-12">
                         {feature_industry_headline}
-                    </h3>
-                    <p className="industry-description pb-6 lg:pb-10 text-left text-gray-800 text-base md:text-lg leading-tight" dangerouslySetInnerHTML={{ __html: feature_industry_description }} />
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                    </h2>
+                    {/* <p className="industry-description pb-6 lg:pb-10 text-left text-gray-800 text-base md:text-lg leading-tight" dangerouslySetInnerHTML={{ __html: feature_industry_description }} /> */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
                         {industries.map((industry, index) => (
                             <div
                                 key={industry.title}
-                                className="relative overflow-hidden rounded-md group"
+                                className="relative overflow-hidden rounded-md group flex items-center justify-center"
                             >
                                 <img
                                     src={industry.img.src}
                                     alt={industry.title}
-                                    className="hidden md:block w-auto h-full object-cover duration-200 ease-out"
+                                    className="hidden md:block w-full h-full object-cover duration-200 ease-out"
                                 />
                                 <img
                                     src={industry.imgMobile.src}
                                     alt={industry.title}
-                                    className="block md:hidden w-auto h-full object-cover duration-200 ease-out"
+                                    className="block md:hidden w-full h-full object-cover duration-200 ease-out"
                                 />
-                                <div className="flex flex-col justify-end items-start gap-3 lg:gap-5 absolute top-0 h-full w-full bg-gradient-to-t from-jmso-dark-blue to-jmso-dark-blue/0 from-0% to-50% md:to-40% z-20 p-4 lg:p-6">
-                                    <h4 className="text-white text-base lg:text-xl font-semibold">
+                                <div className="flex flex-col justify-end items-center gap-3 lg:gap-5 absolute top-0 h-full w-full bg-gradient-to-t from-jmso-dark-blue to-jmso-dark-blue/0 from-0% to-50% md:to-40% z-20 p-4 lg:p-6">
+                                    <h4 className="text-white text-center text-xl lg:text-2xl font-semibold">
                                         {industry.title}
                                     </h4>
                                 </div>
@@ -210,10 +161,13 @@ export default function Application({
                         ))}
                     </div>
                 </div>
-                <p className="text-jmso-dark-blue-alt font-medium text-center text-base md:text-lg my-4">
-                    and more...
-                </p>
+                <div className="my-4"></div>
             </div>
+            <img
+                src={bgFlipped.src}
+                alt="Application"
+                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full select-none pointer-events-none"
+            />
         </section>
     );
 }
