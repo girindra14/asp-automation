@@ -108,57 +108,61 @@ export default function Problems({ paintpoint_headline }) {
             </div>
 
             {paint_points.map((item, index) => (
-                index % 2 === 0 ? (
-                    <div className="flex flex-wrap items-center gap-8 pt-8 lg:pt-16">
-                        <div className="ml-auto lg:max-w-[480px] xl:max-w-[576px] 2xl:max-w-[640px] pt-0 lg:py-0 w-full px-4 lg:pl-4 lg:pr-12 lg:w-1/2 xl:py-0">
-                            <h3 className="text-white text-2xl lg:text-3xl xl:text-[40px] font-semibold mb-4 lg:mb-8 leading-none" dangerouslySetInnerHTML={{ __html: item.name }} />
-                            <ul className="flex flex-col gap-4 lg:gap-8">
-                                {item.paint_point_items.map((item, index) => (
-                                    <li className="inline-flex items-center gap-4 lg:gap-8">
-                                        <img
-                                            src={item.image.src}
-                                            alt={`Solution ${index + 1}`}
-                                            className="w-8 h-8 lg:w-12 lg:h-12"
-                                        />
-                                        <p className="text-white/80 text-base md:text-lg xl:text-xl" dangerouslySetInnerHTML={{ __html: item.explanation }} />
-                                    </li>
-                                ))}
-                            </ul>
+                <div key={index} className="pt-8 lg:pt-16">
+                    {index % 2 === 0 ? (
+                        <div className="flex items-stretch">
+                            <div className="w-1/2 flex items-center">
+                                <div className="w-full px-4 lg:px-8 xl:px-12">
+                                        <h3 className="text-white text-lg md:text-2xl lg:text-3xl xl:text-[40px] font-semibold mb-3 md:mb-4 lg:mb-8 leading-tight md:leading-none" dangerouslySetInnerHTML={{ __html: item.name }} />                                    <ul className="flex flex-col gap-2 md:gap-3 lg:gap-4 xl:gap-6 2xl:gap-8">
+                                        {item.paint_point_items.map((point, idx) => (
+                                            <li key={idx} className="flex items-start gap-2 md:gap-3 lg:gap-4 xl:gap-6 2xl:gap-8">
+                                                <img
+                                                    src={point.image.src}
+                                                    alt={`Solution ${idx + 1}`}
+                                                    className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-12 2xl:h-12 flex-shrink-0 mt-0.5"
+                                                />
+                                                <p className="text-white/80 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl leading-snug md:leading-normal" dangerouslySetInnerHTML={{ __html: point.explanation }} />
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="w-1/2">
+                                <img
+                                    src={item.image.src}
+                                    alt={`Problem ${index + 1}`}
+                                    className="lg:rounded-l-xl w-full h-full object-cover"
+                                />
+                            </div>
                         </div>
-                        <div className="order-first w-full h-full lg:order-last lg:w-1/2">
-                            <img
-                                src={item.image.src}
-                                alt={`Problem ${index + 1}`}
-                                className="lg:rounded-l-xl w-full h-full object-cover"
-                            />
+                    ) : (
+                        <div className="flex items-stretch">
+                            <div className="w-1/2">
+                                <img
+                                    src={item.image.src}
+                                    alt={`Problem ${index + 1}`}
+                                    className="lg:rounded-r-xl w-full h-full object-cover"
+                                />
+                            </div>
+                            <div className="w-1/2 flex items-center">
+                                <div className="w-full px-4 lg:px-8 xl:px-12">
+                                        <h3 className="text-white text-lg md:text-2xl lg:text-3xl xl:text-[40px] font-semibold mb-3 md:mb-4 lg:mb-8 leading-tight md:leading-none" dangerouslySetInnerHTML={{ __html: item.name }} />                                    <ul className="flex flex-col gap-2 md:gap-3 lg:gap-4 xl:gap-6 2xl:gap-8">
+                                        {item.paint_point_items.map((point, idx) => (
+                                            <li key={idx} className="flex items-start gap-2 md:gap-3 lg:gap-4 xl:gap-6 2xl:gap-8">
+                                                <img
+                                                    src={point.image.src}
+                                                    alt={`Solution ${idx + 1}`}
+                                                    className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-12 2xl:h-12 flex-shrink-0 mt-0.5"
+                                                />
+                                                <p className="text-white/80 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl leading-snug md:leading-normal" dangerouslySetInnerHTML={{ __html: point.explanation }} />
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                ) : (
-                    <div className="flex flex-wrap items-center gap-8 pt-8 lg:pt-16">
-                        <div className="w-full h-full lg:w-1/2">
-                            <img
-                                src={item.image.src}
-                                alt={`Problem ${index + 1}`}
-                                className="lg:rounded-r-xl w-full h-full object-cover"
-                            />
-                        </div>
-                        <div className="mr-auto lg:max-w-[480px] xl:max-w-[576px] 2xl:max-w-[640px] pt-0 lg:py-0 w-full px-4 lg:pl-12 lg:pr-4 lg:w-1/2 xl:py-0">
-                            <h3 className="text-white text-2xl lg:text-3xl xl:text-[40px] font-semibold mb-4 lg:mb-8 leading-none" dangerouslySetInnerHTML={{ __html: item.name }} />
-                            <ul className="flex flex-col gap-4 lg:gap-8">
-                                {item.paint_point_items.map((item, index) => (
-                                    <li className="inline-flex items-center gap-4 lg:gap-8">
-                                        <img
-                                            src={item.image.src}
-                                            alt={`Solution ${index + 1}`}
-                                            className="w-8 h-8 lg:w-12 lg:h-12"
-                                        />
-                                        <p className="text-white/80 text-base md:text-lg xl:text-xl" dangerouslySetInnerHTML={{ __html: item.explanation }} />
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                )
+                    )}
+                </div>
             ))}
         </section>
     );

@@ -1,4 +1,3 @@
-import bg from "../../assets/images/application-bg.png";
 import bgFlipped from "../../assets/images/application-bg-flipped.png";
 import automotive from "../../assets/images/industries/automotive.png";
 import biotech from "../../assets/images/industries/biotech.png";
@@ -99,24 +98,9 @@ export default function Application({
             img: lcd,
             imgMobile: lcdMobile,
         },
-        // {
-        //     title: "Medical components",
-        //     img: medical,
-        //     imgMobile: medicalMobile,
-        // },
-        // {
-        //     title: "Automotive parts",
-        //     img: automotive,
-        //     imgMobile: automotiveMobile,
-        // },
     ];
     return (
         <section id="application" className="relative py-8 md:py-12 lg:py-20">
-            <img
-                src={bg.src}
-                alt="Application"
-                className="absolute top-0 left-1/2 -translate-x-1/2 w-full select-none pointer-events-none"
-            />
             <div className="relative container flex flex-col items-center z-10">
                 <h2 className="jmso-heading text-jmso-dark-blue text-center mb-8 lg:mb-12">
                     {feature_headline}
@@ -140,7 +124,7 @@ export default function Application({
                         {industries.map((industry, index) => (
                             <div
                                 key={industry.title}
-                                className="relative overflow-hidden rounded-md group flex items-center justify-center"
+                                className="relative overflow-hidden rounded-md group flex items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
                             >
                                 <img
                                     src={industry.img.src}
