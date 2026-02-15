@@ -531,8 +531,8 @@ export default function ContactWithFooter() {
                 <div className="container mx-auto px-4 max-w-7xl">
                     {/* Header */}
                     <div className="text-center mb-8 lg:mb-16">
-                        <h2 className="jmso-heading text-jmso-dark-blue mb-4">
-                            GET IN <span className="text-jmso-tosca">TOUCH</span>
+                        <h2 className="jmso-heading text-jmso-dark-blue mb-8 lg:mb-16">
+                            Get In <span className="text-jmso-tosca">Touch</span>
                         </h2>
                         <p className="text-jmso-dark-blue/80 text-lg max-w-2xl mx-auto">
                             Let us discuss your automation needs and how we can support your industrial projects.
@@ -678,7 +678,7 @@ export default function ContactWithFooter() {
                             <div className="inline-flex items-center justify-center w-14 h-14 bg-jmso-tosca/20 rounded-full mb-4 group-hover:bg-jmso-tosca/30 transition-all duration-300">
                                 <MapPin size={28} className="text-jmso-tosca" />
                             </div>
-                            <h4 className="font-semibold text-white mb-3 text-sm uppercase tracking-wider">
+                            <h4 className="font-semibold text-white mb-3 text-sm tracking-wider">
                                 Address
                             </h4>
                             <p className="text-white/70 text-sm leading-relaxed">
@@ -692,7 +692,7 @@ export default function ContactWithFooter() {
                             <div className="inline-flex items-center justify-center w-14 h-14 bg-jmso-tosca/20 rounded-full mb-4 group-hover:bg-jmso-tosca/30 transition-all duration-300">
                                 <Envelope size={28} className="text-jmso-tosca" />
                             </div>
-                            <h4 className="font-semibold text-white mb-3 text-sm uppercase tracking-wider">
+                            <h4 className="font-semibold text-white mb-3 text-sm tracking-wider">
                                 Email
                             </h4>
                             <a
@@ -708,7 +708,7 @@ export default function ContactWithFooter() {
                             <div className="inline-flex items-center justify-center w-14 h-14 bg-jmso-tosca/20 rounded-full mb-4 group-hover:bg-jmso-tosca/30 transition-all duration-300">
                                 <Phone size={28} className="text-jmso-tosca" />
                             </div>
-                            <h4 className="font-semibold text-white mb-3 text-sm uppercase tracking-wider">
+                            <h4 className="font-semibold text-white mb-3 text-sm tracking-wider">
                                 Phone
                             </h4>
                             <a
@@ -724,7 +724,7 @@ export default function ContactWithFooter() {
                             <div className="inline-flex items-center justify-center w-14 h-14 bg-green-500/20 rounded-full mb-4 group-hover:bg-green-500/30 transition-all duration-300">
                                 <WhatsappLogo size={28} weight="fill" className="text-green-400" />
                             </div>
-                            <h4 className="font-semibold text-white mb-3 text-sm uppercase tracking-wider">
+                            <h4 className="font-semibold text-white mb-3 text-sm tracking-wider">
                                 WhatsApp
                             </h4>
                             <a
