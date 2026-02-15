@@ -89,7 +89,7 @@ Field of application : ultra-precision valve equipment /
             id="about"
             className={
                 is_country_lp
-                    ? "relative py-8 md:py-12 lg:py-20 bg-gradient-to-b from-jmso-light-blue via-white to-white"
+                    ? "relative py-8 md:py-12 lg:py-20 bg-white"
                     : "relative py-8 md:py-12 lg:py-20 bg-white"
             }
         >

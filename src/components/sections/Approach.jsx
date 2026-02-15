@@ -1,120 +1,191 @@
-import Machine from "../ui/machine-slider";
-import approach_corner from "../../assets/images/tosca-corner-blur.svg";
-import approach_1 from "../../assets/images/approach/approach-1.png";
-import approach_2 from "../../assets/images/approach/approach-2.png";
-import approach_3 from "../../assets/images/approach/approach-3.png";
-import React from "react";
+import { useEffect, useState } from "react";
+import { X, CheckCircle2 } from "lucide-react";
+import { ChartSlider } from "@/components/ui/swiper";
+import chart from "../../assets/images/jmso-chart-en.png";
+import chart_mobile from "../../assets/images/jmso-chart-mobile-en.png";
+import automotive from "../../assets/images/industries/automotive.png";
+import biotech from "../../assets/images/industries/biotech.png";
+import lcd from "../../assets/images/industries/lcd.png";
+import medical from "../../assets/images/industries/medical.png";
+import rocket from "../../assets/images/industries/rocket.png";
+import semiconductor from "../../assets/images/industries/semiconductor.png";
+import automotiveMobile from "../../assets/images/industries/automotive-mobile.png";
+import biotechMobile from "../../assets/images/industries/biotech-mobile.png";
+import lcdMobile from "../../assets/images/industries/lcd-mobile.png";
+import medicalMobile from "../../assets/images/industries/medical-mobile.png";
+import rocketMobile from "../../assets/images/industries/rocket-mobile.png";
+import semiconductorMobile from "../../assets/images/industries/semiconductor-mobile.png";
+import bg from "../../assets/images/application-bg.png";
 
 export default function Approach({
-    approach_headline_1,
-    approach_headline_1_explanation_1,
-    approach_headline_1_explanation_2,
-    approach_headline_1_explanation_3,
-    approach_headline_1_footnote,
-    approach_headline_2,
-    approach_headline_2_explanation_1,
-    approach_headline_2_explanation_2,
-    approach_headline_2_explanation_3,
-    approach_headline_2_footnote,
-    approach_headline_3,
-    approach_headline_3_explanation_1,
-    approach_headline_3_explanation_2,
-    approach_headline_3_footnote,
-    approach_quote,
+    service_headline,
 }) {
-    approach_headline_1_explanation_3 += `
-    <span class="text-xs">${approach_headline_1_footnote !== null ? approach_headline_1_footnote : ''}</span>
-    `
-    approach_headline_2_explanation_3 += `
-    <span class="text-xs">${approach_headline_2_footnote !== null ? approach_headline_2_footnote : ''}</span>
-    `
-    approach_headline_3_explanation_2 += `
-    <span class="text-xs">${approach_headline_3_footnote !== null ? approach_headline_3_footnote : ''}</span>
-    `
-    const content = [
+    useEffect(() => {
+        const applyStylesToStrongChildren = () => {
+            const descriptions = document.querySelectorAll('.service-description strong');
+
+            descriptions.forEach(element => {
+                element.style.color = '#002a69';
+            });
+
+            const explanations = document.querySelectorAll('.service-explanation strong');
+
+            explanations.forEach(element => {
+                element.style.color = '#0759d4';
+            });
+        };
+        applyStylesToStrongChildren();
+    });
+
+    const industries = [
         {
-            title: approach_headline_1,
-            image: approach_1,
-            items: [
-                approach_headline_1_explanation_1,
-                approach_headline_1_explanation_2,
-                approach_headline_1_explanation_3
+            title: "Industrial PC",
+            img: semiconductor,
+            imgMobile: semiconductorMobile,
+            description: "Design and implementation of PLC, HMI, and SCADA systems tailored to industrial processes.",
+            keySpecs: [
+                "Industrial-Grade Processor & Long Lifecycle",
+                "Rugged Design & Operating Conditions",
+                "Flexible I/O & Expandability",
+                "Reliability & Industrial OS Support"
             ],
+            link: "#"
         },
         {
-            title: approach_headline_2,
-            image: approach_2,
-            items: [
-                approach_headline_2_explanation_1,
-                approach_headline_2_explanation_2,
-                approach_headline_2_explanation_3
+            title: "Uninterruptible Power Supply",
+            img: rocket,
+            imgMobile: rocketMobile,
+            description: "Design, assembly, testing, and commissioning of electrical and control panels based on industry standards.",
+            keySpecs: [
+                "Isolation Transformer for Maximum Protection",
+                "Dual Output Voltage Support",
+                "High Reliability for Industrial Loads",
+                "Clean & Stable Power Quality"
             ],
+            link: "#"
         },
         {
-            title: approach_headline_3,
-            image: approach_3,
-            items: [
-                approach_headline_3_explanation_1,
-                approach_headline_3_explanation_2
+            title: "CCTV",
+            img: biotech,
+            imgMobile: biotechMobile,
+            description: "Selection, installation, and calibration of sensors, transmitters, and measurement instruments.",
+            keySpecs: [
+                "AI Video Analytics",
+                "Thermal Imaging Capability",
+                "High Accuracy & Early Warning",
+                "Industrial-Grade Reliability & Integration"
             ],
+            link: "#"
+        },
+        {
+            title: "Fiber Optic",
+            img: lcd,
+            imgMobile: lcdMobile,
+            description: "Design and deployment of reliable industrial networks for data communication and system integration.",
+            keySpecs: [
+                "High Bandwidth & Long-Distance Transmission",
+                "Immunity to EMI & Electrical Noise",
+                "Industrial-Grade Cable & Connector Design",
+                "High Reliability & Network Stability"
+            ],
+            link: "#"
+        },
+                {
+            title: "Industrial Switch",
+            img: lcd,
+            imgMobile: lcdMobile,
+            description: "Design and deployment of reliable industrial networks for data communication and system integration.",
+            keySpecs: [
+                "Rugged Industrial Design",
+                "High Reliability & Redundancy",
+                "Flexible Port & PoE Options",
+                "Industrial Network Management & Security"
+            ],
+            link: "#"
+        },
+        {
+            title: "Supervisory Control and Data Acquisition",
+            img: lcd,
+            imgMobile: lcdMobile,
+            description: "Design and deployment of reliable industrial networks for data communication and system integration.",
+            keySpecs: [
+                "Real-Time Monitoring & Control",
+                "Reliable Communication Protocols",
+                "High Availability & System Redundancy",
+                "Scalability & Cybersecurity"
+            ],
+            link: "#"
         },
     ];
+
     return (
         <section
             id="approach"
             className="bg-jmso-light-blue relative py-8 md:py-12 lg:py-20"
         >
-            <div className="container">
-                <h2 className="jmso-heading text-jmso-dark-blue text-center mb-12 lg:mb-16">
-                    Three Distinctive{" "}
-                    <span className="text-jmso-tosca">Approaches by JMSO</span>
-                </h2>
-                <div>
-                    <div className="flex flex-col gap-8">
-                        {content.map((c, index) => (
-                            <div key={index}>
-                                <h3 className="text-2xl lg:text-[28px] font-bold text-jmso-dark-blue mb-4 lg:mb-5">
-                                    {index + 1}. {c.title}
-                                </h3>
-                                <div className="flex flex-col md:flex-row items-center gap-0 lg:gap-8 bg-jmso-dark-blue relative rounded-xl overflow-hidden">
+            <img
+                src={bg.src}
+                alt="Features"
+                className="absolute top-0 left-1/2 -translate-x-1/2 w-full select-none pointer-events-none"
+            />
+            <div className="relative container flex flex-col items-center z-10">
+                <h2 className="jmso-heading text-jmso-dark-blue text-center mb-8 lg:mb-12" dangerouslySetInnerHTML={{ __html: service_headline }} />
+                <div className="w-full max-w-6xl">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
+                        {industries.map((industry, index) => (
+                            <div
+                                key={industry.title}
+                                className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                            >
+                                {/* Card Image */}
+                                <div className="relative h-48 overflow-hidden">
                                     <img
-                                        src={approach_corner.src}
-                                        alt={"Corner"}
-                                        className="w-full h-auto absolute top-0 -translate-y-1/2 right-0 translate-x-1/2"
+                                        src={industry.img.src}
+                                        alt={industry.title}
+                                        className="hidden md:block w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                     />
                                     <img
-                                        src={c.image.src}
-                                        alt={c.title}
-                                        className="w-full md:w-[50%] lg:w-[30rem] h-full object-cover"
+                                        src={industry.imgMobile.src}
+                                        alt={industry.title}
+                                        className="block md:hidden w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                     />
-                                    <ul className="flex flex-col divide-y divide-white/10 [&>li]:py-4 [&>li]:text-white [&>li]:text-medium [&>li]:text-base [&>li]:lg:text-xl pl-4 pr-4 lg:pl-0 lg:pr-8 w-full relative">
-                                        {c.items.map((item, index) => (
-                                            <li
-                                                key={index}
-                                                dangerouslySetInnerHTML={{
-                                                    __html: item,
-                                                }}
-                                            />
-                                        ))}
-                                    </ul>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-jmso-dark-blue/90 to-transparent"></div>
                                 </div>
+
+                                {/* Card Content */}
+                                <div className="p-6">
+                                    <h3 className="text-xl font-bold text-jmso-dark-blue mb-3">
+                                        {industry.title}
+                                    </h3>
+                                    <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                                        {industry.description}
+                                    </p>
+
+                                    {/* Key Specs */}
+                                    <div className="mb-6 space-y-2">
+                                        {industry.keySpecs.map((spec, idx) => (
+                                            <div key={idx} className="flex items-start gap-2">
+                                                <CheckCircle2 className="w-4 h-4 text-[#0759d4] mt-0.5 flex-shrink-0" />
+                                                <span className="text-sm text-gray-700">{spec}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    {/* CTA Button */}
+                                    <a
+                                        href={industry.link}
+                                        className="block w-full bg-gradient-to-r from-jmso-dark-blue to-[#0759d4] text-white py-3 px-6 rounded-lg font-semibold hover:from-[#003380] hover:to-[#0865f0] transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 text-center"
+                                    >
+                                        Learn More
+                                    </a>
+                                </div>
+
+                                {/* Decorative Corner */}
+                                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-jmso-dark-blue/10 to-transparent rounded-bl-full"></div>
                             </div>
                         ))}
                     </div>
                 </div>
-                <p
-                    className="text-center text-base md:text-lg lg:text-xl text-jmso-dark-blue/80 leading-tight mt-4 md:mt-6 lg:mt-8 font-semibold"
-                    dangerouslySetInnerHTML={{ __html: approach_quote }}
-                />
-            </div>
-            <div
-                className="container mt-8 lg:mt-16 scroll-mt-[calc(65px+2rem)] lg:scroll-mt-[calc(73px+2rem)]"
-                id="product"
-            >
-                <h3 className="jmso-subheading text-jmso-dark-blue mb-4 lg:mb-8 text-center leading-none">
-                    Our Automated Machines Examples
-                </h3>
-                <Machine client:load />
             </div>
         </section>
     );
