@@ -45,40 +45,40 @@ export default function Chart({
             img: semiconductor,
             imgMobile: semiconductorMobile,
             description: "Design and implementation of PLC, HMI, and SCADA systems tailored to industrial processes.",
-            problem: "Proses produksi manual yang tidak efisien, kesulitan monitoring real-time, dan tingginya biaya operasional",
-            solution: "Implementasi PLC, SCADA, HMI, dan sistem kontrol terintegrasi dengan monitoring terpusat dan data analytics",
-            benefit: "Peningkatan produktivitas 35-45%, pengurangan error produksi hingga 70%, dan visibility penuh terhadap proses produksi"
+            problem: "Inefficient manual production processes, difficulties in real-time monitoring, and high operational costs",
+            solution: "Implementation of PLC, SCADA, HMI, and integrated control systems with centralized monitoring and data analytics",
+            benefit: "Increased productivity, reduced production errors, and full visibility into the production process."
         },
         {
             title: "Control Panel Engineering",
             img: rocket,
             imgMobile: rocketMobile,
             description: "Design, assembly, testing, and commissioning of electrical and control panels based on industry standards.",
-            problem: "Panel kontrol tidak standar, dokumentasi tidak lengkap, dan kesulitan troubleshooting saat terjadi masalah",
-            solution: "Engineering panel sesuai IEC standard, dokumentasi lengkap, component selection tepat, dan testing menyeluruh",
-            benefit: "Reliability tinggi, kemudahan maintenance, compliance terhadap standar internasional, dan lifecycle cost optimal"
+            problem: "Non-standard control panels, incomplete documentation, and difficulties in troubleshooting when problems occur",
+            solution: "Engineering panels according to IEC standards, complete documentation, proper component selection, and comprehensive testing",
+            benefit: "High reliability, ease of maintenance, compliance with international standards, and optimal lifecycle cost"
         },
         {
             title: "Instrumentation & Field Devices",
             img: biotech,
             imgMobile: biotechMobile,
             description: "Selection, installation, and calibration of sensors, transmitters, and measurement instruments.",
-            problem: "Akurasi pengukuran yang tidak konsisten, kalibrasi tidak terjadwal, dan data tidak terintegrasi ke sistem",
-            solution: "Pemilihan dan instalasi sensor, transmitter, dan field devices berkualitas dengan sistem kalibrasi terstruktur",
-            benefit: "Akurasi pengukuran >99%, preventive maintenance terjadwal, dan data real-time terintegrasi untuk decision making"
+            problem: "Inconsistent measurement accuracy, irregular calibration schedules, and lack of system integration",
+            solution: "Selection and installation of quality sensors, transmitters, and field devices with structured calibration systems",
+            benefit: "Measurement accuracy >99%, scheduled preventive maintenance, and integrated real-time data for decision making"
         },
         {
             title: "Industrial Network & Communication",
             img: lcd,
             imgMobile: lcdMobile,
             description: "Design and deployment of reliable industrial networks for data communication and system integration.",
-            problem: "Network downtime yang sering, bottleneck komunikasi data, dan cybersecurity yang lemah di lingkungan OT",
-            solution: "Desain industrial ethernet, Profinet/Modbus integration, managed switch, dan cybersecurity untuk OT network",
-            benefit: "Network uptime 99.9%, data transfer real-time tanpa delay, segmentasi keamanan berlapis, dan scalability mudah"
+            problem: "Frequent network downtime, data communication bottlenecks, and weak cybersecurity in OT environments",
+            solution: "Design of industrial ethernet, Profinet/Modbus integration, managed switch, and cybersecurity for OT network",
+            benefit: "Network uptime 99.9%, real-time data transfer without delay, layered security segmentation, and easy scalability"
         },
     ];
     return (
-        <section id="features" className="relative py-8 md:py-12 lg:py-20">
+        <section id="our-solutions" className="relative py-8 md:py-12 lg:py-20">
             <img
                 src={bg.src}
                 alt="Features"
@@ -122,7 +122,7 @@ export default function Chart({
                                         onClick={() => setSelectedIndustry(industry)}
                                         className="w-full bg-gradient-to-r from-jmso-dark-blue to-[#0759d4] text-white py-3 px-6 rounded-lg font-semibold hover:from-[#003380] hover:to-[#0865f0] transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
                                     >
-                                        Penjelasan
+                                        Explanation
                                     </button>
                                 </div>
 

@@ -120,7 +120,7 @@ export default function Approach({
 
     return (
         <section
-            id="approach"
+            id="our-products"
             className="bg-jmso-light-blue relative py-8 md:py-12 lg:py-20"
         >
             <img
@@ -176,7 +176,7 @@ export default function Approach({
                                         href={industry.link}
                                         className="block w-full bg-gradient-to-r from-jmso-dark-blue to-[#0759d4] text-white py-3 px-6 rounded-lg font-semibold hover:from-[#003380] hover:to-[#0865f0] transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 text-center"
                                     >
-                                        Learn More
+                                        Consult Now
                                     </a>
                                 </div>
 

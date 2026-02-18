@@ -8,12 +8,11 @@ import React from "react";
 export default function Navbar() {
     const navigation = {
         menu: [
-            { link: "#application", title: "Application" },
-            { link: "#features", title: "Features" },
-            { link: "#case-study", title: "Case Study" },
-            //   { link: "#products", title: "Products" },
-            { link: "#faq", title: "FAQ" },
-            { link: "#about", title: "About" },
+            { link: "#what-we-do", title: "What We Do" },
+            { link: "#why-choose-us", title: "Why Choose Us" },
+            { link: "#our-solutions", title: "Our Solutions" },
+            { link: "#our-products", title: "Our Products" },
+            { link: "#about-us", title: "About Us" },
         ],
         contact_us: { link: "#contact-us", title: "Contact Us" },
     };

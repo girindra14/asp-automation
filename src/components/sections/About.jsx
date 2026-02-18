@@ -504,14 +504,10 @@ export default function AboutUs() {
     return (
         <>
             {/* About Us Section */}
-            <section id="about" className="relative py-8 md:py-12 lg:py-20 bg-white">
+            <section id="about-us" className="relative py-8 md:py-12 lg:py-20 bg-white">
                 <div className="container mx-auto px-4 max-w-7xl">
                     {/* Header */}
-                    <div className="text-center mb-12 lg:mb-16">
-                        <h2 className="jmso-heading text-jmso-dark-blue mb-4">
-                            About <span className="text-jmso-tosca">Us</span>
-                        </h2>
-                    </div>
+                    <h2 className="jmso-heading text-jmso-dark-blue text-center mb-8 lg:mb-12">About Us</h2>
 
                     {/* Company Overview */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 lg:mb-24">
@@ -620,9 +616,7 @@ export default function AboutUs() {
                 <div className="container mx-auto px-4 max-w-7xl">
                     {/* Header */}
                     <div className="text-center mb-12">
-                        <h3 className="jmso-subheading text-jmso-dark-blue mb-4">
-                            Our <span className="text-jmso-tosca">Works</span>
-                        </h3>
+                        <h2 className="jmso-heading text-jmso-dark-blue text-center mb-8 lg:mb-12">Our Works</h2>
                         <p className="text-jmso-dark-blue/70 text-lg max-w-2xl mx-auto">
                             Trusted by leading industries for reliability, precision, and
                             comprehensive support

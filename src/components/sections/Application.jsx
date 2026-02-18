@@ -100,7 +100,7 @@ export default function Application({
         },
     ];
     return (
-        <section id="application" className="relative py-8 md:py-12 lg:py-20">
+        <section id="what-we-do" className="relative py-8 md:py-12 lg:py-20">
             <div className="relative container flex flex-col items-center z-10">
                 <h2 className="jmso-heading text-jmso-dark-blue text-center mb-8 lg:mb-12">
                     {feature_headline}
@@ -122,26 +122,28 @@ export default function Application({
                     {/* <p className="industry-description pb-6 lg:pb-10 text-left text-gray-800 text-base md:text-lg leading-tight" dangerouslySetInnerHTML={{ __html: feature_industry_description }} /> */}
                     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
                         {industries.map((industry, index) => (
-                            <div
-                                key={industry.title}
-                                className="relative overflow-hidden rounded-md group flex items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-                            >
-                                <img
-                                    src={industry.img.src}
-                                    alt={industry.title}
-                                    className="hidden md:block w-full h-full object-cover duration-200 ease-out"
-                                />
-                                <img
-                                    src={industry.imgMobile.src}
-                                    alt={industry.title}
-                                    className="block md:hidden w-full h-full object-cover duration-200 ease-out"
-                                />
-                                <div className="flex flex-col justify-end items-center gap-3 lg:gap-5 absolute top-0 h-full w-full bg-gradient-to-t from-jmso-dark-blue to-jmso-dark-blue/0 from-0% to-50% md:to-40% z-20 p-4 lg:p-6">
-                                    <h4 className="text-white text-center text-xl lg:text-2xl font-semibold">
-                                        {industry.title}
-                                    </h4>
+                            <a href="#our-solutions">
+                                <div
+                                    key={industry.title}
+                                    className="relative overflow-hidden rounded-md group flex items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                                >
+                                    <img
+                                        src={industry.img.src}
+                                        alt={industry.title}
+                                        className="hidden md:block w-full h-full object-cover duration-200 ease-out"
+                                    />
+                                    <img
+                                        src={industry.imgMobile.src}
+                                        alt={industry.title}
+                                        className="block md:hidden w-full h-full object-cover duration-200 ease-out"
+                                    />
+                                    <div className="flex flex-col justify-end items-center gap-3 lg:gap-5 absolute top-0 h-full w-full bg-gradient-to-t from-jmso-dark-blue to-jmso-dark-blue/0 from-0% to-50% md:to-40% z-20 p-4 lg:p-6">
+                                        <h4 className="text-white text-center text-xl lg:text-2xl font-semibold">
+                                            {industry.title}
+                                        </h4>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         ))}
                     </div>
                 </div>

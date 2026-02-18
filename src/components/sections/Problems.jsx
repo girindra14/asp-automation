@@ -100,7 +100,7 @@ export default function Problems({ paintpoint_headline }) {
     ];
     return (
         <section
-            id="problems"
+            id="why-choose-us"
             className="bg-jmso-dark-blue-alt relative py-8 md:py-12 lg:py-20"
         >
             <div className="container">
