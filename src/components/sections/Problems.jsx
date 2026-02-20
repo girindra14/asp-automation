@@ -28,24 +28,31 @@ export default function Problems({ paintpoint_headline }) {
         {
             name: "Experienced Automation Engineers",
             image: problem1_3,
+            description: [
+                "Our team consists of skilled automation engineers with hands-on experience in industrial environments. We understand real operational challenges — from system downtime and process inefficiencies to safety compliance.",
+                "We don't just design systems; we design solutions that work reliably in demanding industrial conditions."
+            ],
             paint_point_items: [
                 {
                     image: problem1,
-                    explanation: "Australia's older welders find it hard to transfer skills to younger staff"
+                    explanation: "Accurate system design"
                 },
                 {
                     image: problem2,
-                    explanation: "Labor shortages delay production schedules"
+                    explanation: "Reduced implementation risk"
                 },
                 {
                     image: problem3,
-                    explanation: "Inconsistent quality and high defect rate"
+                    explanation: "Faster project execution"
                 }
             ]
         },
         {
             name: "Proven Industrial Projects",
             image: problem4_6,
+            description: [
+                "Our automation systems are designed with long-term performance in mind. We prioritize system stability, industrial-grade components, and scalable architecture to ensure your operations can grow without major system overhauls."
+            ],
             paint_point_items: [
                 {
                     image: problem4,
@@ -64,6 +71,10 @@ export default function Problems({ paintpoint_headline }) {
         {
             name: "Reliable After-Sales Support",
             image: problem7_9,
+            description: [
+                "Automation systems require ongoing reliability. Our team provides responsive technical support, preventive maintenance guidance, and troubleshooting assistance to minimize operational disruption.",
+                "We build long-term partnerships, not just transactions."
+            ],
             paint_point_items: [
                 {
                     image: problem7,
@@ -82,6 +93,10 @@ export default function Problems({ paintpoint_headline }) {
         {
             name: "Trusted Technology Partners",
             image: problem1_3,
+            description: [
+                "We provide complete automation services — from initial consultation and system design to panel fabrication, installation, commissioning, and after-sales support.",
+                "By managing the full lifecycle of your automation project, we ensure seamless integration between hardware, software, and field devices."
+            ],
             paint_point_items: [
                 {
                     image: problem7,
@@ -113,7 +128,21 @@ export default function Problems({ paintpoint_headline }) {
                         <div className="flex items-stretch">
                             <div className="w-1/2 flex items-center">
                                 <div className="w-full px-4 lg:px-8 xl:px-12">
-                                        <h3 className="text-white text-lg md:text-2xl lg:text-3xl xl:text-[40px] font-semibold mb-3 md:mb-4 lg:mb-8 leading-tight md:leading-none" dangerouslySetInnerHTML={{ __html: item.name }} />                                    <ul className="flex flex-col gap-2 md:gap-3 lg:gap-4 xl:gap-6 2xl:gap-8">
+                                    <h3 className="text-white text-lg md:text-2xl lg:text-3xl xl:text-[40px] font-semibold mb-3 md:mb-4 lg:mb-6 leading-tight md:leading-none" dangerouslySetInnerHTML={{ __html: item.name }} />
+                                    
+                                    {/* Description Paragraphs */}
+                                    {item.description && item.description.map((paragraph, pIdx) => (
+                                        <p key={pIdx} className="text-white/80 text-xs sm:text-sm md:text-base lg:text-lg mb-3 md:mb-4 lg:mb-5 leading-relaxed">
+                                            {paragraph}
+                                        </p>
+                                    ))}
+                                    
+                                    {/* What this means for you */}
+                                    <p className="text-white font-semibold text-sm md:text-base lg:text-lg xl:text-xl mb-2 md:mb-3 lg:mb-4">
+                                        What this means for you:
+                                    </p>
+                                    
+                                    <ul className="flex flex-col gap-2 md:gap-3 lg:gap-4 xl:gap-6 2xl:gap-8">
                                         {item.paint_point_items.map((point, idx) => (
                                             <li key={idx} className="flex items-start gap-2 md:gap-3 lg:gap-4 xl:gap-6 2xl:gap-8">
                                                 <img
@@ -146,7 +175,21 @@ export default function Problems({ paintpoint_headline }) {
                             </div>
                             <div className="w-1/2 flex items-center">
                                 <div className="w-full px-4 lg:px-8 xl:px-12">
-                                        <h3 className="text-white text-lg md:text-2xl lg:text-3xl xl:text-[40px] font-semibold mb-3 md:mb-4 lg:mb-8 leading-tight md:leading-none" dangerouslySetInnerHTML={{ __html: item.name }} />                                    <ul className="flex flex-col gap-2 md:gap-3 lg:gap-4 xl:gap-6 2xl:gap-8">
+                                    <h3 className="text-white text-lg md:text-2xl lg:text-3xl xl:text-[40px] font-semibold mb-3 md:mb-4 lg:mb-6 leading-tight md:leading-none" dangerouslySetInnerHTML={{ __html: item.name }} />
+                                    
+                                    {/* Description Paragraphs */}
+                                    {item.description && item.description.map((paragraph, pIdx) => (
+                                        <p key={pIdx} className="text-white/80 text-xs sm:text-sm md:text-base lg:text-lg mb-3 md:mb-4 lg:mb-5 leading-relaxed">
+                                            {paragraph}
+                                        </p>
+                                    ))}
+                                    
+                                    {/* What this means for you */}
+                                    <p className="text-white font-semibold text-sm md:text-base lg:text-lg xl:text-xl mb-2 md:mb-3 lg:mb-4">
+                                        What this means for you:
+                                    </p>
+                                    
+                                    <ul className="flex flex-col gap-2 md:gap-3 lg:gap-4 xl:gap-6 2xl:gap-8">
                                         {item.paint_point_items.map((point, idx) => (
                                             <li key={idx} className="flex items-start gap-2 md:gap-3 lg:gap-4 xl:gap-6 2xl:gap-8">
                                                 <img
