@@ -531,7 +531,7 @@ export default function ContactWithFooter() {
                 <div className="container mx-auto px-4 max-w-7xl">
                     {/* Header */}
                     <div className="text-center mb-8 lg:mb-16">
-                        <h2 className="jmso-heading text-jmso-dark-blue text-center mb-8 lg:mb-12">Get In Touch</h2>
+                        <h2 className="jmso-heading text-jmso-dark-blue text-center mb-8 lg:mb-10">Get In Touch</h2>
                         <p className="text-jmso-dark-blue/80 text-lg max-w-2xl mx-auto">
                             Let us discuss your automation needs and how we can support your industrial projects.
                         </p>
