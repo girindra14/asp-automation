@@ -443,7 +443,6 @@ import {
     Lightning,
     Flask,
     Gear,
-    Certificate,
     Handshake,
 } from "@phosphor-icons/react/dist/ssr";
 
@@ -485,13 +484,6 @@ export default function AboutUs() {
             title: "Process Automation",
             products: "DCS Systems, Analytical Instruments, Safety PLCs",
         },
-    ];
-
-    const certifications = [
-        { name: "ISO 9001" },
-        { name: "ISO 14001" },
-        { name: "OHSAS 18001" },
-        { name: "CE Certified" },
     ];
 
     const partnerships = [
@@ -616,7 +608,7 @@ export default function AboutUs() {
                 <div className="container mx-auto px-4 max-w-7xl">
                     {/* Header */}
                     <div className="text-center mb-12">
-                        <h2 className="jmso-heading text-jmso-dark-blue text-center mb-8 lg:mb-12">Our Works</h2>
+                        <h2 className="jmso-heading text-jmso-dark-blue text-center mb-8 lg:mb-10">Our Works</h2>
                         <p className="text-jmso-dark-blue/70 text-lg max-w-2xl mx-auto">
                             Trusted by leading industries for reliability, precision, and
                             comprehensive support
@@ -650,70 +642,39 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            {/* Certifications & Partnerships Section */}
+            {/* Our Partners Section */}
             <section className="relative py-12 md:py-16 lg:py-20 bg-gradient-to-b from-white to-jmso-light-blue">
                 <div className="container mx-auto px-4 max-w-7xl">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-                        {/* Certifications */}
-                        <div>
-                            <div className="text-center lg:text-left mb-8">
-                                <div className="inline-flex items-center gap-3 mb-4">
-                                    <Certificate
-                                        size={40}
-                                        weight="fill"
-                                        className="text-jmso-tosca"
-                                    />
-                                    <h3 className="text-2xl md:text-3xl font-bold text-jmso-dark-blue">
-                                        Certifications
-                                    </h3>
-                                </div>
-                                <p className="text-jmso-dark-blue/70">
-                                    Certified and compliant with international standards
-                                </p>
-                            </div>
-                            <div className="grid grid-cols-2 gap-6">
-                                {certifications.map((cert, index) => (
-                                    <div
-                                        key={index}
-                                        className="bg-gray-50 border-2 border-dashed border-gray-300 aspect-[3/2] rounded-lg hover:border-jmso-tosca hover:bg-white transition-all duration-300 cursor-pointer flex items-center justify-center"
-                                    >
-                                        <span className="text-gray-600 font-medium text-sm">
-                                            {cert.name}
-                                        </span>
-                                    </div>
-                                ))}
-                            </div>
+                    {/* Header - Centered */}
+                    <div className="text-center mb-12">
+                        <div className="inline-flex items-center justify-center gap-3 mb-6 md:mb-10">
+                            <Handshake
+                                size={48}
+                                weight="fill"
+                                className="text-jmso-tosca"
+                            />
+                            <h2 className="jmso-heading text-jmso-dark-blue">
+                                Our Partners
+                            </h2>
                         </div>
+                        <p className="text-jmso-dark-blue/70 text-lg max-w-2xl mx-auto">
+                            Collaborating with global industry leaders to deliver the best automation solutions
+                        </p>
+                    </div>
 
-                        {/* Partnerships */}
-                        <div>
-                            <div className="text-center lg:text-left mb-8">
-                                <div className="inline-flex items-center gap-3 mb-4">
-                                    <Handshake
-                                        size={40}
-                                        weight="fill"
-                                        className="text-jmso-tosca"
-                                    />
-                                    <h3 className="text-2xl md:text-3xl font-bold text-jmso-dark-blue">
-                                        Partnerships
-                                    </h3>
+                    {/* Partners Grid - Centered */}
+                    <div className="max-w-4xl mx-auto">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+                            {partnerships.map((partner, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-white border-2 border-dashed border-gray-300 aspect-[3/2] rounded-xl hover:border-jmso-tosca hover:shadow-lg transition-all duration-300 cursor-pointer flex items-center justify-center group"
+                                >
+                                    <span className="text-gray-600 group-hover:text-jmso-tosca font-semibold text-base md:text-lg transition-colors">
+                                        {partner.name}
+                                    </span>
                                 </div>
-                                <p className="text-jmso-dark-blue/70">
-                                    Collaborating with global industry leaders
-                                </p>
-                            </div>
-                            <div className="grid grid-cols-2 gap-6">
-                                {partnerships.map((partner, index) => (
-                                    <div
-                                        key={index}
-                                        className="bg-gray-50 border-2 border-dashed border-gray-300 aspect-[3/2] rounded-lg hover:border-jmso-tosca hover:bg-white transition-all duration-300 cursor-pointer flex items-center justify-center"
-                                    >
-                                        <span className="text-gray-600 font-medium text-sm">
-                                            {partner.name}
-                                        </span>
-                                    </div>
-                                ))}
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </div>
