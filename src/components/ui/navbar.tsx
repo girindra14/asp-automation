@@ -1,5 +1,4 @@
 import logo from "../../assets/images/logo_asp.png";
-import logoShort from "../../../public/favicon.webp";
 import { Button } from "@/components/ui/button";
 import MobileNav from "@/components/ui/mobile-nav";
 
@@ -69,7 +68,7 @@ export default function Navbar() {
                     <img
                         src={logo.src}
                         alt="ASP Automation"
-                        height={32}
+                        width={128}
                         loading="eager"
                         className="hidden md:block lg:hidden"
                     />

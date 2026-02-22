@@ -1,11 +1,9 @@
 // ---
 // import { Image } from "astro:assets";
 
-import heroBg from "../../assets/images/hero-bg-untouched.png";
-import heroBgMobile from "../../assets/images/hero-bg-mobile.png";
-import heroBgTablet from "../../assets/images/hero-bg-tablet.png";
-import arcTosca from "../../assets/images/arc-underline-tosca.svg";
-import heroChart from "../../assets/images/hero-chart-en.svg";
+import heroBg from "../../assets/images/hero-bg-untouched1.webp";
+import heroBgMobile from "../../assets/images/hero-bg-mobile1.webp";
+import heroBgTablet from "../../assets/images/hero-bg-tablet1.webp";
 // import { getLangFromUrl, useTranslations } from "@/lib/utils";
 
 // const lang = getLangFromUrl(Astro.url);
@@ -73,7 +71,7 @@ export default function Hero({
                             </a>
                             <a
                                 href="#application"
-                                className="px-8 py-4 bg-transparent hover:bg-white/10 text-jmso-dark-blue/75 lg:text-white font-bold text-xl lg:text-2xl rounded-lg border-2 border-white/75 hover:border-white transition-all duration-300 text-center"
+                                className="px-8 py-4 bg-transparent hover:bg-white/10 text-white lg:text-white font-bold text-xl lg:text-2xl rounded-lg border-2 border-white/75 hover:border-white transition-all duration-300 text-center"
                             >
                                 View Our Solutions
                             </a>

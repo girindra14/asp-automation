@@ -3,16 +3,15 @@ import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css/effect-fade";
 import "swiper/css";
 import { useRef, useState } from "react";
-import slide_1 from "../../assets/images/sliders/weld_1.webp";
-import slide_2 from "../../assets/images/sliders/weld_2.webp";
-import slide_3 from "../../assets/images/sliders/weld_3.webp";
-import slide_4 from "../../assets/images/sliders/weld_4.webp";
-import slide_5 from "../../assets/images/sliders/weld_5.webp";
-import slide_6 from "../../assets/images/sliders/weld_6.webp";
-import slide_7 from "../../assets/images/sliders/weld_7.webp";
-import slide_8 from "../../assets/images/sliders/weld_8.webp";
+import slide_1 from "../../assets/images/sliders/weld_11.webp";
+import slide_2 from "../../assets/images/sliders/weld_12.webp";
+import slide_3 from "../../assets/images/sliders/weld_13.webp";
+import slide_4 from "../../assets/images/sliders/weld_14.webp";
+import slide_5 from "../../assets/images/sliders/weld_15.webp";
+import slide_6 from "../../assets/images/sliders/weld_16.webp";
+import slide_7 from "../../assets/images/sliders/weld_17.webp";
+import slide_8 from "../../assets/images/sliders/weld_18.webp";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react/dist/ssr";
-import React from "react";
 
 export const ChartSlider = () => {
   const [_, setInit] = useState<boolean>();
