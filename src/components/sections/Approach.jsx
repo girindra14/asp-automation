@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { X, CheckCircle2 } from "lucide-react";
+import { X } from "lucide-react";
+import { CheckCircle } from "@phosphor-icons/react/dist/ssr";
 import { ChartSlider } from "@/components/ui/swiper";
 import chart from "../../assets/images/jmso-chart-en.png";
 import chart_mobile from "../../assets/images/jmso-chart-mobile-en.png";
@@ -165,7 +166,11 @@ export default function Approach({
                                     <div className="mb-6 space-y-2">
                                         {industry.keySpecs.map((spec, idx) => (
                                             <div key={idx} className="flex items-start gap-2">
-                                                <CheckCircle2 className="w-4 h-4 text-[#0759d4] mt-0.5 flex-shrink-0" />
+                                                <CheckCircle
+                                                    size={24}
+                                                    weight="fill"
+                                                    className="text-jmso-tosca mt-1 flex-shrink-0"
+                                                />
                                                 <span className="text-sm text-gray-700">{spec}</span>
                                             </div>
                                         ))}
@@ -174,7 +179,7 @@ export default function Approach({
                                     {/* CTA Button */}
                                     <a
                                         href={industry.link}
-                                        className="block w-full bg-gradient-to-r from-jmso-dark-blue to-[#0759d4] text-white py-3 px-6 rounded-lg font-semibold hover:from-[#003380] hover:to-[#0865f0] transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 text-center"
+                                        className="block w-full bg-gradient-to-br from-jmso-tosca to-jmso-dark-blue text-white py-3 px-6 rounded-lg font-semibold hover:from-jmso-tosca hover:to-jmso-dark-blue transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 text-center"
                                     >
                                         Consult Now
                                     </a>

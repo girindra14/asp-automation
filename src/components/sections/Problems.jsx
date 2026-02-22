@@ -125,79 +125,79 @@ export default function Problems({ paintpoint_headline }) {
             {paint_points.map((item, index) => (
                 <div key={index} className="pt-8 lg:pt-16">
                     {index % 2 === 0 ? (
-                        <div className="flex items-stretch">
-                            <div className="w-1/2 flex items-center">
-                                <div className="w-full px-4 lg:px-8 xl:px-12">
-                                    <h3 className="text-white text-lg md:text-2xl lg:text-3xl xl:text-[40px] font-semibold mb-3 md:mb-4 lg:mb-6 leading-tight md:leading-none" dangerouslySetInnerHTML={{ __html: item.name }} />
+                        <div className="flex flex-col lg:flex-row items-stretch">
+                            <div className="w-full lg:w-1/2 flex items-center order-2 lg:order-1">
+                                <div className="w-full px-4 py-6 lg:py-0 lg:px-8 xl:px-12">
+                                    <h3 className="text-white text-2xl md:text-3xl lg:text-3xl xl:text-[40px] font-semibold mb-4 lg:mb-6 leading-tight" dangerouslySetInnerHTML={{ __html: item.name }} />
                                     
                                     {/* Description Paragraphs */}
                                     {item.description && item.description.map((paragraph, pIdx) => (
-                                        <p key={pIdx} className="text-white/80 text-xs sm:text-sm md:text-base lg:text-lg mb-3 md:mb-4 lg:mb-5 leading-relaxed">
+                                        <p key={pIdx} className="text-white/80 text-base md:text-lg mb-4 lg:mb-5 leading-relaxed">
                                             {paragraph}
                                         </p>
                                     ))}
                                     
                                     {/* What this means for you */}
-                                    <p className="text-white font-semibold text-sm md:text-base lg:text-lg xl:text-xl mb-2 md:mb-3 lg:mb-4">
+                                    <p className="text-white font-semibold text-base md:text-lg lg:text-xl mb-3 lg:mb-4">
                                         What this means for you:
                                     </p>
                                     
-                                    <ul className="flex flex-col gap-2 md:gap-3 lg:gap-4 xl:gap-6 2xl:gap-8">
+                                    <ul className="flex flex-col gap-3 md:gap-4 lg:gap-6 xl:gap-8">
                                         {item.paint_point_items.map((point, idx) => (
-                                            <li key={idx} className="flex items-start gap-2 md:gap-3 lg:gap-4 xl:gap-6 2xl:gap-8">
+                                            <li key={idx} className="flex items-start gap-3 md:gap-4 lg:gap-6 xl:gap-8">
                                                 <img
                                                     src={point.image.src}
                                                     alt={`Solution ${idx + 1}`}
-                                                    className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-12 2xl:h-12 flex-shrink-0 mt-0.5"
+                                                    className="w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 xl:w-12 xl:h-12 flex-shrink-0 mt-0.5"
                                                 />
-                                                <p className="text-white/80 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl leading-snug md:leading-normal" dangerouslySetInnerHTML={{ __html: point.explanation }} />
+                                                <p className="text-white/80 text-base md:text-lg lg:text-xl leading-normal" dangerouslySetInnerHTML={{ __html: point.explanation }} />
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
                             </div>
-                            <div className="w-1/2">
+                            <div className="w-full lg:w-1/2 order-1 lg:order-2">
                                 <img
                                     src={item.image.src}
                                     alt={`Problem ${index + 1}`}
-                                    className="lg:rounded-l-xl w-full h-full object-cover"
+                                    className="lg:rounded-l-xl w-full h-full object-cover min-h-[250px] md:min-h-[350px]"
                                 />
                             </div>
                         </div>
                     ) : (
-                        <div className="flex items-stretch">
-                            <div className="w-1/2">
+                        <div className="flex flex-col lg:flex-row items-stretch">
+                            <div className="w-full lg:w-1/2">
                                 <img
                                     src={item.image.src}
                                     alt={`Problem ${index + 1}`}
-                                    className="lg:rounded-r-xl w-full h-full object-cover"
+                                    className="lg:rounded-r-xl w-full h-full object-cover min-h-[250px] md:min-h-[350px]"
                                 />
                             </div>
-                            <div className="w-1/2 flex items-center">
-                                <div className="w-full px-4 lg:px-8 xl:px-12">
-                                    <h3 className="text-white text-lg md:text-2xl lg:text-3xl xl:text-[40px] font-semibold mb-3 md:mb-4 lg:mb-6 leading-tight md:leading-none" dangerouslySetInnerHTML={{ __html: item.name }} />
+                            <div className="w-full lg:w-1/2 flex items-center">
+                                <div className="w-full px-4 py-6 lg:py-0 lg:px-8 xl:px-12">
+                                    <h3 className="text-white text-2xl md:text-3xl lg:text-3xl xl:text-[40px] font-semibold mb-4 lg:mb-6 leading-tight" dangerouslySetInnerHTML={{ __html: item.name }} />
                                     
                                     {/* Description Paragraphs */}
                                     {item.description && item.description.map((paragraph, pIdx) => (
-                                        <p key={pIdx} className="text-white/80 text-xs sm:text-sm md:text-base lg:text-lg mb-3 md:mb-4 lg:mb-5 leading-relaxed">
+                                        <p key={pIdx} className="text-white/80 text-base md:text-lg mb-4 lg:mb-5 leading-relaxed">
                                             {paragraph}
                                         </p>
                                     ))}
                                     
                                     {/* What this means for you */}
-                                    <p className="text-white font-semibold text-sm md:text-base lg:text-lg xl:text-xl mb-2 md:mb-3 lg:mb-4">
+                                    <p className="text-white font-semibold text-base md:text-lg lg:text-xl mb-3 lg:mb-4">
                                         What this means for you:
                                     </p>
                                     
-                                    <ul className="flex flex-col gap-2 md:gap-3 lg:gap-4 xl:gap-6 2xl:gap-8">
+                                    <ul className="flex flex-col gap-3 md:gap-4 lg:gap-6 xl:gap-8">
                                         {item.paint_point_items.map((point, idx) => (
-                                            <li key={idx} className="flex items-start gap-2 md:gap-3 lg:gap-4 xl:gap-6 2xl:gap-8">
+                                            <li key={idx} className="flex items-start gap-3 md:gap-4 lg:gap-6 xl:gap-8">
                                                 <img
                                                     src={point.image.src}
                                                     alt={`Solution ${idx + 1}`}
-                                                    className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-9 lg:h-9 xl:w-10 xl:h-10 2xl:w-12 2xl:h-12 flex-shrink-0 mt-0.5"
+                                                    className="w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 xl:w-12 xl:h-12 flex-shrink-0 mt-0.5"
                                                 />
-                                                <p className="text-white/80 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl leading-snug md:leading-normal" dangerouslySetInnerHTML={{ __html: point.explanation }} />
+                                                <p className="text-white/80 text-base md:text-lg lg:text-xl leading-normal" dangerouslySetInnerHTML={{ __html: point.explanation }} />
                                             </li>
                                         ))}
                                     </ul>

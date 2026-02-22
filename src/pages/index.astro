@@ -1,22 +1,18 @@
 ---
 import Application from "../components/sections/Application.jsx";
 import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/ui/navbar.tsx";
 import Hero from "../components/sections/Hero";
 import CTA from "../components/sections/CTA";
 import Problems from "../components/sections/Problems";
 import Chart from "../components/sections/Chart";
 import Approach from "../components/sections/Approach";
-import CaseStudy from "../components/sections/CaseStudy";
-import SupportSteps from "../components/sections/SupportSteps";
-import FAQ from "../components/sections/FAQ";
 import About from "../components/sections/About";
 import Contact from "../components/sections/Contact";
-import Map from "../components/sections/Map";
+
+const canonicalUrl = import.meta.env.CANONICAL_URL || "http://localhost:4321";
 ---
 
-<Layout>
-    <Navbar />
+<Layout canonicalUrl={canonicalUrl}>
     <Hero
         hero_headline={"Empowering Industry Through Smart Automation"}
         hero_sub_headline={"End-to-end industrial automation solutions to improve efficiency, safety, and operational reliability"}

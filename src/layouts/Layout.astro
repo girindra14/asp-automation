@@ -1,7 +1,66 @@
 ---
-import '../styles/custom.css';
+import Navbar from "../components/ui/navbar.tsx";
+import customCSS from '../styles/custom.css';
+
+export interface Props {
+  canonicalUrl: string;
+}
+
+const { canonicalUrl } = Astro.props;
 ---
 
-<main>
-  <slot />
-</main>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml,image/png" href="/favicon.webp" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:url" content={canonicalUrl} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta content="index,follow,all" name="robots" />
+    <meta
+      name="title"
+      content={`ASP Automation - Your Industrial Automation Partner`}
+    />
+    <meta
+      name="description"
+      content={`ASP Automation provides integrated industrial automation solutions to improve efficiency, safety, and operational reliability across various industries.`}
+    />
+    <link rel="canonical" href={canonicalUrl} />
+    <title>ASP Automation</title>
+    <link rel="dns-prefetch" href={canonicalUrl}>
+    <link rel="preconnect" href={canonicalUrl} crossorigin>
+    <Fragment set:html={`<style>${customCSS}</style>`} />
+    <!-- GSC -->
+    <!-- <meta name="google-site-verification" content="iNcx25s2rV9q_29woQd_HQwGSUN2xibBBB-Kpw52HFg" /> -->
+    <!-- End GSC -->
+    <!-- Data Layer for GTM (Google Tag Manager) -->
+    <!-- <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+    </script> -->
+    <!-- End Data Layer for GTM (Google Tag Manager) -->
+    <!-- GTM (Google Tag Manager) -->
+    <!-- <script is:inline>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5M2JWJXN');
+    </script> -->
+    <!-- End GTM (Google Tag Manager) -->
+    <!-- Rich Snippet Review JSON-LD -->
+    <!-- End Rich Snippet Review JSON-LD -->
+  </head>
+  <body class="overflow-hidden overflow-y-auto bg-body">
+    <!-- GTM (Google Tag Manager) (noscript) -->
+    <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5M2JWJXN"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+    <!-- End GTM (Google Tag Manager) (noscript) -->
+    <Navbar
+      client:load
+    />
+    <slot />
+  </body>
+</html>

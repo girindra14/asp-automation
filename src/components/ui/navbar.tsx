@@ -1,9 +1,7 @@
-import logo from "../../assets/images/jmso-logo.png";
-import logoShort from "../../assets/images/favicon.png";
+import logo from "../../assets/images/logo_asp.png";
+import logoShort from "../../../public/favicon.webp";
 import { Button } from "@/components/ui/button";
 import MobileNav from "@/components/ui/mobile-nav";
-
-import React from "react";
 
 export default function Navbar() {
     const navigation = {
@@ -19,12 +17,12 @@ export default function Navbar() {
     return (
         <header className="w-full py-4 border-b border-black/10 bg-white sticky top-0 z-50">
             <div className="container lg:flex justify-between items-center gap-4 hidden">
-                <a href={`#`} aria-label="JMSO">
+                <a href={`/`} aria-label="ASP Automation">
                     <img
                         src={logo.src}
-                        alt="JMSO"
+                        alt="ASP Automation"
                         loading="eager"
-                        className="h-8 w-auto"
+                        className="h-16 w-auto"
                     />
                 </a>
                 <nav className="flex gap-8 items-center">
@@ -58,10 +56,10 @@ export default function Navbar() {
                     <MobileNav
                         navItem={navigation.menu}
                         titleImg={
-                            <a slot="titleImg" href="#" aria-label="JMSO">
+                            <a slot="titleImg" href="/" aria-label="ASP Automation">
                                 <img
                                     src={logo.src}
-                                    alt="JMSO"
+                                    alt="ASP Automation"
                                     loading="eager"
                                     className="h-8 w-auto"
                                 />
@@ -70,14 +68,14 @@ export default function Navbar() {
                     ></MobileNav>
                     <img
                         src={logo.src}
-                        alt="JMSO"
+                        alt="ASP Automation"
                         height={32}
                         loading="eager"
                         className="hidden md:block lg:hidden"
                     />
                     <img
-                        src={logoShort.src}
-                        alt="JMSO"
+                        src={logo.src}
+                        alt="ASP Automation"
                         loading="eager"
                         className="block md:hidden h-8 w-auto"
                     />

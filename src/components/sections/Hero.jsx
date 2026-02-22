@@ -62,18 +62,18 @@ export default function Hero({
             <div className="flex flex-col lg:flex-row items-center relative lg:min-h-[calc(100dvh-73px-84px)] container">
                 <div className="pt-12 md:pt-12 lg:py-0 w-full xl:py-24 flex justify-center">
                     <div className="flex flex-col w-full lg:max-w-5xl gap-5 items-center">
-                        <h1 className="text-center text-7xl text-white font-bold leading-none mb-5" dangerouslySetInnerHTML={{ __html: hero_headline }} />
-                        <p className="text-center text-white text-4xl lg:text-3xl font-medium mb-5" dangerouslySetInnerHTML={{ __html: hero_sub_headline }} />
+                        <h1 className="text-center text-5xl lg:text-7xl text-white font-bold leading-none mb-5" dangerouslySetInnerHTML={{ __html: hero_headline }} />
+                        <p className="text-center text-white text-2xl lg:text-3xl font-medium mb-5" dangerouslySetInnerHTML={{ __html: hero_sub_headline }} />
                         <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto justify-center mb-20 md:mb-30 lg:mb-5">
                             <a
                                 href="#contact-us"
-                                className="px-8 py-4 bg-jmso-tosca hover:bg-jmso-tosca/90 text-jmso-dark-blue font-bold text-3xl lg:text-2xl rounded-lg transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:scale-105"
+                                className="px-8 py-4 bg-jmso-tosca hover:bg-jmso-tosca/90 text-jmso-dark-blue font-bold text-xl lg:text-2xl rounded-lg transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:scale-105"
                             >
                                 Request a Consultation
                             </a>
                             <a
                                 href="#application"
-                                className="px-8 py-4 bg-transparent hover:bg-white/10 text-white font-bold text-3xl lg:text-2xl rounded-lg border-2 border-white/50 hover:border-white transition-all duration-300 text-center"
+                                className="px-8 py-4 bg-transparent hover:bg-white/10 text-jmso-dark-blue/75 lg:text-white font-bold text-xl lg:text-2xl rounded-lg border-2 border-white/75 hover:border-white transition-all duration-300 text-center"
                             >
                                 View Our Solutions
                             </a>

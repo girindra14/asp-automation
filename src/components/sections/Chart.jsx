@@ -87,7 +87,7 @@ export default function Chart({
             <div className="relative container flex flex-col items-center z-10">
                 <h2 className="jmso-heading text-jmso-dark-blue text-center mb-8 lg:mb-12" dangerouslySetInnerHTML={{ __html: service_headline }} />
                 <div className="w-full max-w-6xl">
-                    <div className="grid grid-cols-2 gap-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
                         {industries.map((industry, index) => (
                             <div
                                 key={industry.title}
@@ -120,7 +120,7 @@ export default function Chart({
                                     {/* CTA Button */}
                                     <button
                                         onClick={() => setSelectedIndustry(industry)}
-                                        className="w-full bg-gradient-to-r from-jmso-dark-blue to-[#0759d4] text-white py-3 px-6 rounded-lg font-semibold hover:from-[#003380] hover:to-[#0865f0] transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
+                                        className="w-full bg-gradient-to-br from-jmso-tosca to-jmso-dark-blue text-white py-3 px-6 rounded-lg font-semibold hover:from-jmso-tosca hover:to-jmso-dark-blue transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
                                     >
                                         Explanation
                                     </button>
