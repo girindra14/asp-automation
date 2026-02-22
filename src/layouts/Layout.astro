@@ -1,6 +1,6 @@
 ---
 import Navbar from "../components/ui/navbar.tsx";
-import customCSS from '../styles/custom.css';
+import '../styles/custom.css';
 
 export interface Props {
   canonicalUrl: string;
@@ -29,7 +29,6 @@ const { canonicalUrl } = Astro.props;
     <title>ASP Automation</title>
     <link rel="dns-prefetch" href={canonicalUrl}>
     <link rel="preconnect" href={canonicalUrl} crossorigin>
-    <Fragment set:html={`<style>${customCSS}</style>`} />
     <!-- GSC -->
     <!-- <meta name="google-site-verification" content="iNcx25s2rV9q_29woQd_HQwGSUN2xibBBB-Kpw52HFg" /> -->
     <!-- End GSC -->
