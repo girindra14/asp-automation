@@ -1,11 +1,11 @@
 ---
-import Application from "../components/sections/Application.jsx";
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/sections/Hero";
+import WhatWeDo from "../components/sections/WhatWeDo.jsx";
+import WhyChooseUs from "../components/sections/WhyChooseUs.jsx";
+import OurSolutions from "../components/sections/OurSolutions.jsx";
 import CTA from "../components/sections/CTA";
-import Problems from "../components/sections/Problems";
-import Chart from "../components/sections/Chart";
-import Approach from "../components/sections/Approach";
+import OurProducts from "../components/sections/OurProducts.jsx";
 import About from "../components/sections/About";
 import Contact from "../components/sections/Contact";
 
@@ -14,25 +14,21 @@ const canonicalUrl = import.meta.env.CANONICAL_URL || "http://localhost:4321";
 
 <Layout canonicalUrl={canonicalUrl}>
     <Hero
-        hero_headline={"Empowering Industry Through Smart Automation"}
-        hero_sub_headline={"End-to-end industrial automation solutions to improve efficiency, safety, and operational reliability"}
+        headline={"Empowering Industry Through Smart Automation"}
+        sub_headline={"End-to-end industrial automation solutions to improve efficiency, safety, and operational reliability"}
     />
-    <Application
+    <WhatWeDo
         client:load
-        feature_headline={"What We Do"}
-        feature_description={"We provide integrated industrial automation solutions, combining reliable products, engineering expertise, and responsive support to help industries operate smarter and more efficiently."}
-        feature_industry_headline={"Core Solutions"}
-        feature_industry_description={
-        `Australia, known for its vast resources and remote regions, is heavily reliant on sectors like mining and construction. However, labor shortages and the logistical challenges of working in harsh, isolated environments have intensified the need for more efficient solutions. Rising infrastructure demands require advanced technologies to bridge the gap in manpower and ensure quality and durability across long-term projects.
-         Automatic welding machines are essential in addressing these challenges, offering precision and durability that manual labor often falls short of in remote or high-stakes conditions. By automating welding processes, industries can overcome labor shortages and enhance productivity, ensuring projects remain on schedule while maintaining high standards of safety and quality.`
-        }
+        headline={"What We Do"}
+        description={"We provide integrated industrial automation solutions, combining reliable products, engineering expertise, and responsive support to help industries operate smarter and more efficiently."}
+        solution_headline={"Core Solutions"}
     />
-    <Problems
-        paintpoint_headline={"Why Choose Us"}
+    <WhyChooseUs
+        headline={"Why Choose Us"}
     />
-    <Chart
+    <OurSolutions
         client:load
-        service_headline={"Our Solutions"}
+        headline={"Our Solutions"}
     />
     <div class="relative">
         <CTA
@@ -43,9 +39,9 @@ const canonicalUrl = import.meta.env.CANONICAL_URL || "http://localhost:4321";
         />
         <div class="bg-clip-3 bg-jmso-light-blue w-full absolute h-full -bottom-px"></div>
     </div>
-    <Approach
+    <OurProducts
         client:load
-        service_headline={"Our Products"}
+        headline={"Our Products"}
     />
     <About client:load />
     <Contact />

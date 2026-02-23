@@ -1,9 +1,9 @@
 // ---
 // import { Image } from "astro:assets";
 
-import heroBg from "../../assets/images/hero-bg-untouched1.webp";
-import heroBgMobile from "../../assets/images/hero-bg-mobile1.webp";
-import heroBgTablet from "../../assets/images/hero-bg-tablet1.webp";
+import heroBg from "../../assets/images/hero-bg-untouched.webp";
+import heroBgMobile from "../../assets/images/hero-bg-mobile.webp";
+import heroBgTablet from "../../assets/images/hero-bg-tablet.webp";
 // import { getLangFromUrl, useTranslations } from "@/lib/utils";
 
 // const lang = getLangFromUrl(Astro.url);
@@ -13,8 +13,8 @@ import heroBgTablet from "../../assets/images/hero-bg-tablet1.webp";
 import { useEffect } from "react";
 
 export default function Hero({
-    hero_headline,
-    hero_sub_headline,
+    headline,
+    sub_headline,
 }) {
     useEffect(() => {
         const applyStylesToStrongChildren = () => {
@@ -60,8 +60,8 @@ export default function Hero({
             <div className="flex flex-col lg:flex-row items-center relative lg:min-h-[calc(100dvh-73px-84px)] container">
                 <div className="pt-12 md:pt-12 lg:py-0 w-full xl:py-24 flex justify-center">
                     <div className="flex flex-col w-full lg:max-w-5xl gap-5 items-center">
-                        <h1 className="text-center text-5xl lg:text-7xl text-white font-bold leading-none mb-5" dangerouslySetInnerHTML={{ __html: hero_headline }} />
-                        <p className="text-center text-white text-2xl lg:text-3xl font-medium mb-5" dangerouslySetInnerHTML={{ __html: hero_sub_headline }} />
+                        <h1 className="text-center text-5xl lg:text-7xl text-white font-bold leading-none mb-5" dangerouslySetInnerHTML={{ __html: headline }} />
+                        <p className="text-center text-white text-2xl lg:text-3xl font-medium mb-5" dangerouslySetInnerHTML={{ __html: sub_headline }} />
                         <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto justify-center mb-20 md:mb-30 lg:mb-5">
                             <a
                                 href="#contact-us"
