@@ -259,7 +259,7 @@ export default function ContactWithFooter() {
 
                     {/* Bottom Copyright Section */}
                     <div className="text-center space-y-2">
-                        <p className="text-white/60 text-sm">copyright 2026 ASP Automation. All rights reserved.</p>
+                        <p className="text-white/60 text-sm">© 2026 ASP Automation. All rights reserved.</p>
                     </div>
                 </div>
             </footer>
