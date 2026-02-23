@@ -17,6 +17,7 @@ import FODatasheet from "../../assets/images/our-products/fo/fo-datasheet.pdf";
 import ISG1 from "../../assets/images/our-products/isg/isg_1.png";
 import ISG2 from "../../assets/images/our-products/isg/isg_2.png";
 import ISGDatasheet from "../../assets/images/our-products/isg/isg-datasheet.pdf";
+import AICCTVDatasheet from "../../assets/images/our-products/scada/ai-cctv-datasheet.pdf";
 import bg from "../../assets/images/application-bg.png";
 
 export default function OurProducts({
@@ -110,7 +111,7 @@ export default function OurProducts({
                 "High Availability & System Redundancy",
                 "Scalability & Cybersecurity"
             ],
-            link: IPCDatasheet
+            link: AICCTVDatasheet
         },
     ];
 
