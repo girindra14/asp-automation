@@ -167,7 +167,7 @@ export default function OurProducts({
                                         href={product.link}
                                         className="block w-full bg-gradient-to-br from-jmso-tosca to-jmso-dark-blue text-white py-3 px-6 rounded-lg font-semibold hover:from-jmso-tosca hover:to-jmso-dark-blue transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 text-center"
                                     >
-                                        Consult Now
+                                        Product Info
                                     </a>
                                 </div>
 
