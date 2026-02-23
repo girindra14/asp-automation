@@ -92,7 +92,7 @@ export default function WhyChooseUs({ headline }) {
         },
         {
             name: "End-to-End Project Capability",
-            image: whyChooseUs4,
+            image: whyChooseUs1,
             description: [
                 "We provide complete automation services — from initial consultation and system design to panel fabrication, installation, commissioning, and after-sales support.",
                 "By managing the full lifecycle of your automation project, we ensure seamless integration between hardware, software, and field devices."
