@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules";
+import { Autoplay, Navigation, EffectFade } from "swiper/modules";
 import "swiper/css/effect-fade";
 import "swiper/css";
 import { useRef, useState } from "react";
@@ -12,6 +12,7 @@ import slide_6 from "../../assets/images/sliders/slider_6.webp";
 import slide_7 from "../../assets/images/sliders/slider_7.webp";
 import slide_8 from "../../assets/images/sliders/slider_8.webp";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react/dist/ssr";
+import type { ImageMetadata } from "astro";
 
 export const WhatWeDoSlider = () => {
   const [_, setInit] = useState<boolean>();
@@ -129,6 +130,47 @@ export const WhatWeDoSlider = () => {
           />
         </SwiperSlide>
       </Swiper>
+    </div>
+  );
+};
+
+interface FadeSliderProps {
+  imgs: ImageMetadata[];
+}
+
+export const FadeSlider = ({ imgs }: FadeSliderProps) => {
+  const [_, setInit] = useState<boolean>();
+  return (
+    <div className="relative aspect-[4/3] overflow-hidden">
+      <Swiper
+        onInit={() => setInit(true)}
+        slidesPerView={1}
+        loop={true}
+        speed={1000}
+        autoplay={{
+          delay: 1500,
+          disableOnInteraction: false,
+        }}
+        effect="fade"
+        fadeEffect={{
+          crossFade: true
+        }}
+        modules={[Autoplay, EffectFade]}
+        className="w-full h-full"
+      >
+        {imgs.map((img, index) => (
+          <SwiperSlide>
+              <img
+                src={img.src}
+                alt={`Product ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-jmso-dark-blue/90 to-transparent pointer-events-none z-10"></div>
     </div>
   );
 };

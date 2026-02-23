@@ -192,7 +192,7 @@ export default function OurSolutions({
                                 {/* CTA Footer */}
                                 <div className="pt-6 border-t border-gray-200">
                                     <button className="w-full bg-gradient-to-br from-jmso-tosca to-jmso-dark-blue text-white py-4 px-8 rounded-xl font-semibold hover:from-jmso-tosca hover:to-jmso-dark-blue transition-all duration-300 shadow-lg hover:shadow-xl">
-                                        Konsultasi Gratis Sekarang
+                                        Consult Now
                                     </button>
                                 </div>
                             </div>

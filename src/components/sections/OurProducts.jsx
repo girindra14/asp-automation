@@ -1,19 +1,22 @@
 import { useEffect, useState } from "react";
-import { X } from "lucide-react";
 import { CheckCircle } from "@phosphor-icons/react/dist/ssr";
-import { ChartSlider } from "@/components/ui/swiper";
-import automotive from "../../assets/images/industries/automotive.png";
-import biotech from "../../assets/images/industries/biotech.png";
-import lcd from "../../assets/images/industries/lcd.png";
-import medical from "../../assets/images/industries/medical.png";
-import rocket from "../../assets/images/industries/rocket.png";
-import semiconductor from "../../assets/images/industries/semiconductor.png";
-import automotiveMobile from "../../assets/images/industries/automotive-mobile.png";
-import biotechMobile from "../../assets/images/industries/biotech-mobile.png";
-import lcdMobile from "../../assets/images/industries/lcd-mobile.png";
-import medicalMobile from "../../assets/images/industries/medical-mobile.png";
-import rocketMobile from "../../assets/images/industries/rocket-mobile.png";
-import semiconductorMobile from "../../assets/images/industries/semiconductor-mobile.png";
+import { FadeSlider } from "../ui/swiper";
+import IPC1 from "../../assets/images/our-products/ipc/ipc_1.png";
+import IPC2 from "../../assets/images/our-products/ipc/ipc_2.png";
+import IPC3 from "../../assets/images/our-products/ipc/ipc_3.png";
+import IPCDatasheet from "../../assets/images/our-products/ipc/ipc-datasheet.pdf";
+import UPS1 from "../../assets/images/our-products/ups/ups_1.png";
+import UPS2 from "../../assets/images/our-products/ups/ups_2.png";
+import UPS3 from "../../assets/images/our-products/ups/ups_3.png";
+import UPSDatasheet from "../../assets/images/our-products/ups/ups-datasheet.pdf";
+import CCTV1 from "../../assets/images/our-products/cctv/cctv_1.png";
+import CCTV2 from "../../assets/images/our-products/cctv/cctv_2.png";
+import CCTV3 from "../../assets/images/our-products/cctv/cctv_3.png";
+import FO1 from "../../assets/images/our-products/fo/fo_1.png";
+import FODatasheet from "../../assets/images/our-products/fo/fo-datasheet.pdf";
+import ISG1 from "../../assets/images/our-products/isg/isg_1.png";
+import ISG2 from "../../assets/images/our-products/isg/isg_2.png";
+import ISGDatasheet from "../../assets/images/our-products/isg/isg-datasheet.pdf";
 import bg from "../../assets/images/application-bg.png";
 
 export default function OurProducts({
@@ -36,11 +39,10 @@ export default function OurProducts({
         applyStylesToStrongChildren();
     });
 
-    const industries = [
+    const products = [
         {
             title: "Industrial PC",
-            img: semiconductor,
-            imgMobile: semiconductorMobile,
+            imgs: [IPC1, IPC2, IPC3],
             description: "Design and implementation of PLC, HMI, and SCADA systems tailored to industrial processes.",
             keySpecs: [
                 "Industrial-Grade Processor & Long Lifecycle",
@@ -48,12 +50,11 @@ export default function OurProducts({
                 "Flexible I/O & Expandability",
                 "Reliability & Industrial OS Support"
             ],
-            link: "#"
+            link: IPCDatasheet
         },
         {
             title: "Uninterruptible Power Supply",
-            img: rocket,
-            imgMobile: rocketMobile,
+            imgs: [UPS1, UPS2, UPS3],
             description: "Design, assembly, testing, and commissioning of electrical and control panels based on industry standards.",
             keySpecs: [
                 "Isolation Transformer for Maximum Protection",
@@ -61,12 +62,11 @@ export default function OurProducts({
                 "High Reliability for Industrial Loads",
                 "Clean & Stable Power Quality"
             ],
-            link: "#"
+            link: UPSDatasheet
         },
         {
             title: "CCTV",
-            img: biotech,
-            imgMobile: biotechMobile,
+            imgs: [CCTV1, CCTV2, CCTV3],
             description: "Selection, installation, and calibration of sensors, transmitters, and measurement instruments.",
             keySpecs: [
                 "AI Video Analytics",
@@ -74,12 +74,11 @@ export default function OurProducts({
                 "High Accuracy & Early Warning",
                 "Industrial-Grade Reliability & Integration"
             ],
-            link: "#"
+            link: IPCDatasheet
         },
         {
             title: "Fiber Optic",
-            img: lcd,
-            imgMobile: lcdMobile,
+            imgs: [FO1],
             description: "Design and deployment of reliable industrial networks for data communication and system integration.",
             keySpecs: [
                 "High Bandwidth & Long-Distance Transmission",
@@ -87,12 +86,11 @@ export default function OurProducts({
                 "Industrial-Grade Cable & Connector Design",
                 "High Reliability & Network Stability"
             ],
-            link: "#"
+            link: FODatasheet
         },
                 {
             title: "Industrial Switch",
-            img: lcd,
-            imgMobile: lcdMobile,
+            imgs: [ISG1, ISG2],
             description: "Design and deployment of reliable industrial networks for data communication and system integration.",
             keySpecs: [
                 "Rugged Industrial Design",
@@ -100,12 +98,11 @@ export default function OurProducts({
                 "Flexible Port & PoE Options",
                 "Industrial Network Management & Security"
             ],
-            link: "#"
+            link: ISGDatasheet
         },
         {
             title: "Supervisory Control and Data Acquisition",
-            img: lcd,
-            imgMobile: lcdMobile,
+            imgs: [IPC1, IPC2, IPC3],
             description: "Design and deployment of reliable industrial networks for data communication and system integration.",
             keySpecs: [
                 "Real-Time Monitoring & Control",
@@ -113,7 +110,7 @@ export default function OurProducts({
                 "High Availability & System Redundancy",
                 "Scalability & Cybersecurity"
             ],
-            link: "#"
+            link: IPCDatasheet
         },
     ];
 
@@ -131,38 +128,29 @@ export default function OurProducts({
                 <h2 className="jmso-heading text-jmso-dark-blue text-center mb-8 lg:mb-12" dangerouslySetInnerHTML={{ __html: headline }} />
                 <div className="w-full max-w-6xl">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
-                        {industries.map((industry, index) => (
+                        {products.map((product, index) => (
                             <div
-                                key={industry.title}
+                                key={product.title}
                                 className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
                             >
                                 {/* Card Image */}
                                 <div className="relative aspect-[4/3] overflow-hidden">
-                                    <img
-                                        src={industry.img.src}
-                                        alt={industry.title}
-                                        className="hidden md:block w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                    />
-                                    <img
-                                        src={industry.imgMobile.src}
-                                        alt={industry.title}
-                                        className="block md:hidden w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                    />
+                                    <FadeSlider imgs={product.imgs} client:load />
                                     <div className="absolute inset-0 bg-gradient-to-t from-jmso-dark-blue/90 to-transparent"></div>
                                 </div>
 
                                 {/* Card Content */}
                                 <div className="p-6">
                                     <h3 className="text-xl font-bold text-jmso-dark-blue mb-3">
-                                        {industry.title}
+                                        {product.title}
                                     </h3>
                                     <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                                        {industry.description}
+                                        {product.description}
                                     </p>
 
                                     {/* Key Specs */}
                                     <div className="mb-6 space-y-2">
-                                        {industry.keySpecs.map((spec, idx) => (
+                                        {product.keySpecs.map((spec, idx) => (
                                             <div key={idx} className="flex items-start gap-2">
                                                 <CheckCircle
                                                     size={24}
@@ -176,7 +164,7 @@ export default function OurProducts({
 
                                     {/* CTA Button */}
                                     <a
-                                        href={industry.link}
+                                        href={product.link}
                                         className="block w-full bg-gradient-to-br from-jmso-tosca to-jmso-dark-blue text-white py-3 px-6 rounded-lg font-semibold hover:from-jmso-tosca hover:to-jmso-dark-blue transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 text-center"
                                     >
                                         Consult Now
