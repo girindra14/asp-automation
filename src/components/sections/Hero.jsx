@@ -70,7 +70,7 @@ export default function Hero({
                                 Request a Consultation
                             </a>
                             <a
-                                href="#application"
+                                href="#our-solutions"
                                 className="px-8 py-4 bg-transparent hover:bg-white/10 text-white lg:text-white font-bold text-xl lg:text-2xl rounded-lg border-2 border-white/75 hover:border-white transition-all duration-300 text-center"
                             >
                                 View Our Solutions
