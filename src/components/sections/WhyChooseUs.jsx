@@ -48,7 +48,7 @@ export default function WhyChooseUs({ headline }) {
             ]
         },
         {
-            name: "Proven Industrial Projects",
+            name: "Reliable & Scalable Solutions",
             image: whyChooseUs2,
             description: [
                 "Our automation systems are designed with long-term performance in mind. We prioritize system stability, industrial-grade components, and scalable architecture to ensure your operations can grow without major system overhauls."
@@ -56,20 +56,20 @@ export default function WhyChooseUs({ headline }) {
             paint_point_items: [
                 {
                     image: problem4,
-                    explanation: "Current machine jig replacement is too costly to afford"
+                    explanation: "Reduced downtime"
                 },
                 {
                     image: problem5,
-                    explanation: "In Australia, existing automatic machines fail to reach the target production volume"
+                    explanation: "Long-term investment protection"
                 },
                 {
                     image: problem6,
-                    explanation: "Hard to locate an automatic machine that fits both technical and budget constraints"
+                    explanation: "Future-ready automation infrastructure"
                 }
             ]
         },
         {
-            name: "Reliable After-Sales Support",
+            name: "Strong Technical Support & After-Sales Service",
             image: whyChooseUs3,
             description: [
                 "Automation systems require ongoing reliability. Our team provides responsive technical support, preventive maintenance guidance, and troubleshooting assistance to minimize operational disruption.",
@@ -78,21 +78,21 @@ export default function WhyChooseUs({ headline }) {
             paint_point_items: [
                 {
                     image: problem7,
-                    explanation: "Outsourcing processes result in higher costs, which are not economical for customers"
+                    explanation: "Faster issue resolution"
                 },
                 {
                     image: problem8,
-                    explanation: "Outsourced welding tasks face high defect rates, showing the need to install advanced machines"
+                    explanation: "Operational continuity"
                 },
                 {
                     image: problem9,
-                    explanation: "Insufficient welders affecting in-house production quality"
+                    explanation: "Peace of mind"
                 }
             ]
         },
         {
-            name: "Trusted Technology Partners",
-            image: whyChooseUs1,
+            name: "End-to-End Project Capability",
+            image: whyChooseUs4,
             description: [
                 "We provide complete automation services — from initial consultation and system design to panel fabrication, installation, commissioning, and after-sales support.",
                 "By managing the full lifecycle of your automation project, we ensure seamless integration between hardware, software, and field devices."
@@ -100,15 +100,15 @@ export default function WhyChooseUs({ headline }) {
             paint_point_items: [
                 {
                     image: problem7,
-                    explanation: "Outsourcing processes result in higher costs, which are not economical for customers"
+                    explanation: "One trusted partner"
                 },
                 {
                     image: problem8,
-                    explanation: "Outsourced welding tasks face high defect rates, showing the need to install advanced machines"
+                    explanation: "Clear communication"
                 },
                 {
                     image: problem9,
-                    explanation: "Insufficient welders affecting in-house production quality"
+                    explanation: "Better system integration"
                 }
             ]
         }
