@@ -13,52 +13,72 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import aboutUs from "../../assets/images/about-us.webp";
 import aboutUsMobile from "../../assets/images/about-us-mobile.webp";
+import work1 from "../../assets/images/our-works/work_1.webp";
+import work2 from "../../assets/images/our-works/work_2.webp";
+import work3 from "../../assets/images/our-works/work_3.webp";
+import work4 from "../../assets/images/our-works/work_4.webp";
+import work5 from "../../assets/images/our-works/work_5.webp";
+import work1Mobile from "../../assets/images/our-works/work_1-mobile.webp";
+import work2Mobile from "../../assets/images/our-works/work_2-mobile.webp";
+import work3Mobile from "../../assets/images/our-works/work_3-mobile.webp";
+import work4Mobile from "../../assets/images/our-works/work_4-mobile.webp";
+import work5Mobile from "../../assets/images/our-works/work_5-mobile.webp";
+import ABB from "../../assets/images/partnerships/abb.webp";
+import Ablerex from "../../assets/images/partnerships/ablerex.webp";
+import Advantech from "../../assets/images/partnerships/advantech.webp";
+import Belden from "../../assets/images/partnerships/belden.webp";
+import Cisco from "../../assets/images/partnerships/cisco.webp";
+import HanwhaVision from "../../assets/images/partnerships/hanwha-vision.webp";
+import Netviel from "../../assets/images/partnerships/netviel.webp";
 
 export default function AboutUs() {
     const works = [
         {
-            icon: <Factory size={64} />,
+            img: work1,
+            imgMobile: work1Mobile,
             category: "Manufacturing",
             title: "Automotive Assembly Line",
             products: "PLC Systems, HMI Panels, Servo Motors",
         },
         {
-            icon: <Buildings size={64} />,
+            img: work2,
+            imgMobile: work2Mobile,
             category: "Infrastructure",
             title: "Smart Building Control",
             products: "BMS Systems, SCADA, IoT Sensors",
         },
         {
-            icon: <Drop size={64} />,
+            img: work3,
+            imgMobile: work3Mobile,
             category: "Water Treatment",
             title: "Filtration System Control",
             products: "Process Controllers, Flow Meters, Valves",
         },
         {
-            icon: <Package size={64} />,
+            img: work4,
+            imgMobile: work4Mobile,
             category: "Packaging",
             title: "Conveyor Automation",
             products: "Motion Controllers, VFDs, Safety Systems",
         },
         {
-            icon: <Lightning size={64} />,
+            img: work5,
+            imgMobile: work5Mobile,
             category: "Energy",
             title: "Power Distribution Control",
             products: "Power Meters, Monitoring Systems, Switchgear",
         },
-        {
-            icon: <Flask size={64} />,
-            category: "Chemical",
-            title: "Process Automation",
-            products: "DCS Systems, Analytical Instruments, Safety PLCs",
-        },
     ];
 
     const partnerships = [
-        { name: "Siemens" },
-        { name: "Schneider" },
-        { name: "ABB" },
-        { name: "Rockwell" },
+        { img: ABB },
+        { img: Ablerex },
+        { img: Advantech },
+        { img: Belden },
+        { img: Cisco },
+        { img: HanwhaVision },
+        { img: Netviel },
+
     ];
 
     return (
@@ -197,8 +217,18 @@ export default function AboutUs() {
                                 key={index}
                                 className="group bg-white rounded-xl border border-jmso-dark-blue/10 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
                             >
-                                <div className="bg-gradient-to-br from-jmso-tosca to-jmso-dark-blue aspect-[4/3] flex items-center justify-center text-white group-hover:scale-105 transition-transform duration-300">
-                                    <div className="opacity-50">{work.icon}</div>
+                                <div className="relative aspect-[4/3] overflow-hidden">
+                                    <img
+                                        src={work.img.src}
+                                        alt={work.title}
+                                        className="hidden md:block w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    />
+                                    <img
+                                        src={work.imgMobile.src}
+                                        alt={work.title}
+                                        className="block md:hidden w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-jmso-dark-blue/90 to-transparent"></div>
                                 </div>
                                 <div className="p-6">
                                     <span className="inline-block px-3 py-1 bg-jmso-light-blue text-jmso-tosca rounded-full text-xs font-semibold mb-3">
@@ -236,13 +266,12 @@ export default function AboutUs() {
                     <div className="max-w-4xl mx-auto">
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
                             {partnerships.map((partner, index) => (
-                                <div
-                                    key={index}
-                                    className="bg-white border-2 border-dashed border-gray-300 aspect-[3/2] rounded-xl hover:border-jmso-tosca hover:shadow-lg transition-all duration-300 cursor-pointer flex items-center justify-center group"
-                                >
-                                    <span className="text-gray-600 group-hover:text-jmso-tosca font-semibold text-base md:text-lg transition-colors">
-                                        {partner.name}
-                                    </span>
+                                <div key={index} className="group flex items-center justify-center">
+                                    <img
+                                        src={partner.img.src}
+                                        alt={partner.img.alt}
+                                        className="w-full h-auto object-contain hover:scale-110 transition-transform duration-700"
+                                    />
                                 </div>
                             ))}
                         </div>
