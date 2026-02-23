@@ -11,6 +11,8 @@ import {
     Gear,
     Handshake,
 } from "@phosphor-icons/react/dist/ssr";
+import aboutUs from "../../assets/images/about-us.webp";
+import aboutUsMobile from "../../assets/images/about-us-mobile.webp";
 
 export default function AboutUs() {
     const works = [
@@ -71,11 +73,18 @@ export default function AboutUs() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 lg:mb-24">
                         {/* Image */}
                         <div className="order-2 lg:order-1">
-                            <div className="bg-gradient-to-br from-jmso-tosca to-jmso-dark-blue rounded-xl shadow-lg aspect-[4/3] overflow-hidden flex items-center justify-center text-white">
-                                <div className="text-center p-8">
-                                    <Gear size={96} className="mx-auto mb-4 opacity-50" />
-                                    <p className="text-xl font-semibold">Industrial Automation</p>
-                                </div>
+                            <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+                                <img
+                                    src={aboutUs.src}
+                                    alt="About Us"
+                                    className="hidden md:block w-full h-full object-cover"
+                                />
+                                <img
+                                    src={aboutUsMobile.src}
+                                    alt="About Us"
+                                    className="block md:hidden w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-jmso-dark-blue/90 to-transparent"></div>
                             </div>
                         </div>
 
