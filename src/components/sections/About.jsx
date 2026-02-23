@@ -36,37 +36,37 @@ export default function AboutUs() {
         {
             img: work1,
             imgMobile: work1Mobile,
-            category: "Manufacturing",
+            // category: "Manufacturing",
             title: "Automotive Assembly Line",
-            products: "PLC Systems, HMI Panels, Servo Motors",
+            // products: "PLC Systems, HMI Panels, Servo Motors",
         },
         {
             img: work2,
             imgMobile: work2Mobile,
-            category: "Infrastructure",
+            // category: "Infrastructure",
             title: "Smart Building Control",
-            products: "BMS Systems, SCADA, IoT Sensors",
+            // products: "BMS Systems, SCADA, IoT Sensors",
         },
         {
             img: work3,
             imgMobile: work3Mobile,
-            category: "Water Treatment",
+            // category: "Water Treatment",
             title: "Filtration System Control",
-            products: "Process Controllers, Flow Meters, Valves",
+            // products: "Process Controllers, Flow Meters, Valves",
         },
         {
             img: work4,
             imgMobile: work4Mobile,
-            category: "Packaging",
+            // category: "Packaging",
             title: "Conveyor Automation",
-            products: "Motion Controllers, VFDs, Safety Systems",
+            // products: "Motion Controllers, VFDs, Safety Systems",
         },
         {
             img: work5,
             imgMobile: work5Mobile,
-            category: "Energy",
+            // category: "Energy",
             title: "Power Distribution Control",
-            products: "Power Meters, Monitoring Systems, Switchgear",
+            // products: "Power Meters, Monitoring Systems, Switchgear",
         },
     ];
 
@@ -231,15 +231,15 @@ export default function AboutUs() {
                                     <div className="absolute inset-0 bg-gradient-to-t from-jmso-dark-blue/90 to-transparent"></div>
                                 </div>
                                 <div className="p-6">
-                                    <span className="inline-block px-3 py-1 bg-jmso-light-blue text-jmso-tosca rounded-full text-xs font-semibold mb-3">
+                                    {/* <span className="inline-block px-3 py-1 bg-jmso-light-blue text-jmso-tosca rounded-full text-xs font-semibold mb-3">
                                         {work.category}
-                                    </span>
+                                    </span> */}
                                     <h4 className="text-xl font-bold text-jmso-dark-blue mb-2">
                                         {work.title}
                                     </h4>
-                                    <p className="text-jmso-dark-blue/60 text-sm">
+                                    {/* <p className="text-jmso-dark-blue/60 text-sm">
                                         Products: {work.products}
-                                    </p>
+                                    </p> */}
                                 </div>
                             </div>
                         ))}
