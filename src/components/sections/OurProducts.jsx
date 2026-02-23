@@ -75,7 +75,7 @@ export default function OurProducts({
                 "High Accuracy & Early Warning",
                 "Industrial-Grade Reliability & Integration"
             ],
-            link: IPCDatasheet
+            link: AICCTVDatasheet
         },
         {
             title: "Fiber Optic",
@@ -111,7 +111,7 @@ export default function OurProducts({
                 "High Availability & System Redundancy",
                 "Scalability & Cybersecurity"
             ],
-            link: AICCTVDatasheet
+            link: IPCDatasheet
         },
     ];
 
