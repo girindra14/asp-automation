@@ -270,7 +270,7 @@ export default function AboutUs() {
                                     <img
                                         src={partner.img.src}
                                         alt={partner.img.alt}
-                                        className="w-full h-auto object-contain hover:scale-110 transition-transform duration-700"
+                                        className="w-auto h-24 object-contain hover:scale-110 transition-transform duration-700"
                                     />
                                 </div>
                             ))}
