@@ -128,45 +128,47 @@ export default function OurProducts({
             <div className="relative container flex flex-col items-center z-10">
                 <h2 className="jmso-heading text-jmso-dark-blue text-center mb-8 lg:mb-12" dangerouslySetInnerHTML={{ __html: headline }} />
                 <div className="w-full max-w-6xl">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
+                    <div className="grid grid-cols md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                         {products.map((product, index) => (
                             <div
                                 key={product.title}
-                                className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                                className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col"
                             >
                                 {/* Card Image */}
-                                <div className="relative aspect-[4/3] overflow-hidden">
+                                <div className="relative aspect-[4/3] overflow-hidden flex-shrink-0">
                                     <FadeSlider imgs={product.imgs} client:load />
                                     <div className="absolute inset-0 bg-gradient-to-t from-jmso-dark-blue/90 to-transparent"></div>
                                 </div>
 
                                 {/* Card Content */}
-                                <div className="p-6">
-                                    <h3 className="text-xl font-bold text-jmso-dark-blue mb-3">
-                                        {product.title}
-                                    </h3>
-                                    <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                                        {product.description}
-                                    </p>
+                                <div className="p-6 flex flex-col flex-1">
+                                    <div className="flex-grow">
+                                        <h3 className="text-xl font-bold text-jmso-dark-blue mb-3">
+                                            {product.title}
+                                        </h3>
+                                        <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                                            {product.description}
+                                        </p>
 
-                                    {/* Key Specs */}
-                                    <div className="mb-6 space-y-2">
-                                        {product.keySpecs.map((spec, idx) => (
-                                            <div key={idx} className="flex items-start gap-2">
-                                                <CheckCircle
-                                                    size={24}
-                                                    weight="fill"
-                                                    className="text-jmso-tosca mt-1 flex-shrink-0"
-                                                />
-                                                <span className="text-sm text-gray-700">{spec}</span>
-                                            </div>
-                                        ))}
+                                        {/* Key Specs */}
+                                        <div className="space-y-2">
+                                            {product.keySpecs.map((spec, idx) => (
+                                                <div key={idx} className="flex items-start gap-2">
+                                                    <CheckCircle
+                                                        size={24}
+                                                        weight="fill"
+                                                        className="text-jmso-tosca mt-1 flex-shrink-0"
+                                                    />
+                                                    <span className="text-sm text-gray-700">{spec}</span>
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
 
                                     {/* CTA Button */}
                                     <a
                                         href={product.title == 'Supervisory Control and Data Acquisition' ? 'https://wa.me/6282139940054' : product.link}
-                                        className="block w-full bg-gradient-to-br from-jmso-tosca to-jmso-dark-blue text-white py-3 px-6 rounded-lg font-semibold hover:from-jmso-tosca hover:to-jmso-dark-blue transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 text-center"
+                                        className="mt-6 block w-full bg-gradient-to-br from-jmso-tosca to-jmso-dark-blue text-white py-3 px-6 rounded-lg font-semibold hover:from-jmso-tosca hover:to-jmso-dark-blue transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 text-center"
                                     >
                                         {product.title == 'Supervisory Control and Data Acquisition' ? 'Consult Now' : 'Product Info'}
                                     </a>
