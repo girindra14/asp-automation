@@ -145,7 +145,7 @@ export default function WhyChooseUs({ headline }) {
                                     
                                     <ul className="flex flex-col gap-3 md:gap-4 lg:gap-6 xl:gap-8">
                                         {item.paint_point_items.map((point, idx) => (
-                                            <li key={idx} className="flex items-start gap-3 md:gap-4 lg:gap-6 xl:gap-8">
+                                            <li key={idx} className="flex items-center gap-3 md:gap-4 lg:gap-6 xl:gap-8">
                                                 <img
                                                     src={point.image.src}
                                                     alt={`Solution ${idx + 1}`}
@@ -192,7 +192,7 @@ export default function WhyChooseUs({ headline }) {
                                     
                                     <ul className="flex flex-col gap-3 md:gap-4 lg:gap-6 xl:gap-8">
                                         {item.paint_point_items.map((point, idx) => (
-                                            <li key={idx} className="flex items-start gap-3 md:gap-4 lg:gap-6 xl:gap-8">
+                                            <li key={idx} className="flex items-center gap-3 md:gap-4 lg:gap-6 xl:gap-8">
                                                 <img
                                                     src={point.image.src}
                                                     alt={`Solution ${idx + 1}`}
