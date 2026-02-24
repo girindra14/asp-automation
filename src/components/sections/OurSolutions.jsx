@@ -142,7 +142,7 @@ export default function OurSolutions({
                             <div className="flex items-start justify-between">
                                 <div>
                                     <h3 className="text-2xl font-bold">{selectedIndustry.title}</h3>
-                                    {/* <p className="text-blue-100 mt-1">{selectedIndustry.description}</p> */}
+                                    <p className="hidden md:block text-blue-100 mt-1">{selectedIndustry.description}</p>
                                 </div>
                                 <button
                                     onClick={() => setSelectedIndustry(null)}

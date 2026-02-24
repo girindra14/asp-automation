@@ -10,6 +10,7 @@ import problem9 from "../../assets/images/why-choose-us/problem7.svg";
 import whyChooseUs1 from "../../assets/images/why-choose-us/why-choose-us1.webp";
 import whyChooseUs2 from "../../assets/images/why-choose-us/why-choose-us2.webp";
 import whyChooseUs3 from "../../assets/images/why-choose-us/why-choose-us3.webp";
+import whyChooseUs4 from "../../assets/images/why-choose-us/why-choose-us4.webp";
 
 import { useEffect } from "react";
 
@@ -92,7 +93,7 @@ export default function WhyChooseUs({ headline }) {
         },
         {
             name: "End-to-End Project Capability",
-            image: whyChooseUs1,
+            image: whyChooseUs4,
             description: [
                 "We provide complete automation services — from initial consultation and system design to panel fabrication, installation, commissioning, and after-sales support.",
                 "By managing the full lifecycle of your automation project, we ensure seamless integration between hardware, software, and field devices."
