@@ -18,11 +18,13 @@ import work2 from "../../assets/images/our-works/work_2.webp";
 import work3 from "../../assets/images/our-works/work_3.webp";
 import work4 from "../../assets/images/our-works/work_4.webp";
 import work5 from "../../assets/images/our-works/work_5.webp";
+import work6 from "../../assets/images/our-works/work_6.webp";
 import work1Mobile from "../../assets/images/our-works/work_1-mobile.webp";
 import work2Mobile from "../../assets/images/our-works/work_2-mobile.webp";
 import work3Mobile from "../../assets/images/our-works/work_3-mobile.webp";
 import work4Mobile from "../../assets/images/our-works/work_4-mobile.webp";
 import work5Mobile from "../../assets/images/our-works/work_5-mobile.webp";
+import work6Mobile from "../../assets/images/our-works/work_6-mobile.webp";
 import ABB from "../../assets/images/partnerships/abb.webp";
 import Ablerex from "../../assets/images/partnerships/ablerex.webp";
 import Advantech from "../../assets/images/partnerships/advantech.webp";
@@ -66,6 +68,13 @@ export default function AboutUs() {
             imgMobile: work5Mobile,
             // category: "Energy",
             title: "AI-Powered CCTV Installation",
+            // products: "Power Meters, Monitoring Systems, Switchgear",
+        },
+        {
+            img: work6,
+            imgMobile: work6Mobile,
+            // category: "Energy",
+            title: "Automation Panel Set-Up for Manufacture",
             // products: "Power Meters, Monitoring Systems, Switchgear",
         },
     ];
