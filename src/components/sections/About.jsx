@@ -144,10 +144,10 @@ export default function AboutUs() {
                 <div className="container mx-auto px-4 max-w-7xl">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                         {/* Vision */}
-                        <div className="bg-white p-8 md:p-10 rounded-xl border-2 border-jmso-tosca/20 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div className="bg-white p-8 md:p-10 rounded-xl border-2 border-jmso-medium-blue/20 shadow-lg hover:shadow-xl transition-all duration-300">
                             <div className="flex items-center gap-4 mb-6">
-                                <div className="w-14 h-14 bg-jmso-tosca/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <Eye size={32} className="text-jmso-tosca" />
+                                <div className="w-14 h-14 bg-jmso-medium-blue/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <Eye size={32} className="text-jmso-medium-blue" />
                                 </div>
                                 <h3 className="text-2xl md:text-3xl font-bold text-jmso-dark-blue">
                                     Our Vision
@@ -171,10 +171,10 @@ export default function AboutUs() {
                         </div>
 
                         {/* Mission */}
-                        <div className="bg-white p-8 md:p-10 rounded-xl border-2 border-jmso-tosca/20 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div className="bg-white p-8 md:p-10 rounded-xl border-2 border-jmso-medium-blue/20 shadow-lg hover:shadow-xl transition-all duration-300">
                             <div className="flex items-center gap-4 mb-6">
-                                <div className="w-14 h-14 bg-jmso-tosca/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <Target size={32} className="text-jmso-tosca" />
+                                <div className="w-14 h-14 bg-jmso-medium-blue/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <Target size={32} className="text-jmso-medium-blue" />
                                 </div>
                                 <h3 className="text-2xl md:text-3xl font-bold text-jmso-dark-blue">
                                     Our Mission

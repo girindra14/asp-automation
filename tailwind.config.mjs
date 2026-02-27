@@ -35,7 +35,7 @@ export default {
           colors: {
               "jmso-tosca": "#78D736",
               "jmso-dark-blue": "#001A23",
-              "jmso-medium-blue": "#31493C",
+              "jmso-medium-blue": "#589E29",
               "jmso-light-blue": "#E8F1F2",
               "jmso-blue": "#0759d4",
           },
