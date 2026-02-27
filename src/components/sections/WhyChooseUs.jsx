@@ -117,7 +117,7 @@ export default function WhyChooseUs({ headline }) {
     return (
         <section
             id="why-choose-us"
-            className="bg-jmso-dark-blue-alt relative py-8 md:py-12 lg:py-20"
+            className="bg-jmso-dark-blue relative py-8 md:py-12 lg:py-20"
         >
             <div className="container">
                 <h2 className="paintpoint-headline jmso-heading text-white text-center mb-8 lg:mb-12" dangerouslySetInnerHTML={{ __html: headline }} />
