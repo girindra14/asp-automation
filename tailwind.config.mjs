@@ -33,10 +33,10 @@ export default {
       },
       extend: {
           colors: {
-              "jmso-tosca": "#07d4c8",
-              "jmso-dark-blue": "#002a69",
-              "jmso-dark-blue-alt": "#012b6a",
-              "jmso-light-blue": "#ebf3ff",
+              "jmso-tosca": "#78D736",
+              "jmso-dark-blue": "#001A23",
+              "jmso-dark-blue-alt": "#001A23",
+              "jmso-light-blue": "#E8F1F2",
               "jmso-blue": "#0759d4",
           },
           keyframes: {

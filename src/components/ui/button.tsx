@@ -9,7 +9,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-jmso-blue text-white hover:bg transition-all-jmso-blue/90 duration-300 ease-out",
+        default: "bg-jmso-tosca text-dark-blue hover:bg-jmso-tosca/90 transition-all duration-300 ease-out",
         secondary:
           "bg-gradient-to-tr from-white/75 to-white text-jmso-dark-blue hover:from-white/80 hover:to-white/80 transition-all duration-300 ease-out",
         "form-input":

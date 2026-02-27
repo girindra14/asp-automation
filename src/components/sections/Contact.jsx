@@ -139,7 +139,7 @@ export default function ContactWithFooter() {
 
                                 <button
                                     type="submit"
-                                    className="w-full bg-jmso-tosca hover:bg-jmso-tosca/90 text-white font-semibold py-3 px-6 rounded-md transition-all duration-300 flex items-center justify-center gap-2 group"
+                                    className="w-full bg-jmso-tosca hover:bg-jmso-tosca/90 text-jmso-dark-blue font-semibold py-3 px-6 rounded-md transition-all duration-300 flex items-center justify-center gap-2 group"
                                 >
                                     <span>Send Message</span>
                                     <PaperPlaneTilt
