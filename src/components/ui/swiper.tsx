@@ -163,14 +163,14 @@ export const FadeSlider = ({ imgs }: FadeSliderProps) => {
               <img
                 src={img.src}
                 alt={`Product ${index + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
           </SwiperSlide>
         ))}
       </Swiper>
       
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-jmso-dark-blue/90 to-transparent pointer-events-none z-10"></div>
+      {/* <div className="absolute inset-0 bg-gradient-to-t from-jmso-dark-blue/90 to-transparent pointer-events-none z-10"></div> */}
     </div>
   );
 };

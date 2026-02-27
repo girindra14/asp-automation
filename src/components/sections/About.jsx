@@ -31,7 +31,9 @@ import Advantech from "../../assets/images/partnerships/advantech.webp";
 import Belden from "../../assets/images/partnerships/belden.webp";
 import Cisco from "../../assets/images/partnerships/cisco.webp";
 import HanwhaVision from "../../assets/images/partnerships/hanwha-vision.webp";
+import Moxa from "../../assets/images/partnerships/moxa.webp";
 import Netviel from "../../assets/images/partnerships/netviel.webp";
+import Siemens from "../../assets/images/partnerships/siemens.webp";
 
 export default function AboutUs() {
     const works = [
@@ -86,7 +88,9 @@ export default function AboutUs() {
         { img: Belden },
         { img: Cisco },
         { img: HanwhaVision },
+        { img: Moxa },
         { img: Netviel },
+        { img: Siemens },
 
     ];
 
@@ -273,7 +277,7 @@ export default function AboutUs() {
 
                     {/* Partners Grid - Centered */}
                     <div className="max-w-4xl mx-auto">
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+                        <div className="grid grid-cols-3 md:grid-cols-3 gap-6 lg:gap-8">
                             {partnerships.map((partner, index) => (
                                 <div key={index} className="group flex items-center justify-center">
                                     <img
