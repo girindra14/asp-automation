@@ -12,12 +12,16 @@ import UPSDatasheet from "../../assets/images/our-products/ups/ups-datasheet.pdf
 import CCTV1 from "../../assets/images/our-products/cctv/cctv_1.png";
 import CCTV2 from "../../assets/images/our-products/cctv/cctv_2.png";
 import CCTV3 from "../../assets/images/our-products/cctv/cctv_3.png";
+import AICCTVDatasheet from "../../assets/images/our-products/cctv/ai-cctv-datasheet.pdf";
 import FO1 from "../../assets/images/our-products/fo/fo_1.png";
 import FODatasheet from "../../assets/images/our-products/fo/fo-datasheet.pdf";
 import ISG1 from "../../assets/images/our-products/isg/isg_1.png";
 import ISG2 from "../../assets/images/our-products/isg/isg_2.png";
 import ISGDatasheet from "../../assets/images/our-products/isg/isg-datasheet.pdf";
-import AICCTVDatasheet from "../../assets/images/our-products/cctv/ai-cctv-datasheet.pdf";
+import SCADA1 from "../../assets/images/our-products/scada/scada_1.png";
+import SCADA2 from "../../assets/images/our-products/scada/scada_2.png";
+import SCADA3 from "../../assets/images/our-products/scada/scada_3.png";
+import SCADA4 from "../../assets/images/our-products/scada/scada_4.png";
 import bg from "../../assets/images/application-bg.png";
 
 export default function OurProducts({
@@ -103,7 +107,7 @@ export default function OurProducts({
         },
         {
             title: "Supervisory Control and Data Acquisition",
-            imgs: [IPC1, IPC2, IPC3],
+            imgs: [SCADA1, SCADA2, SCADA3, SCADA4],
             description: "Design and deployment of reliable industrial networks for data communication and system integration.",
             keySpecs: [
                 "Real-Time Monitoring & Control",
@@ -111,7 +115,7 @@ export default function OurProducts({
                 "High Availability & System Redundancy",
                 "Scalability & Cybersecurity"
             ],
-            link: IPCDatasheet
+            link: "#"
         },
     ];
 
@@ -136,8 +140,11 @@ export default function OurProducts({
                             >
                                 {/* Card Image */}
                                 <div className="relative aspect-[4/3] overflow-hidden flex-shrink-0">
-                                    <FadeSlider imgs={product.imgs} client:load />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-jmso-dark-blue/90 to-transparent"></div>
+                                    {product.title == 'Supervisory Control and Data Acquisition'
+                                        ? <FadeSlider imgs={product.imgs} imgZoomType="zoom-out" client:load />
+                                        : <FadeSlider imgs={product.imgs} imgZoomType="zoom-in" client:load />
+                                    }
+                                    <div className="absolute inset-0 bg-gradient-to-t from-jmso-dark-blue/75 to-transparent"></div>
                                 </div>
 
                                 {/* Card Content */}

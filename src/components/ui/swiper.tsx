@@ -136,9 +136,10 @@ export const WhatWeDoSlider = () => {
 
 interface FadeSliderProps {
   imgs: ImageMetadata[];
+  imgZoomType: string;
 }
 
-export const FadeSlider = ({ imgs }: FadeSliderProps) => {
+export const FadeSlider = ({ imgs, imgZoomType }: FadeSliderProps) => {
   const [_, setInit] = useState<boolean>();
   return (
     <div className="relative aspect-[4/3] overflow-hidden">
@@ -163,14 +164,11 @@ export const FadeSlider = ({ imgs }: FadeSliderProps) => {
               <img
                 src={img.src}
                 alt={`Product ${index + 1}`}
-                className="w-full h-full object-contain"
+                className={`w-full h-full ${imgZoomType === "zoom-out" ? "object-cover" : "object-contain"}`}
               />
           </SwiperSlide>
         ))}
       </Swiper>
-      
-      {/* Gradient Overlay */}
-      {/* <div className="absolute inset-0 bg-gradient-to-t from-jmso-dark-blue/90 to-transparent pointer-events-none z-10"></div> */}
     </div>
   );
 };

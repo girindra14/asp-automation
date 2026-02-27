@@ -117,7 +117,7 @@ export default function AboutUs() {
                                     alt="About Us"
                                     className="block md:hidden w-full h-full object-cover"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-jmso-dark-blue/90 to-transparent"></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-jmso-dark-blue/75 to-transparent"></div>
                             </div>
                         </div>
 
@@ -241,7 +241,7 @@ export default function AboutUs() {
                                         alt={work.title}
                                         className="block md:hidden w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-jmso-dark-blue/90 to-transparent"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-jmso-dark-blue/75 to-transparent"></div>
                                 </div>
                                 <div className="p-6">
                                     {/* <span className="inline-block px-3 py-1 bg-jmso-light-blue text-jmso-tosca rounded-full text-xs font-semibold mb-3">
