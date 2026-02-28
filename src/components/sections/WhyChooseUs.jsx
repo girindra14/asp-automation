@@ -1,16 +1,19 @@
-import problem1 from "../../assets/images/why-choose-us/problem1.svg";
-import problem2 from "../../assets/images/why-choose-us/problem2.svg";
-import problem3 from "../../assets/images/why-choose-us/problem3.svg";
-import problem4 from "../../assets/images/why-choose-us/problem4.svg";
-import problem5 from "../../assets/images/why-choose-us/problem5.svg";
-import problem6 from "../../assets/images/why-choose-us/problem6.svg";
-import problem7 from "../../assets/images/why-choose-us/problem7.svg";
-import problem8 from "../../assets/images/why-choose-us/problem7.svg";
-import problem9 from "../../assets/images/why-choose-us/problem7.svg";
-import whyChooseUs1 from "../../assets/images/why-choose-us/why-choose-us1.webp";
-import whyChooseUs2 from "../../assets/images/why-choose-us/why-choose-us2.webp";
-import whyChooseUs3 from "../../assets/images/why-choose-us/why-choose-us3.webp";
-import whyChooseUs4 from "../../assets/images/why-choose-us/why-choose-us4.webp";
+import whyChooseUs1 from "../../assets/images/why-choose-us/why-choose-us1.svg";
+import whyChooseUs2 from "../../assets/images/why-choose-us/why-choose-us2.svg";
+import whyChooseUs3 from "../../assets/images/why-choose-us/why-choose-us3.svg";
+import whyChooseUs4 from "../../assets/images/why-choose-us/why-choose-us4.svg";
+import whyChooseUs5 from "../../assets/images/why-choose-us/why-choose-us5.svg";
+import whyChooseUs6 from "../../assets/images/why-choose-us/why-choose-us6.svg";
+import whyChooseUs7 from "../../assets/images/why-choose-us/why-choose-us7.svg";
+import whyChooseUs8 from "../../assets/images/why-choose-us/why-choose-us8.svg";
+import whyChooseUs9 from "../../assets/images/why-choose-us/why-choose-us9.svg";
+import whyChooseUs10 from "../../assets/images/why-choose-us/why-choose-us10.svg";
+import whyChooseUs11 from "../../assets/images/why-choose-us/why-choose-us11.svg";
+import whyChooseUs12 from "../../assets/images/why-choose-us/why-choose-us12.svg";
+import whyChooseUs1_3 from "../../assets/images/why-choose-us/why-choose-us1.webp";
+import whyChooseUs4_6 from "../../assets/images/why-choose-us/why-choose-us2.webp";
+import whyChooseUs7_9 from "../../assets/images/why-choose-us/why-choose-us3.webp";
+import whyChooseUs10_12 from "../../assets/images/why-choose-us/why-choose-us4.webp";
 
 import { useEffect } from "react";
 
@@ -28,87 +31,87 @@ export default function WhyChooseUs({ headline }) {
     const paint_points = [
         {
             name: "Experienced Automation Engineers",
-            image: whyChooseUs1,
+            image: whyChooseUs1_3,
             description: [
                 "Our team consists of skilled automation engineers with hands-on experience in industrial environments. We understand real operational challenges — from system downtime and process inefficiencies to safety compliance.",
                 "We don't just design systems; we design solutions that work reliably in demanding industrial conditions."
             ],
             paint_point_items: [
                 {
-                    image: problem1,
+                    image: whyChooseUs1,
                     explanation: "Accurate system design"
                 },
                 {
-                    image: problem2,
+                    image: whyChooseUs2,
                     explanation: "Reduced implementation risk"
                 },
                 {
-                    image: problem3,
+                    image: whyChooseUs3,
                     explanation: "Faster project execution"
                 }
             ]
         },
         {
             name: "Reliable & Scalable Solutions",
-            image: whyChooseUs2,
+            image: whyChooseUs4_6,
             description: [
                 "Our automation systems are designed with long-term performance in mind. We prioritize system stability, industrial-grade components, and scalable architecture to ensure your operations can grow without major system overhauls."
             ],
             paint_point_items: [
                 {
-                    image: problem4,
+                    image: whyChooseUs4,
                     explanation: "Reduced downtime"
                 },
                 {
-                    image: problem5,
+                    image: whyChooseUs5,
                     explanation: "Long-term investment protection"
                 },
                 {
-                    image: problem6,
+                    image: whyChooseUs6,
                     explanation: "Future-ready automation infrastructure"
                 }
             ]
         },
         {
             name: "Strong Technical Support & After-Sales Service",
-            image: whyChooseUs3,
+            image: whyChooseUs7_9,
             description: [
                 "Automation systems require ongoing reliability. Our team provides responsive technical support, preventive maintenance guidance, and troubleshooting assistance to minimize operational disruption.",
                 "We build long-term partnerships, not just transactions."
             ],
             paint_point_items: [
                 {
-                    image: problem7,
+                    image: whyChooseUs7,
                     explanation: "Faster issue resolution"
                 },
                 {
-                    image: problem8,
+                    image: whyChooseUs8,
                     explanation: "Operational continuity"
                 },
                 {
-                    image: problem9,
+                    image: whyChooseUs9,
                     explanation: "Peace of mind"
                 }
             ]
         },
         {
             name: "End-to-End Project Capability",
-            image: whyChooseUs4,
+            image: whyChooseUs10_12,
             description: [
                 "We provide complete automation services — from initial consultation and system design to panel fabrication, installation, commissioning, and after-sales support.",
                 "By managing the full lifecycle of your automation project, we ensure seamless integration between hardware, software, and field devices."
             ],
             paint_point_items: [
                 {
-                    image: problem7,
+                    image: whyChooseUs10,
                     explanation: "One trusted partner"
                 },
                 {
-                    image: problem8,
+                    image: whyChooseUs11,
                     explanation: "Clear communication"
                 },
                 {
-                    image: problem9,
+                    image: whyChooseUs12,
                     explanation: "Better system integration"
                 }
             ]
@@ -146,11 +149,19 @@ export default function WhyChooseUs({ headline }) {
                                     <ul className="flex flex-col gap-3 md:gap-4 lg:gap-6 xl:gap-8">
                                         {item.paint_point_items.map((point, idx) => (
                                             <li key={idx} className="flex items-center gap-3 md:gap-4 lg:gap-6 xl:gap-8">
-                                                <img
-                                                    src={point.image.src}
-                                                    alt={`Solution ${idx + 1}`}
-                                                    className="w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 xl:w-12 xl:h-12 flex-shrink-0 mt-0.5"
-                                                />
+                                                <div
+                                                    className="w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 xl:w-12 xl:h-12 flex-shrink-0 mt-0.5 bg-jmso-tosca"
+                                                    style={{
+                                                        maskImage: `url(${point.image.src})`,
+                                                        maskSize: 'contain',
+                                                        maskRepeat: 'no-repeat',
+                                                        maskPosition: 'center',
+                                                        WebkitMaskImage: `url(${point.image.src})`,
+                                                        WebkitMaskSize: 'contain',
+                                                        WebkitMaskRepeat: 'no-repeat',
+                                                        WebkitMaskPosition: 'center'
+                                                    }}
+                                                ></div>
                                                 <p className="text-white/80 text-base md:text-lg lg:text-xl leading-normal" dangerouslySetInnerHTML={{ __html: point.explanation }} />
                                             </li>
                                         ))}
@@ -193,11 +204,19 @@ export default function WhyChooseUs({ headline }) {
                                     <ul className="flex flex-col gap-3 md:gap-4 lg:gap-6 xl:gap-8">
                                         {item.paint_point_items.map((point, idx) => (
                                             <li key={idx} className="flex items-center gap-3 md:gap-4 lg:gap-6 xl:gap-8">
-                                                <img
-                                                    src={point.image.src}
-                                                    alt={`Solution ${idx + 1}`}
-                                                    className="w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 xl:w-12 xl:h-12 flex-shrink-0 mt-0.5"
-                                                />
+                                                <div
+                                                    className="w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 xl:w-12 xl:h-12 flex-shrink-0 mt-0.5 bg-jmso-tosca"
+                                                    style={{
+                                                        maskImage: `url(${point.image.src})`,
+                                                        maskSize: 'contain',
+                                                        maskRepeat: 'no-repeat',
+                                                        maskPosition: 'center',
+                                                        WebkitMaskImage: `url(${point.image.src})`,
+                                                        WebkitMaskSize: 'contain',
+                                                        WebkitMaskRepeat: 'no-repeat',
+                                                        WebkitMaskPosition: 'center'
+                                                    }}
+                                                ></div>
                                                 <p className="text-white/80 text-base md:text-lg lg:text-xl leading-normal" dangerouslySetInnerHTML={{ __html: point.explanation }} />
                                             </li>
                                         ))}
