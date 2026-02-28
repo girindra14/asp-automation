@@ -1,4 +1,3 @@
-import bgFlipped from "../../assets/images/application-bg-flipped.png";
 import IFD from "../../assets/images/core-solutions/ifd.webp";
 import NID from "../../assets/images/core-solutions/nid.webp";
 import ECP from "../../assets/images/core-solutions/ecp.webp";
@@ -59,7 +58,7 @@ export default function WhatWeDo({
         },
     ];
     return (
-        <section id="what-we-do" className="relative py-8 md:py-12 lg:py-20">
+        <section id="what-we-do" className="relative py-8 md:py-12 lg:py-20 bg-gradient-to-b from-white to-jmso-light-blue">
             <div className="relative container flex flex-col items-center z-10">
                 <h2 className="jmso-heading text-jmso-dark-blue text-center mb-8 lg:mb-12">
                     {headline}
@@ -107,11 +106,6 @@ export default function WhatWeDo({
                 </div>
                 <div className="my-4"></div>
             </div>
-            <img
-                src={bgFlipped.src}
-                alt="Application"
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full select-none pointer-events-none"
-            />
         </section>
     );
 }

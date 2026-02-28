@@ -22,7 +22,6 @@ import SCADA1 from "../../assets/images/our-products/scada/scada_1.png";
 import SCADA2 from "../../assets/images/our-products/scada/scada_2.png";
 import SCADA3 from "../../assets/images/our-products/scada/scada_3.png";
 import SCADA4 from "../../assets/images/our-products/scada/scada_4.png";
-import bg from "../../assets/images/application-bg.png";
 
 export default function OurProducts({
     headline,
@@ -124,11 +123,6 @@ export default function OurProducts({
             id="our-products"
             className="bg-jmso-light-blue relative py-8 md:py-12 lg:py-20"
         >
-            <img
-                src={bg.src}
-                alt="Features"
-                className="absolute top-0 left-1/2 -translate-x-1/2 w-full select-none pointer-events-none"
-            />
             <div className="relative container flex flex-col items-center z-10">
                 <h2 className="jmso-heading text-jmso-dark-blue text-center mb-8 lg:mb-12" dangerouslySetInnerHTML={{ __html: headline }} />
                 <div className="w-full max-w-6xl">

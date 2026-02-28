@@ -8,7 +8,6 @@ import IFDMobile from "../../assets/images/our-solutions/ifd-mobile.webp";
 import INCMobile from "../../assets/images/our-solutions/inc-mobile.webp";
 import CPEMobile from "../../assets/images/our-solutions/cpe-mobile.webp";
 import IASMobile from "../../assets/images/our-solutions/ias-mobile.webp";
-import bg from "../../assets/images/application-bg.png";
 
 export default function OurSolutions({
     headline,
@@ -72,11 +71,6 @@ export default function OurSolutions({
     ];
     return (
         <section id="our-solutions" className="relative py-8 md:py-12 lg:py-20">
-            <img
-                src={bg.src}
-                alt="Features"
-                className="absolute top-0 left-1/2 -translate-x-1/2 w-full select-none pointer-events-none"
-            />
             <div className="relative container flex flex-col items-center z-10">
                 <h2 className="jmso-heading text-jmso-dark-blue text-center mb-8 lg:mb-12" dangerouslySetInnerHTML={{ __html: headline }} />
                 <div className="w-full max-w-6xl">
