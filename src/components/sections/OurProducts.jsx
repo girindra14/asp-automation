@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { CheckCircle } from "@phosphor-icons/react/dist/ssr";
 import { FadeSlider } from "../ui/swiper";
+import { X } from "lucide-react";
 import IPC1 from "../../assets/images/our-products/ipc/ipc_1.png";
 import IPC2 from "../../assets/images/our-products/ipc/ipc_2.png";
 import IPC3 from "../../assets/images/our-products/ipc/ipc_3.png";
@@ -26,6 +27,8 @@ import SCADA4 from "../../assets/images/our-products/scada/scada_4.png";
 export default function OurProducts({
     headline,
 }) {
+    const [selectedProduct, setSelectedProduct] = useState(null);
+
     useEffect(() => {
         const applyStylesToStrongChildren = () => {
             const descriptions = document.querySelectorAll('.service-description strong');
@@ -54,18 +57,28 @@ export default function OurProducts({
                 "Flexible I/O & Expandability",
                 "Reliability & Industrial OS Support"
             ],
+            productSpecs: {
+                problem: "Inefficient manual production processes, difficulties in real-time monitoring, and high operational costs",
+                solution: "Implementation of PLC, SCADA, HMI, and integrated control systems with centralized monitoring and data analytics",
+                benefit: "Increased productivity, reduced production errors, and full visibility into the production process."
+            },
             link: IPCDatasheet
         },
         {
             title: "Uninterruptible Power Supply",
             imgs: [UPS1, UPS2, UPS3],
-            description: "Design, assembly, testing, and commissioning of electrical and control panels based on industry standards.",
+            description: "Design, assembly, testing, and commissioning of electrical and control panels based on Product standards.",
             keySpecs: [
                 "Isolation Transformer for Maximum Protection",
                 "Dual Output Voltage Support",
                 "High Reliability for Industrial Loads",
                 "Clean & Stable Power Quality"
             ],
+            productSpecs: {
+                problem: "Inefficient manual production processes, difficulties in real-time monitoring, and high operational costs",
+                solution: "Implementation of PLC, SCADA, HMI, and integrated control systems with centralized monitoring and data analytics",
+                benefit: "Increased productivity, reduced production errors, and full visibility into the production process."
+            },
             link: UPSDatasheet
         },
         {
@@ -78,6 +91,11 @@ export default function OurProducts({
                 "High Accuracy & Early Warning",
                 "Industrial-Grade Reliability & Integration"
             ],
+            productSpecs: {
+                problem: "Inefficient manual production processes, difficulties in real-time monitoring, and high operational costs",
+                solution: "Implementation of PLC, SCADA, HMI, and integrated control systems with centralized monitoring and data analytics",
+                benefit: "Increased productivity, reduced production errors, and full visibility into the production process."
+            },
             link: AICCTVDatasheet
         },
         {
@@ -90,6 +108,11 @@ export default function OurProducts({
                 "Industrial-Grade Cable & Connector Design",
                 "High Reliability & Network Stability"
             ],
+            productSpecs: {
+                problem: "Inefficient manual production processes, difficulties in real-time monitoring, and high operational costs",
+                solution: "Implementation of PLC, SCADA, HMI, and integrated control systems with centralized monitoring and data analytics",
+                benefit: "Increased productivity, reduced production errors, and full visibility into the production process."
+            },
             link: FODatasheet
         },
                 {
@@ -102,6 +125,11 @@ export default function OurProducts({
                 "Flexible Port & PoE Options",
                 "Industrial Network Management & Security"
             ],
+            productSpecs: {
+                problem: "Inefficient manual production processes, difficulties in real-time monitoring, and high operational costs",
+                solution: "Implementation of PLC, SCADA, HMI, and integrated control systems with centralized monitoring and data analytics",
+                benefit: "Increased productivity, reduced production errors, and full visibility into the production process."
+            },
             link: ISGDatasheet
         },
         {
@@ -114,6 +142,11 @@ export default function OurProducts({
                 "High Availability & System Redundancy",
                 "Scalability & Cybersecurity"
             ],
+            productSpecs: {
+                problem: "Inefficient manual production processes, difficulties in real-time monitoring, and high operational costs",
+                solution: "Implementation of PLC, SCADA, HMI, and integrated control systems with centralized monitoring and data analytics",
+                benefit: "Increased productivity, reduced production errors, and full visibility into the production process."
+            },
             link: "#"
         },
     ];
@@ -169,10 +202,18 @@ export default function OurProducts({
                                     {/* CTA Button */}
                                     <a
                                         href={product.title == 'Supervisory Control and Data Acquisition' ? 'https://wa.me/6282139940054' : product.link}
-                                        className="mt-6 block w-full bg-gradient-to-br from-jmso-tosca to-jmso-dark-blue text-white py-3 px-6 rounded-lg font-semibold hover:from-jmso-tosca hover:to-jmso-dark-blue transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 text-center"
+                                        className="mt-6 mb-3 block w-full bg-gradient-to-br from-jmso-tosca to-jmso-dark-blue text-white py-3 px-6 rounded-lg font-semibold hover:from-jmso-tosca hover:to-jmso-dark-blue transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 text-center"
                                     >
                                         {product.title == 'Supervisory Control and Data Acquisition' ? 'Consult Now' : 'Product Info'}
                                     </a>
+
+                                    {/* CTA Button */}
+                                    <button
+                                        onClick={() => setSelectedProduct(product)}
+                                        className="w-full bg-white text-jmso-tosca border-2 py-3 px-6 rounded-lg font-semibold hover:from-jmso-tosca hover:to-jmso-dark-blue transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
+                                    >
+                                        Product Spec
+                                    </button>
                                 </div>
 
                                 {/* Decorative Corner */}
@@ -182,6 +223,119 @@ export default function OurProducts({
                     </div>
                 </div>
             </div>
+
+            {/* Modal */}
+            {selectedProduct && (
+                <div
+                    className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-end md:items-center justify-center p-4 animate-fadeIn"
+                    onClick={() => setSelectedProduct(null)}
+                >
+                    <div
+                        className="bg-white rounded-t-3xl md:rounded-3xl w-full max-w-3xl max-h-[90vh] overflow-hidden animate-slideUp shadow-2xl flex flex-col"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {/* Modal Header - Fixed */}
+                        <div className="bg-gradient-to-br from-jmso-tosca to-jmso-dark-blue text-white p-6 rounded-t-3xl md:rounded-t-3xl flex-shrink-0">
+                            <div className="flex items-start justify-between">
+                                <div>
+                                    <h3 className="text-2xl font-bold">{selectedProduct.title}</h3>
+                                    <p className="hidden md:block text-blue-100 mt-1">{selectedProduct.description}</p>
+                                </div>
+                                <button
+                                    onClick={() => setSelectedProduct(null)}
+                                    className="text-white hover:bg-white/20 p-2 rounded-lg transition-colors ml-4 flex-shrink-0"
+                                >
+                                    <X className="w-6 h-6" />
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Modal Content - Scrollable */}
+                        <div className="overflow-y-auto flex-1">
+                            <div className="p-8">
+                                <table className="w-full border-collapse">
+                                    <thead>
+                                        <tr className="bg-gradient-to-r from-jmso-tosca to-jmso-dark-blue text-white">
+                                            <th className="w-1/4 px-5 py-3 text-left text-sm font-bold uppercase tracking-wider rounded-tl-xl">
+                                                Kategori
+                                            </th>
+                                            <th className="px-5 py-3 text-left text-sm font-bold uppercase tracking-wider rounded-tr-xl">
+                                                Deskripsi
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {/* Problem Row */}
+                                        <tr className="border-b border-gray-100 hover:bg-red-50/50 transition-colors">
+                                            <td className="px-5 py-5 align-top">
+                                                <div className="flex items-center gap-3">
+                                                    <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                                        <span className="text-white text-xs font-bold">P</span>
+                                                    </div>
+                                                    <span className="font-bold text-jmso-dark-blue">Problem</span>
+                                                </div>
+                                            </td>
+                                            <td className="px-5 py-5 text-gray-600 leading-relaxed align-top">
+                                                {selectedProduct.productSpecs.problem}
+                                            </td>
+                                        </tr>
+
+                                        {/* Solution Row */}
+                                        <tr className="border-b border-gray-100 hover:bg-blue-50/50 transition-colors">
+                                            <td className="px-5 py-5 align-top">
+                                                <div className="flex items-center gap-3">
+                                                    <div className="w-8 h-8 bg-[#0759d4] rounded-full flex items-center justify-center flex-shrink-0">
+                                                        <span className="text-white text-xs font-bold">S</span>
+                                                    </div>
+                                                    <span className="font-bold text-jmso-dark-blue">Solution</span>
+                                                </div>
+                                            </td>
+                                            <td className="px-5 py-5 text-gray-600 leading-relaxed align-top">
+                                                {selectedProduct.productSpecs.solution}
+                                            </td>
+                                        </tr>
+
+                                        {/* Benefit Row */}
+                                        <tr className="hover:bg-green-50/50 transition-colors">
+                                            <td className="px-5 py-5 align-top">
+                                                <div className="flex items-center gap-3">
+                                                    <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                                        <span className="text-white text-xs font-bold">B</span>
+                                                    </div>
+                                                    <span className="font-bold text-jmso-dark-blue">Benefit</span>
+                                                </div>
+                                            </td>
+                                            <td className="px-5 py-5 text-gray-600 leading-relaxed align-top">
+                                                {selectedProduct.productSpecs.benefit}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            <style jsx>{`
+                @keyframes fadeIn {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+
+                @keyframes slideUp {
+                    from { transform: translateY(100%); }
+                    to { transform: translateY(0); }
+                }
+
+                .animate-fadeIn {
+                    animation: fadeIn 0.3s ease-out;
+                }
+
+                .animate-slideUp {
+                    animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+                }
+            `}</style>
         </section>
     );
 }
